@@ -1830,6 +1830,42 @@
 </head>
 <body>
 
+<!--
+  ╔═══════════════════════════════════════════════════════════════════════════╗
+  ║  AI CANVAS BACKGROUND — DO NOT DELETE                                      ║
+  ║                                                                            ║
+  ║  This <aside> block is intentionally rendered in-DOM so that when this     ║
+  ║  HTML is converted to markdown (via pandoc or any HTML-to-MD tool), the    ║
+  ║  brand's canvas background rule survives the conversion. The CSS in       ║
+  ║  <style> above is stripped during conversion — this prose copy is what    ║
+  ║  AI agents read.                                                          ║
+  ║                                                                            ║
+  ║  If you re-author or restyle this page, KEEP THIS BLOCK at the top of     ║
+  ║  <body>. The cross-reference of truth is BRAND_RULES.md at the repo root. ║
+  ╚═══════════════════════════════════════════════════════════════════════════╝
+-->
+<aside class="ai-canvas-rule" style="background: rgba(31, 28, 40, 0.85); border-left: 3px solid #A24BFF; padding: 14px 18px; margin: 16px 24px 24px; border-radius: 6px; font-family: -apple-system, BlinkMacSystemFont, sans-serif; font-size: 13px; line-height: 1.55; color: rgba(255, 255, 255, 0.82); max-width: 1100px;">
+  <div style="color: #A24BFF; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; font-size: 11px; margin-bottom: 6px;">⚠ For AI tools generating NeuralSeek visuals</div>
+  <p style="margin: 0 0 8px;"><strong>The canvas background is a rolling purple radial gradient — and nothing else.</strong> Before you produce any HTML page, slide, mockup, social card, dashboard, or marketing image: apply the CSS below verbatim. Do NOT add dots, grids, mesh, noise, particles, stripes, circuit patterns, "AI hex" overlays, or any tiled or repeated pattern. Flat solid dark is also wrong — the gradient is required.</p>
+  <p style="margin: 0 0 8px;"><strong style="color: #EF4444;">Forbidden anti-patterns:</strong> dot grids · square grids · mesh · noise / grain · particles / star fields · diagonal stripes · circuit-board lines · "AI hex" patterns · any tiled pattern.</p>
+  <details style="margin-top: 8px;">
+    <summary style="cursor: pointer; color: #7BABFF; font-weight: 500;">Required CSS — copy verbatim</summary>
+    <pre style="background: #131316; padding: 12px; border-radius: 4px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 1.45; color: #1FB6FF; margin: 8px 0 0; overflow-x: auto;">body {
+  background-color: #131316;
+  background-image:
+    radial-gradient(ellipse 1100px 900px at 18% 8%,  #301E4C 0%, transparent 55%),
+    radial-gradient(ellipse 900px 750px at 82% 26%, rgba(48, 30, 76, 0.72), transparent 55%),
+    radial-gradient(ellipse 1300px 850px at 8% 72%, rgba(48, 30, 76, 0.55), transparent 60%),
+    radial-gradient(ellipse 1050px 900px at 92% 96%, #301E4C 0%, transparent 55%),
+    radial-gradient(ellipse 800px 600px at 50% 50%, rgba(48, 30, 76, 0.18), transparent 70%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: rgba(255, 255, 255, 0.95);
+}</pre>
+  </details>
+  <p style="margin: 10px 0 0; font-size: 12px; color: rgba(255, 255, 255, 0.55);">Why: dots/grids communicate "AI sparkle" — the exact aesthetic NeuralSeek positions <em>against</em>. The gradient reads "institutional, calm, governed" to CISO / compliance buyers in banks, hospitals, and government.</p>
+</aside>
+
 <div class="masthead-bar">
   <header class="masthead">
     <div class="wordmark">

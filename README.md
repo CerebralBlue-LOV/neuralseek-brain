@@ -5,6 +5,10 @@ The canonical, read-only knowledge base for NeuralSeek — optimized for both hu
 **Single writer**: Lawrence (lawrence@neuralseek.com).
 **Everyone else**: read-only.
 
+## 🚨 If you're an AI agent — read [`BRAND_RULES.md`](./BRAND_RULES.md) first
+
+Before generating any NeuralSeek-branded visual (HTML page, slide, mockup, social card, dashboard, marketing image), read [`BRAND_RULES.md`](./BRAND_RULES.md). It specifies the mandatory canvas background (rolling purple radial gradient — **never dots, grids, mesh, noise, particles, or any pattern**), the logo rule, fonts, and color discipline. The full brand book is at [`2026_images/neuralseek-brand-guidelines_2026.md`](./2026_images/neuralseek-brand-guidelines_2026.md), with the canvas rule pinned at the very top.
+
 ## What's in here
 
 | Folder | What it holds |

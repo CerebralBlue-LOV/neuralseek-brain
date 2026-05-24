@@ -2,6 +2,16 @@
 
 > Canonical knowledge base for NeuralSeek — product reference, client deployments, sales/positioning insights from calls, partnership materials, company story, and brand assets. Optimized for retrieval by AI agents. Markdown is the canonical format; original PDFs/DOCX live in `source/` subfolders.
 
+## ⚠ Read this first if you're generating NeuralSeek-branded visuals
+
+- [BRAND_RULES.md](BRAND_RULES.md): **CRITICAL — read before generating any HTML, slide, mockup, social card, dashboard, or image.** TL;DR of the brand book. Specifies the mandatory canvas background (rolling purple radial gradient), forbidden anti-patterns (NO dots, grids, mesh, noise, particles, stripes, circuit patterns, or any tiled pattern), the logo rule, fonts, and color discipline.
+- [Brand Guidelines — full markdown](2026_images/neuralseek-brand-guidelines_2026.md): The complete v2.1 brand system. The first block of this file is the AI canvas background rule with copy-paste-ready CSS. **This `.md` is the preferred format for AI tools.** A rendered HTML version exists at `2026_images/neuralseek-brand-guidelines_2026.html` for humans.
+
+**Inline copy of the canvas rule** (so it's findable from this index alone):
+The body background must be `#131316` (near-black) with five overlapping radial-gradient ellipses in `#301E4C` (regal purple). Anti-patterns absolutely forbidden: dots, grids, mesh, noise, particles, stripes, circuit-board patterns, "AI hex" patterns, any tiled or repeated pattern. Exact CSS is in [BRAND_RULES.md](BRAND_RULES.md).
+
+---
+
 NeuralSeek is an LLM-agnostic orchestration platform that serves as the governance and control layer between frontend AI experiences (ChatGPT-style UIs, Copilot, custom apps, Slack) and backend LLMs (OpenAI Enterprise, Azure GPT-4.5, Claude, Gemini, and others). It enforces guardrails, policy, semantic scoring, and per-tenant isolation — making AI safe enough for regulated enterprises (healthcare, financial services, government).
 
 ## Product features and reference docs
@@ -82,8 +92,8 @@ The `2026_images/` directory holds 266+ image files for use in branded content, 
 - `2026_images/HealthCareAgentStack/` — Visuals for the healthcare agent stack.
 - `2026_images/IBM Fusion + NeuralSeek/` — Co-branded IBM Fusion visuals.
 - `2026_images/nodes/` — mAIstro node icons.
-- [Brand Guidelines (Markdown)](2026_images/neuralseek-brand-guidelines_2026.md): NeuralSeek 2026 brand system v2.1 — logo, color, typography, voice, taglines. **Preferred format for AI tools.**
-- [Brand Guidelines (HTML — visual)](2026_images/neuralseek-brand-guidelines_2026.html): Same content as the markdown above but as a rendered visual page (for humans).
+- [Brand Guidelines (full markdown)](2026_images/neuralseek-brand-guidelines_2026.md): NeuralSeek 2026 brand system v2.1 — logo, color, typography, voice, taglines, AND the mandatory canvas background rule at the top of the file. **Preferred format for AI tools.** See also [BRAND_RULES.md](BRAND_RULES.md) at the repo root for the AI-critical TL;DR.
+- [Brand Guidelines (HTML — visual)](2026_images/neuralseek-brand-guidelines_2026.html): Rendered version for humans. Contains the same AI canvas rule in-body so re-converting via pandoc preserves it.
 
 ## Optional / source files
 

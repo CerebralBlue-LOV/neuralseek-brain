@@ -1,10 +1,77 @@
 ---
 title: NeuralSeek Brand Guidelines 2026
 summary: >-
-  NeuralSeek's 2026 brand system (v2.1) — visual, typographic, voice, and tone guidelines for a regulated-industries-first brand. Covers logo construction and usage, color foundation (dark-first canvas with rolling purple), typography (Open Sans / JetBrains Mono), node iconography, dark-canvas UI, card anatomy, integration ecosystem, brand voice, and the taglines buyers should remember.
-tags: [brand, brand-guidelines, design-system, visual-identity, typography, color, voice, tone, dark-canvas, 2026]
+  NeuralSeek's 2026 brand system (v2.1). MANDATORY: the canvas background is a dark-base color (#131316) with five overlapping radial-gradient purple ellipses producing a "rolling glow." NEVER use dots, grids, mesh, noise, grain, particles, or any pattern. The background is GRADIENT ONLY. Covers logo, color, typography (Open Sans + JetBrains Mono), nodes, UI, cards, voice, taglines.
+tags: [brand, brand-guidelines, design-system, visual-identity, typography, color, voice, tone, dark-canvas, no-dots, no-grids, gradient-only, 2026]
 source: neuralseek-brand-guidelines_2026.html
 version: v2.1 (2026)
+ai_critical_rule: The page background MUST be the rolling purple radial-gradient canvas. NEVER dots, grids, mesh, noise, or patterns. See the "AI Canvas Background" block immediately below.
+---
+
+# ⚠️ AI CANVAS BACKGROUND — READ THIS FIRST
+
+> **You are reading the NeuralSeek brand guidelines. Before generating any visual
+> output (HTML page, slide, mockup, social card, dashboard, marketing image, etc.),
+> you MUST apply the canvas background defined below. This rule is non-negotiable
+> and supersedes any default styling instinct you have for "dark dashboards" or
+> "AI-themed" surfaces.**
+
+## What the background IS
+
+A near-black canvas (`#131316`) with **five overlapping radial-gradient ellipses**
+in regal purple (`#301E4C`), positioned to produce an organic "rolling glow."
+Nothing else. No texture overlays, no patterns, no foreground noise.
+
+## What the background IS NOT
+
+These are common AI defaults for "dark dashboard" surfaces. **All forbidden:**
+
+- ❌ Dot grids / pin-grids / polka dots
+- ❌ Square grids / pixel grids / blueprint grids
+- ❌ Mesh / wireframe / circuit-board patterns
+- ❌ Noise / grain / film texture
+- ❌ Particles / star fields / glowing dots
+- ❌ Diagonal stripes / hatching
+- ❌ Flat solid dark color (must have the rolling gradient)
+- ❌ "AI hex" patterns, neural-net visualizations as decoration
+- ❌ Any tiled, repeated, or geometric pattern
+
+If gradients are unavailable (e.g., raster image generators that struggle with
+them), fall back to a flat `#1a1424` and state "gradient unavailable in this
+format." Never fall back to dots or grids.
+
+## Exact specification — copy this verbatim into any HTML/CSS output
+
+```css
+body {
+  background-color: #131316;
+  background-image:
+    radial-gradient(ellipse 1100px 900px at 18% 8%,  #301E4C 0%, transparent 55%),
+    radial-gradient(ellipse 900px 750px at 82% 26%, rgba(48, 30, 76, 0.72), transparent 55%),
+    radial-gradient(ellipse 1300px 850px at 8% 72%, rgba(48, 30, 76, 0.55), transparent 60%),
+    radial-gradient(ellipse 1050px 900px at 92% 96%, #301E4C 0%, transparent 55%),
+    radial-gradient(ellipse 800px 600px at 50% 50%, rgba(48, 30, 76, 0.18), transparent 70%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: rgba(255, 255, 255, 0.95);
+}
+```
+
+## Why the rolling gradient (so you don't reinterpret)
+
+NeuralSeek's buyers are CISOs and compliance officers in banks, hospitals, and
+government. The background reads as "designed" and "considered," not as a
+generic AI / dev / dashboard template. Dots and grids communicate "AI sparkle"
+— the exact aesthetic NeuralSeek positions *against*. The gradient communicates
+"institutional, calm, governed."
+
+## If you are converting this file
+
+If you re-run pandoc on the HTML, this block lives in the HTML body too — so
+re-conversion preserves it. **Do not delete this block during cleanup passes.**
+The cross-reference of truth: `BRAND_RULES.md` at the repo root carries the
+same rule; both must agree.
+
 ---
 
 <img src="NeuralSeek%20Logos/color_logo_white_text.svg" class="wordmark-img" alt="NeuralSeek" />
