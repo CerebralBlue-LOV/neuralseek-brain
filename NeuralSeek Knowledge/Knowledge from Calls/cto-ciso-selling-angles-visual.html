@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuralSeek — Three Angles to Win the CTO/CISO Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0B1220;
+    --ink-2: #2A2638;
+    --ink-3: #332F42;
+    --nav-bg: #0B0A0F;
+    --canvas: #131316;
+    --surface: #2A2638;
+    --surface-2: #1F1C28;
+    --surface-elev: #332F42;
+    --rule: rgba(255,255,255,0.18);
+    --rule-soft: rgba(255,255,255,0.12);
+    --text: rgba(255,255,255,0.95);
+    --text-muted: rgba(255,255,255,0.62);
+    --text-subtle: rgba(255,255,255,0.45);
+    --cyan: #1FB6FF;
+    --trust-blue: #2D5BFF;
+    --indigo: #5B2DFF;
+    --magenta: #A24BFF;
+    --approve: #22C55E;
+    --warn: #F59E0B;
+    --block: #EF4444;
+    --shadow-sm: 0 4px 12px rgba(0,0,0,0.50);
+    --shadow-md: 0 12px 32px rgba(0,0,0,0.52), 0 4px 8px rgba(0,0,0,0.35);
+    --shadow-lg: 0 32px 64px rgba(0,0,0,0.60), 0 12px 24px rgba(0,0,0,0.40);
+    --shadow-xl: 0 48px 96px rgba(0,0,0,0.68), 0 20px 40px rgba(0,0,0,0.46);
+    --gradient: linear-gradient(135deg, #1FB6FF 0%, #2D5BFF 35%, #5B2DFF 70%, #A24BFF 100%);
+    --title-gradient: linear-gradient(90deg, #FDFEFF 0%, #7BABFF 100%);
+    --title-gradient-pink: linear-gradient(90deg, #FDFEFF 0%, #E170FC 100%);
+    --action-gradient: linear-gradient(135deg, #5B2DFF 0%, #A24BFF 100%);
+    --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #131316;
+    background-image:
+      radial-gradient(ellipse 1100px 900px at 18% 8%, #301E4C 0%, transparent 55%),
+      radial-gradient(ellipse 900px 750px at 82% 26%, rgba(48,30,76,0.72), transparent 55%),
+      radial-gradient(ellipse 1300px 850px at 8% 72%, rgba(48,30,76,0.55), transparent 60%),
+      radial-gradient(ellipse 1050px 900px at 92% 96%, #301E4C 0%, transparent 55%),
+      radial-gradient(ellipse 800px 600px at 50% 50%, rgba(48,30,76,0.18), transparent 70%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--text);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection { background: rgba(91,45,255,0.35); color: #fff; }
+
+  /* Layout */
+  .page { max-width: 1240px; margin: 0 auto; padding: 0 56px; }
+
+  /* Masthead */
+  .masthead-bar {
+    background: var(--nav-bg);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.04), var(--shadow-md);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: 64px;
+  }
+  header.masthead {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 24px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .wordmark {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+  }
+  .wordmark-dot {
+    width: 10px; height: 10px;
+    background: var(--gradient);
+    border-radius: 2px;
+  }
+  .meta-line {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    display: flex;
+    gap: 24px;
+  }
+  .meta-line span::before {
+    content: '';
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    margin-right: 8px;
+    transform: translateY(-1px);
+  }
+
+  /* Hero */
+  .hero { margin-bottom: 96px; }
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    width: 36px; height: 1px;
+    background: var(--cyan);
+  }
+  .hero h1 {
+    font-weight: 600;
+    font-size: clamp(44px, 6vw, 78px);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin-bottom: 32px;
+    padding: 0.08em 0;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    max-width: 980px;
+  }
+  .hero-lede {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 720px;
+    font-weight: 400;
+  }
+
+  /* Overview table */
+  .overview {
+    margin-bottom: 120px;
+    background: var(--surface);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+  }
+  .overview::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gradient);
+  }
+  .overview-head {
+    padding: 32px 40px 20px;
+    border-bottom: 1px solid var(--rule-soft);
+    background: var(--surface-2);
+  }
+  .overview-head .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .overview-head h2 {
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: -0.015em;
+  }
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+  }
+  .overview-col {
+    padding: 36px 32px;
+    border-right: 1px solid var(--rule-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .overview-col:last-child { border-right: 0; }
+  .overview-col .col-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    font-weight: 500;
+  }
+  .overview-col .col-title {
+    font-weight: 600;
+    font-size: 21px;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    line-height: 1.25;
+  }
+  .overview-col .col-block {
+    background: var(--surface-2);
+    border-left: 3px solid;
+    border-radius: 0 4px 4px 0;
+    padding: 16px 18px;
+  }
+  .overview-col .col-block.fear { border-left-color: var(--block); }
+  .overview-col .col-block.reframe { border-left-color: var(--approve); }
+  .overview-col .col-block-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .overview-col .col-block .fear-text {
+    font-style: italic;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .overview-col .col-block .reframe-text {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  /* Angle sections */
+  .angle {
+    margin-bottom: 120px;
+    background: var(--surface);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    position: relative;
+  }
+  .angle::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gradient);
+  }
+  .angle-head {
+    padding: 56px 56px 40px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .angle-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .angle-num::before {
+    content: '';
+    width: 36px; height: 1px;
+    background: var(--cyan);
+  }
+  .angle-title {
+    font-weight: 600;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 8px;
+    padding: 0.04em 0;
+  }
+  .angle-subtitle {
+    font-size: 17px;
+    color: var(--text-muted);
+    max-width: 720px;
+    line-height: 1.55;
+  }
+
+  /* Fear + Reframe two-up */
+  .angle-twoup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .twoup-cell {
+    padding: 44px 48px;
+    border-right: 1px solid var(--rule-soft);
+    position: relative;
+  }
+  .twoup-cell:last-child { border-right: 0; }
+  .twoup-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .twoup-label::before {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+  .twoup-cell.fear { background: linear-gradient(135deg, rgba(239,68,68,0.06) 0%, transparent 60%); }
+  .twoup-cell.fear .twoup-label { color: var(--block); }
+  .twoup-cell.fear .twoup-label::before { background: var(--block); }
+  .twoup-cell.reframe { background: linear-gradient(135deg, rgba(34,197,94,0.05) 0%, transparent 60%); }
+  .twoup-cell.reframe .twoup-label { color: var(--approve); }
+  .twoup-cell.reframe .twoup-label::before { background: var(--approve); }
+
+  .twoup-quote {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+  .twoup-quote.italic { font-style: italic; font-weight: 400; }
+  .twoup-foot {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  /* Headlines block */
+  .headlines {
+    padding: 48px 56px 56px;
+  }
+  .headlines-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .headlines-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    font-weight: 500;
+  }
+  .headlines-meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-subtle);
+  }
+  .headlines-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .headline-card {
+    background: var(--surface-2);
+    border: 1px solid var(--rule-soft);
+    border-radius: 4px;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    color: inherit;
+  }
+  .headline-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(45,91,255,0.40);
+    background: var(--surface-elev);
+  }
+  .headline-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .headline-pub {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #BFDFFF;
+    background: rgba(31,182,255,0.10);
+    border: 1px solid rgba(31,182,255,0.28);
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  .headline-date {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-subtle);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .headline-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text);
+    letter-spacing: -0.005em;
+  }
+  .headline-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #7EA4FF;
+    font-weight: 500;
+    margin-top: 4px;
+  }
+  .headline-cta::after {
+    content: '→';
+    transition: transform 0.2s ease;
+  }
+  .headline-card:hover .headline-cta::after { transform: translateX(4px); }
+
+  /* Pitch deployment closer (per angle) */
+  .deploy {
+    padding: 28px 56px 40px;
+    background: var(--surface-2);
+    border-top: 1px solid var(--rule-soft);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .deploy-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--magenta);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .deploy-text {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  /* Footer */
+  .closer {
+    margin-bottom: 80px;
+    padding: 80px 64px;
+    background: linear-gradient(135deg, var(--ink-2) 0%, var(--ink-3) 100%);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+  }
+  .closer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(31,182,255,0.12), transparent 50%),
+      radial-gradient(ellipse at 100% 100%, rgba(162,75,255,0.14), transparent 50%);
+    pointer-events: none;
+  }
+  .closer-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 28px;
+    position: relative;
+    font-weight: 500;
+  }
+  .closer-statement {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    max-width: 920px;
+    position: relative;
+    margin-bottom: 32px;
+  }
+  .closer-sequence {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  .seq-chip {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--rule-soft);
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+  .seq-chip strong { color: var(--cyan); margin-right: 8px; }
+  .seq-arrow {
+    color: var(--text-subtle);
+    font-family: var(--font-mono);
+  }
+
+  /* Footer line */
+  footer.foot {
+    padding: 32px 0 64px;
+    text-align: center;
+    color: var(--text-subtle);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ===== PRESSURE DIAGRAM ===== */
+  .pressure-section { margin-bottom: 120px; }
+
+  .pressure-head {
+    margin-bottom: 40px;
+    max-width: 820px;
+  }
+  .pressure-head .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .pressure-head .eyebrow::before {
+    content: '';
+    width: 36px; height: 1px;
+    background: var(--cyan);
+  }
+  .pressure-head h2 {
+    font-weight: 600;
+    font-size: clamp(32px, 4.2vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 16px;
+    padding: 0.04em 0;
+  }
+  .pressure-head p {
+    font-size: 17px;
+    color: var(--text-muted);
+    max-width: 720px;
+    line-height: 1.6;
+  }
+
+  .pressure-stage {
+    background: var(--surface);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    box-shadow: var(--shadow-xl);
+    padding: 56px 56px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pressure-stage::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #2D5BFF 0%, #5B2DFF 50%, #EF4444 100%);
+  }
+
+  /* TOP — Board */
+  .ps-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+  .ps-board-cluster {
+    display: flex;
+    align-items: center;
+    gap: -10px;
+  }
+  .ps-board-cluster > * { margin-left: -10px; }
+  .ps-board-cluster > *:first-child { margin-left: 0; }
+
+  .ps-figure {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .ps-figure.board {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, #2D5BFF 0%, #5B2DFF 100%);
+    box-shadow: 0 6px 20px rgba(45,91,255,0.35), 0 0 0 4px var(--surface);
+  }
+  .ps-figure.board svg { width: 28px; height: 28px; }
+
+  .ps-figure.cto {
+    width: 96px; height: 96px;
+    background: linear-gradient(135deg, #475569 0%, #94A3B8 100%);
+    box-shadow:
+      0 8px 24px rgba(0,0,0,0.40),
+      0 -10px 28px rgba(45,91,255,0.35),
+      10px 0 28px rgba(239,68,68,0.35);
+    border: 2px solid rgba(255,255,255,0.10);
+  }
+  .ps-figure.cto svg { width: 48px; height: 48px; }
+
+  .ps-figure.ciso {
+    width: 72px; height: 72px;
+    background: linear-gradient(135deg, #EF4444 0%, #B91C1C 100%);
+    box-shadow: 0 6px 20px rgba(239,68,68,0.40), 0 0 0 4px var(--surface);
+  }
+  .ps-figure.ciso svg { width: 36px; height: 36px; }
+
+  .ps-role-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+  }
+  .ps-role-label.board { color: #7BABFF; }
+  .ps-role-label.cto { color: var(--text); }
+  .ps-role-label.ciso { color: #FCA5A5; }
+
+  .ps-role-sub {
+    font-size: 12px;
+    color: var(--text-subtle);
+    font-style: italic;
+    text-align: center;
+    margin-top: -6px;
+  }
+
+  /* Speech bubble */
+  .ps-bubble {
+    background: linear-gradient(135deg, #2D5BFF 0%, #5B2DFF 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 28px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(45,91,255,0.30), inset 0 1px 0 rgba(255,255,255,0.20);
+    position: relative;
+  }
+  .ps-bubble.danger {
+    background: linear-gradient(135deg, #EF4444 0%, #B91C1C 100%);
+    box-shadow: 0 8px 24px rgba(239,68,68,0.30), inset 0 1px 0 rgba(255,255,255,0.20);
+  }
+  .ps-bubble.board-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; left: 50%;
+    transform: translateX(-50%);
+    width: 0; height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #5B2DFF;
+  }
+
+  /* Big arrow */
+  .ps-arrow-major {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7BABFF;
+  }
+  .ps-arrow-major svg { width: 36px; height: 56px; }
+
+  /* MIDDLE — CTO  ←  Dangers + CISO */
+  .ps-middle {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 28px;
+    align-items: center;
+    margin: 12px 0 24px;
+  }
+
+  .ps-cto-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 36px 24px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow:
+      inset 0 0 0 1px rgba(255,255,255,0.03),
+      0 -8px 28px rgba(45,91,255,0.12),
+      8px 0 28px rgba(239,68,68,0.12);
+    position: relative;
+  }
+
+  /* Pressure indicator stripes on the CTO zone edges */
+  .ps-cto-zone::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #2D5BFF 50%, transparent);
+    border-radius: 14px 14px 0 0;
+    opacity: 0.65;
+  }
+  .ps-cto-zone::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; right: -1px;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, #EF4444 50%, transparent);
+    border-radius: 0 14px 14px 0;
+    opacity: 0.65;
+  }
+
+  /* Squeeze arrows pointing LEFT into the CTO */
+  .ps-squeeze-arrows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    color: #EF4444;
+  }
+  .ps-squeeze-arrows svg { width: 40px; height: 14px; }
+
+  /* Right side: dangers + CISO */
+  .ps-right-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    min-width: 240px;
+  }
+  .ps-dangers {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+  }
+  .ps-danger-chip {
+    background: rgba(239,68,68,0.10);
+    border: 1px solid rgba(239,68,68,0.32);
+    color: #FCA5A5;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.3;
+  }
+  .ps-danger-chip svg {
+    width: 16px; height: 16px;
+    flex-shrink: 0;
+    color: #EF4444;
+  }
+  .ps-ciso-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-top: 6px;
+  }
+
+  /* BOTTOM — Resolution */
+  .ps-resolution {
+    margin-top: 36px;
+    padding-top: 32px;
+    border-top: 1px dashed rgba(34,197,94,0.40);
+    display: flex;
+    justify-content: center;
+  }
+  .ps-resolution-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, rgba(34,197,94,0.16) 0%, rgba(34,197,94,0.04) 100%);
+    border: 1px solid rgba(34,197,94,0.45);
+    padding: 16px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #4ADE80;
+    box-shadow: 0 4px 16px rgba(34,197,94,0.12), inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+  .ps-resolution-badge svg {
+    width: 20px; height: 20px;
+    color: #22C55E;
+  }
+
+  /* ===== VISUAL GRAPHICS ===== */
+  .vis-stage {
+    margin-bottom: 28px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 20px 0 8px;
+    position: relative;
+  }
+
+  /* white rounded chip that wraps each logo */
+  .logo-chip {
+    background: #FFFFFF;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.40), 0 2px 4px rgba(0,0,0,0.30);
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  }
+  .logo-chip:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.50); }
+  .logo-chip img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .logo-chip.sm  { width: 52px; height: 52px; padding: 9px;  border-radius: 11px; }
+  .logo-chip.md  { width: 64px; height: 64px; padding: 11px; border-radius: 13px; }
+  .logo-chip.lg  { width: 84px; height: 84px; padding: 14px; border-radius: 16px; }
+  .logo-chip.xl  { width: 110px; height: 110px; padding: 18px; border-radius: 20px; }
+  .logo-chip.neuralseek {
+    background: linear-gradient(135deg, #1F1C28 0%, #2A2638 100%);
+    box-shadow: 0 0 0 1px rgba(31,182,255,0.30), 0 12px 32px rgba(45,91,255,0.30), 0 24px 48px rgba(91,45,255,0.20);
+  }
+
+  /* logo row layouts */
+  .vis-row {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .vis-row.tight { gap: 12px; }
+  .vis-row.wide  { gap: 28px; }
+
+  /* arrows: down (multi-row converging) */
+  .vis-arrows-down {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2px;
+  }
+  .vis-arrows-down svg { width: 16px; height: 28px; display: block; }
+
+  /* target / center circles */
+  .target-circle {
+    width: 78px; height: 78px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 36px;
+    font-weight: 600;
+    position: relative;
+  }
+  .target-circle.danger {
+    background: radial-gradient(circle at 30% 30%, rgba(239,68,68,0.35), rgba(239,68,68,0.10));
+    border: 2px dashed rgba(239,68,68,0.65);
+    color: #FCA5A5;
+    box-shadow: 0 0 0 1px rgba(239,68,68,0.25), 0 0 48px rgba(239,68,68,0.20);
+  }
+  .target-circle.danger::before {
+    content: ''; position: absolute; inset: -8px;
+    border-radius: 50%;
+    border: 1px solid rgba(239,68,68,0.18);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.10); opacity: 0.2; }
+  }
+
+  /* lock overlay on a chip */
+  .chip-wrap-lock {
+    position: relative;
+    display: inline-block;
+  }
+  .lock-badge {
+    position: absolute;
+    bottom: -10px; right: -10px;
+    width: 38px; height: 38px;
+    background: linear-gradient(135deg, #EF4444 0%, #B91C1C 100%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 12px rgba(239,68,68,0.55), 0 0 0 3px var(--surface);
+  }
+  .lock-badge svg { width: 18px; height: 18px; color: #fff; }
+
+  /* big single logo lockup */
+  .vis-single {
+    display: flex; align-items: center; gap: 32px;
+  }
+  .vis-single .arrow-fade {
+    font-family: var(--font-mono);
+    color: var(--text-subtle);
+    font-size: 28px;
+    letter-spacing: 0.05em;
+  }
+  .vis-single .chip-faded {
+    opacity: 0.35;
+    filter: grayscale(0.6);
+  }
+
+  /* swap-arrows badge between two clusters */
+  .swap-badge {
+    width: 64px; height: 64px;
+    background: linear-gradient(135deg, var(--indigo) 0%, var(--magenta) 100%);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 24px rgba(91,45,255,0.40), 0 0 0 1px rgba(162,75,255,0.40);
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .swap-badge svg { width: 28px; height: 28px; }
+
+  /* flow visual: source → arrow → destination */
+  .vis-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    width: 100%;
+  }
+  .vis-flow .cluster {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .vis-flow .cluster.two-col { grid-template-columns: repeat(2, auto); }
+  .vis-flow-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  .vis-flow-arrow .line {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(239,68,68,0.55) 25%, rgba(239,68,68,0.85) 75%, rgba(239,68,68,1) 100%);
+    position: relative;
+  }
+  .vis-flow-arrow .line::after {
+    content: '';
+    position: absolute;
+    right: -1px; top: 50%;
+    width: 0; height: 0;
+    border-left: 8px solid rgba(239,68,68,1);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    transform: translateY(-50%);
+  }
+  .vis-flow-arrow.safe .line {
+    background: linear-gradient(90deg, transparent 0%, rgba(31,182,255,0.55) 25%, rgba(31,182,255,0.85) 75%, rgba(31,182,255,1) 100%);
+  }
+  .vis-flow-arrow.safe .line::after {
+    border-left-color: rgba(31,182,255,1);
+  }
+
+  /* perimeter / firewall box */
+  .perimeter {
+    position: relative;
+    padding: 24px 28px 24px 28px;
+    border: 2px dashed rgba(34,197,94,0.55);
+    border-radius: 14px;
+    background:
+      radial-gradient(ellipse at center, rgba(34,197,94,0.06) 0%, transparent 70%);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    box-shadow: 0 0 0 1px rgba(34,197,94,0.10) inset, 0 0 48px rgba(34,197,94,0.10);
+  }
+  .perimeter-label {
+    position: absolute;
+    top: -12px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface);
+    padding: 2px 12px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: #4ADE80;
+    border: 1px solid rgba(34,197,94,0.50);
+    border-radius: 3px;
+    font-weight: 600;
+  }
+  .perimeter-side {
+    position: relative;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: center;
+  }
+  .vis-outside-row {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    opacity: 0.5;
+    filter: grayscale(0.3);
+  }
+  .vis-outside-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-top: 14px;
+  }
+
+  /* connecting lines under hub layout */
+  .vis-hub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+  .vis-hub .hub-rays {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+  }
+  .vis-hub .hub-rays::before {
+    content: '';
+    position: absolute;
+    top: -12px; left: 20%; right: 20%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(31,182,255,0.50), rgba(91,45,255,0.50), rgba(162,75,255,0.50), transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .page { padding: 0 24px; }
+    header.masthead { padding: 20px 24px; }
+    .overview-grid { grid-template-columns: 1fr; }
+    .overview-col { border-right: 0; border-bottom: 1px solid var(--rule-soft); }
+    .overview-col:last-child { border-bottom: 0; }
+    .angle-head { padding: 40px 28px 32px; }
+    .angle-twoup { grid-template-columns: 1fr; }
+    .twoup-cell { border-right: 0; border-bottom: 1px solid var(--rule-soft); padding: 32px 28px; }
+    .twoup-cell:last-child { border-bottom: 0; }
+    .headlines { padding: 36px 28px 40px; }
+    .headlines-grid { grid-template-columns: 1fr; }
+    .deploy { padding: 24px 28px 32px; flex-direction: column; align-items: flex-start; }
+    .closer { padding: 48px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead-bar">
+  <header class="masthead">
+    <div class="wordmark"><div class="wordmark-dot"></div>NeuralSeek</div>
+    <div class="meta-line">
+      <span>CTO / CISO Playbook</span>
+      <span>v1.0 · May 2026</span>
+    </div>
+  </header>
+</div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">Sales Enablement · Three Angles</div>
+    <h1>Three angles to win the CTO and CISO room.</h1>
+    <p class="hero-lede">
+      Every CTO and CISO conversation about AI in 2026 maps to one of three private fears.
+      Each fear unlocks a different reframe — and each reframe is backed by a market story
+      already making headlines. Open with the angle that matches the room.
+    </p>
+  </section>
+
+  <!-- PRESSURE DIAGRAM — the buyer's world -->
+  <section class="pressure-section">
+    <div class="pressure-head">
+      <div class="eyebrow">The Buyer's World</div>
+      <h2>The CTO is squeezed from two sides.</h2>
+      <p>
+        Above them, the Board is pushing for AI fast. From their right, the CISO is showing them
+        every way AI can blow up the company. NeuralSeek is the one platform that satisfies
+        both forces at the same time.
+      </p>
+    </div>
+
+    <div class="pressure-stage">
+
+      <!-- TOP: The Board pushing down -->
+      <div class="ps-top">
+        <div class="ps-board-cluster">
+          <div class="ps-figure board">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 21 a8 8 0 0 1 16 0"/>
+            </svg>
+          </div>
+          <div class="ps-figure board">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 21 a8 8 0 0 1 16 0"/>
+            </svg>
+          </div>
+          <div class="ps-figure board">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 21 a8 8 0 0 1 16 0"/>
+            </svg>
+          </div>
+        </div>
+        <div class="ps-role-label board">The Board</div>
+        <div class="ps-bubble board-bubble">"Ship AI now. Don't fall behind."</div>
+      </div>
+
+      <!-- Big down arrow -->
+      <div class="ps-arrow-major">
+        <svg viewBox="0 0 36 56" fill="none">
+          <path d="M18 4 V44 M6 34 L18 50 L30 34" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- MIDDLE: CTO  ←  Dangers  +  CISO -->
+      <div class="ps-middle">
+
+        <!-- CTO zone (the squeezed one) -->
+        <div class="ps-cto-zone">
+          <div class="ps-figure cto">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="7" r="4"/>
+              <path d="M5 21 v-2 a4 4 0 0 1 4 -4 h6 a4 4 0 0 1 4 4 v2"/>
+            </svg>
+          </div>
+          <div class="ps-role-label cto">The CTO</div>
+          <div class="ps-role-sub">caught in the middle</div>
+        </div>
+
+        <!-- Squeeze arrows pointing LEFT toward the CTO -->
+        <div class="ps-squeeze-arrows">
+          <svg viewBox="0 0 40 14" fill="none"><path d="M36 7 H4 M13 1 L4 7 L13 13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg viewBox="0 0 40 14" fill="none"><path d="M36 7 H4 M13 1 L4 7 L13 13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg viewBox="0 0 40 14" fill="none"><path d="M36 7 H4 M13 1 L4 7 L13 13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg viewBox="0 0 40 14" fill="none"><path d="M36 7 H4 M13 1 L4 7 L13 13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg viewBox="0 0 40 14" fill="none"><path d="M36 7 H4 M13 1 L4 7 L13 13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <!-- Right side: Dangers stack + CISO -->
+        <div class="ps-right-zone">
+          <div class="ps-dangers">
+            <div class="ps-danger-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L22 20 H2 z"/><line x1="12" y1="9" x2="12" y2="14"/><circle cx="12" cy="17.5" r="0.6" fill="currentColor"/></svg>
+              AI gives wrong answers
+            </div>
+            <div class="ps-danger-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L22 20 H2 z"/><line x1="12" y1="9" x2="12" y2="14"/><circle cx="12" cy="17.5" r="0.6" fill="currentColor"/></svg>
+              Customer data leaks
+            </div>
+            <div class="ps-danger-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L22 20 H2 z"/><line x1="12" y1="9" x2="12" y2="14"/><circle cx="12" cy="17.5" r="0.6" fill="currentColor"/></svg>
+              AI bills spike unexpectedly
+            </div>
+            <div class="ps-danger-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L22 20 H2 z"/><line x1="12" y1="9" x2="12" y2="14"/><circle cx="12" cy="17.5" r="0.6" fill="currentColor"/></svg>
+              Hackers attack through AI
+            </div>
+            <div class="ps-danger-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L22 20 H2 z"/><line x1="12" y1="9" x2="12" y2="14"/><circle cx="12" cy="17.5" r="0.6" fill="currentColor"/></svg>
+              Regulators come knocking
+            </div>
+          </div>
+          <div class="ps-ciso-stack">
+            <div class="ps-figure ciso">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2 L4 6 v5 c0 5 3.5 9.5 8 11 c4.5 -1.5 8 -6 8 -11 v-5 z"/>
+                <path d="M9 12 L11 14 L15 10"/>
+              </svg>
+            </div>
+            <div class="ps-role-label ciso">The CISO</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM: Resolution badge -->
+      <div class="ps-resolution">
+        <div class="ps-resolution-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12 L10 17 L19 7"/></svg>
+          NeuralSeek is the one platform that satisfies both forces.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="overview">
+    <div class="overview-head">
+      <div class="label">At a Glance</div>
+      <h2>Buyer's private fear → The reframe</h2>
+    </div>
+    <div class="overview-grid">
+
+      <div class="overview-col">
+        <div class="col-num">Angle 01</div>
+        <div class="col-title">AI Advisement<br>(Trusted Advisor)</div>
+        <div class="col-block fear">
+          <div class="col-block-label">Private fear</div>
+          <div class="fear-text">"I don't know who to trust."</div>
+        </div>
+        <div class="col-block reframe">
+          <div class="col-block-label">The reframe</div>
+          <div class="reframe-text">Every party in the room is conflicted — except the LLM-agnostic platform.</div>
+        </div>
+      </div>
+
+      <div class="overview-col">
+        <div class="col-num">Angle 02</div>
+        <div class="col-title">Safety &amp;<br>Long-Term Vision</div>
+        <div class="col-block fear">
+          <div class="col-block-label">Private fear</div>
+          <div class="fear-text">"I'll be the one who gets fired in 3 years."</div>
+        </div>
+        <div class="col-block reframe">
+          <div class="col-block-label">The reframe</div>
+          <div class="reframe-text">LLM choice should be reversible, not permanent.</div>
+        </div>
+      </div>
+
+      <div class="overview-col">
+        <div class="col-num">Angle 03</div>
+        <div class="col-title">Knowledge<br>Protection</div>
+        <div class="col-block fear">
+          <div class="col-block-label">Private fear</div>
+          <div class="fear-text">"Our institutional knowledge is migrating to our vendors."</div>
+        </div>
+        <div class="col-block reframe">
+          <div class="col-block-label">The reframe</div>
+          <div class="reframe-text">Custom AI either protects your knowledge or hands it to the consultant.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ANGLE 01 -->
+  <section class="angle" id="angle-1">
+    <div class="angle-head">
+      <div class="angle-num">Angle 01 · AI Advisement</div>
+      <h2 class="angle-title">Sell trusted-advisor positioning.</h2>
+      <p class="angle-subtitle">
+        The CTO/CISO is drowning in AI pitches. Their internal engineers, their consultants,
+        and their LLM vendors all have a financial reason to mislead them. Earn the room by
+        being the only party that doesn't.
+      </p>
+    </div>
+
+    <div class="angle-twoup">
+      <div class="twoup-cell fear">
+        <div class="twoup-label">Buyer's private fear</div>
+
+        <!-- VISUAL: conflicted vendors converging on the buyer -->
+        <div class="vis-stage">
+          <div class="vis-row">
+            <div class="logo-chip md"><img src="assets/openai.webp" alt="" /></div>
+            <div class="logo-chip md"><img src="assets/anthropic.png" alt="" /></div>
+            <div class="logo-chip md"><img src="assets/gemini.png" alt="" /></div>
+            <div class="logo-chip md"><img src="assets/copilot_icon.png" alt="" /></div>
+          </div>
+          <div class="vis-arrows-down">
+            <svg viewBox="0 0 16 28" fill="none"><path d="M8 0 L8 22 M2 16 L8 26 L14 16" stroke="rgba(239,68,68,0.65)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 16 28" fill="none"><path d="M8 0 L8 22 M2 16 L8 26 L14 16" stroke="rgba(239,68,68,0.65)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 16 28" fill="none"><path d="M8 0 L8 22 M2 16 L8 26 L14 16" stroke="rgba(239,68,68,0.65)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 16 28" fill="none"><path d="M8 0 L8 22 M2 16 L8 26 L14 16" stroke="rgba(239,68,68,0.65)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="target-circle danger">?</div>
+        </div>
+
+        <div class="twoup-quote italic">"I don't know who to trust."</div>
+        <div class="twoup-foot">
+          Internal engineers protect headcount. Consultants take kickbacks from whichever
+          LLM is paying that quarter. LLM vendors push their own model into the stack so
+          deep it can't be swapped. Every voice is conflicted.
+        </div>
+      </div>
+      <div class="twoup-cell reframe">
+        <div class="twoup-label">The reframe</div>
+
+        <!-- VISUAL: NeuralSeek as the neutral hub, every LLM is a swap-in option -->
+        <div class="vis-stage">
+          <div class="logo-chip xl neuralseek"><img src="assets/neuralseek_colored_just_logo.png" alt="" /></div>
+          <div class="vis-hub">
+            <div class="hub-rays">
+              <div class="logo-chip sm"><img src="assets/openai.webp" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/anthropic.png" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/gemini.png" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/meta.png" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/mistral.png" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/xai.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="twoup-quote">Every party in the room is conflicted — except the LLM-agnostic platform.</div>
+        <div class="twoup-foot">
+          NeuralSeek runs every major LLM. We have zero financial incentive to push you
+          toward one provider. That's why CTOs at regulated enterprises text us as
+          advisors, not as customers.
+        </div>
+      </div>
+    </div>
+
+    <div class="headlines">
+      <div class="headlines-head">
+        <div class="headlines-label">Market signal · Why this lands now</div>
+        <div class="headlines-meta">4 recent headlines</div>
+      </div>
+      <div class="headlines-grid">
+
+        <a class="headline-card" href="https://fortune.com/2026/05/04/anthropic-claude-consulting-industry-joint-venture-blackstone-goldman-sachs/" target="_blank" rel="noopener">
+          <div class="headline-meta">
+            <div class="headline-pub">Fortune</div>
+            <div class="headline-date">May 2026</div>
+          </div>
+          <div class="headline-title">Anthropic takes shot at consulting industry in joint venture with Wall Street giants</div>
+          <div class="headline-cta">Read article</div>
+        </a>
+
+        <a class="headline-card" href="https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/" target="_blank" rel="noopener">
+          <div class="headline-meta">
+            <div class="headline-pub">TechCrunch</div>
+            <div class="headline-date">May 2026</div>
+          </div>
+          <div class="headline-title">Anthropic and OpenAI are both launching joint ventures for enterprise AI services</div>
+          <div class="headline-cta">Read article</div>
+        </a>
+
+        <a class="headline-card" href="https://techcrunch.com/2026/02/23/openai-calls-in-the-consultants-for-its-enterprise-push/" target="_blank" rel="noopener">
+          <div class="headline-meta">
+            <div class="headline-pub">TechCrunch</div>
+            <div class="headline-date">Feb 2026</div>
+          </div>
+          <div class="headline-title">OpenAI calls in the consultants for its enterprise push</div>
+          <div class="headline-cta">Read article</div>
+        </a>
+
+        <a class="headline-card" href="https://aibusiness.com/generative-ai/openai-launches-ai-consulting-company-anthropic" target="_blank" rel="noopener">
+          <div class="headline-meta">
+            <div class="headline-pub">AI Business</div>
+            <div class="headline-date">2026</div>
+          </div>
+          <div class="headline-title">OpenAI Launches AI Consulting Company, Following Anthropic</div>
+          <div class="headline-cta">Read article</div>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="deploy">
+      <div class="deploy-label">Deploy this when</div>
+      <div class="deploy-text">
+        The CTO mentions vendor-pitch fatigue, a stalled consulting RFP, or asks
+        an off-the-cuff "what do you actually think about [X LLM/vendor]?" — that's the moment to lead with trust, not product.
+      </div>
+    </div>
+  </section>
+
+  <!-- ANGLE 02 -->
+  <section class="angle" id="angle-2">
+    <div class="angle-head">
+      <div class="angle-num">Angle 02 · Safety &amp; Long-Term Vision</div>
+      <h2 class="angle-title">Sell career-safe, reversible architecture.</h2>
+      <p class="angle-subtitle">
+        The CTO/CISO isn't just managing technology risk — they're managing career risk.
+        The story that earns the deal tells them how they will <em>still be employed in 2029</em>
+        because of the architecture they picked today.
+      </p>
+    </div>
+
+    <div class="angle-twoup">
+      <div class="twoup-cell fear">
+        <div class="twoup-label">Buyer's private fear</div>
+
+        <!-- VISUAL: locked into one LLM provider, no escape -->
+        <div class="vis-stage">
+          <div class="vis-single">
+            <div class="chip-wrap-lock">
+              <div class="logo-chip xl"><img src="assets/openai.webp" alt="" /></div>
+              <div class="lock-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="11" width="16" height="10" rx="2"/>
+                  <path d="M8 11 V7 a4 4 0 0 1 8 0 v4"/>
+                </svg>
+              </div>
+            </div>
+            <div class="arrow-fade">→</div>
+            <div class="chip-wrap-lock">
+              <div class="logo-chip xl chip-faded"><img src="assets/openai.webp" alt="" /></div>
+              <div class="lock-badge" style="background:linear-gradient(135deg,#7f1d1d,#450a0a);box-shadow:0 4px 12px rgba(127,29,29,0.55),0 0 0 3px var(--surface);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="5" x2="19" y2="19"/>
+                  <line x1="19" y1="5" x2="5" y2="19"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="twoup-quote italic">"I'll be the one who gets fired in 3 years."</div>
+        <div class="twoup-foot">
+          LLM pricing doubles. Model behavior changes. A new attack vector emerges. The
+          vibe-coded build collapses at month 9. The CTO who approved the architecture is
+          updating their résumé.
+        </div>
+      </div>
+      <div class="twoup-cell reframe">
+        <div class="twoup-label">The reframe</div>
+
+        <!-- VISUAL: NeuralSeek center with swap arrows to interchangeable LLMs -->
+        <div class="vis-stage">
+          <div class="vis-row wide">
+            <div class="logo-chip lg neuralseek"><img src="assets/neuralseek_colored_just_logo.png" alt="" /></div>
+            <div class="swap-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 7 H17 M14 4 L17 7 L14 10"/>
+                <path d="M17 17 H7 M10 14 L7 17 L10 20"/>
+              </svg>
+            </div>
+            <div class="vis-row tight">
+              <div class="logo-chip md"><img src="assets/openai.webp" alt="" /></div>
+              <div class="logo-chip md"><img src="assets/anthropic.png" alt="" /></div>
+              <div class="logo-chip md"><img src="assets/gemini.png" alt="" /></div>
+              <div class="logo-chip md"><img src="assets/mistral.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="twoup-quote">LLM choice should be reversible, not permanent.</div>
+        <div class="twoup-foot">
+          NeuralSeek sits between your business and whoever is winning the LLM race that
+          quarter. Your business logic, workflows, and governance stay constant — the
+          model underneath swaps in two clicks.
+        </div>
+      </div>
+    </div>
+
+    <div class="headlines">
+      <div class="headlines-head">
+        <div class="headlines-label">Market signal · Why this lands now</div>
+        <div class="headlines-meta">4 recent headlines</div>
+      </div>
+      <div class="headlines-grid">
+
+        <a class="headline-card" href="https://www.cnbc.com/2026/04/17/ai-tokens-anthropic-openai-nvidia.html" target="_blank" rel="noopener">
+          <div class="headline-meta">
+            <div class="headline-pub">CNBC</div>
+            <div class="headline-date">Apr 2026</div>
+          </div>
+          <div class="headline-title">Perspective: AI demand is inflated, and only Anthropic is being realistic</div>
+          <div class="headline-cta">Read article</div>
+        </a>
+
+        <a class="headline-card" href="https://www.theregister.com/2026/04/07/ai_returns_gartner/" target="_blank" rel="noopener">
+          <div class="headline-meta">
+            <div class="headline-pub">The Register</div>
+            <div class="headline-date">Apr 2026</div>
+          </div>
+          <div class="headline-title">Only 28% of AI infrastructure projects fully pay off</div>
+          <div class="headline-cta">Read article</div>
+        </a>
+
+        <a class="headline-card" href="https://itbrief.news/story/anthropic-shifts-enterprise-billing-to-token-based-pricing" target="_blank" rel="noopener">
+          <div class="headline-meta">
+            <div class="headline-pub">IT Brief</div>
+            <div class="headline-date">2026</div>
+          </div>
+          <div class="headline-title">Anthropic shifts enterprise billing to token-based pricing</div>
+          <div class="headline-cta">Read article</div>
+        </a>
+
+        <a class="headline-card" href="https://searchengineland.com/gartner-40-of-agentic-ai-projects-will-fail-making-humans-indispensable-474695" target="_blank" rel="noopener">
+          <div class="headline-meta">
+            <div class="headline-pub">Search Engine Land</div>
+            <div class="headline-date">2026</div>
+          </div>
+          <div class="headline-title">Gartner: 40% of agentic AI projects will fail, making humans indispensable</div>
+          <div class="headline-cta">Read article</div>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="deploy">
+      <div class="deploy-label">Deploy this when</div>
+      <div class="deploy-text">
+        The prospect surfaces LLM pricing, model deprecation, or vendor stability — or right
+        after a public AI vendor news cycle (price hike, behavior change, lawsuit). Also the
+        right paragraph for the "Why NeuralSeek" section of a proposal.
+      </div>
+    </div>
+  </section>
+
+  <!-- ANGLE 03 -->
+  <section class="angle" id="angle-3">
+    <div class="angle-head">
+      <div class="angle-num">Angle 03 · Knowledge Protection</div>
+      <h2 class="angle-title">Sell the protection of the institutional moat.</h2>
+      <p class="angle-subtitle">
+        The deepest fear isn't "AI fails." It's "AI succeeds, the vendor owns the
+        implementation, and our company's competitive moat now lives on someone else's
+        server with someone else's renewal terms."
+      </p>
+    </div>
+
+    <div class="angle-twoup">
+      <div class="twoup-cell fear">
+        <div class="twoup-label">Buyer's private fear</div>
+
+        <!-- VISUAL: enterprise data systems flowing OUT to LLM vendors -->
+        <div class="vis-stage">
+          <div class="vis-flow">
+            <div class="cluster">
+              <div class="logo-chip sm"><img src="assets/salesforce.webp" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/databricks.png" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/snowflake.png" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/sharepoint.png" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/epic.webp" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/oracle.png" alt="" /></div>
+            </div>
+            <div class="vis-flow-arrow">
+              <div class="line"></div>
+            </div>
+            <div class="cluster two-col">
+              <div class="logo-chip md"><img src="assets/openai.webp" alt="" /></div>
+              <div class="logo-chip md"><img src="assets/anthropic.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="twoup-quote italic">"Our institutional knowledge is migrating to our vendors."</div>
+        <div class="twoup-foot">
+          Business logic ends up in the consultant's Notion. In a Stack Overflow thread.
+          In a comment from 2014 that says "don't touch this, the regulator will sue." The
+          next upgrade — they own it. You rent it back forever.
+        </div>
+      </div>
+      <div class="twoup-cell reframe">
+        <div class="twoup-label">The reframe</div>
+
+        <!-- VISUAL: enterprise data + NeuralSeek protected inside a perimeter; LLMs outside -->
+        <div class="vis-stage">
+          <div class="perimeter">
+            <div class="perimeter-label">Your Firewall</div>
+            <div class="perimeter-side">
+              <div class="logo-chip sm"><img src="assets/salesforce.webp" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/databricks.png" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/snowflake.png" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/sharepoint.png" alt="" /></div>
+              <div class="logo-chip sm"><img src="assets/epic.webp" alt="" /></div>
+            </div>
+            <div class="perimeter-side">
+              <div class="logo-chip lg neuralseek"><img src="assets/neuralseek_colored_just_logo.png" alt="" /></div>
+            </div>
+          </div>
+          <div class="vis-outside-row">
+            <div class="logo-chip sm"><img src="assets/openai.webp" alt="" /></div>
+            <div class="logo-chip sm"><img src="assets/anthropic.png" alt="" /></div>
+            <div class="logo-chip sm"><img src="assets/gemini.png" alt="" /></div>
+            <div class="logo-chip sm"><img src="assets/mistral.png" alt="" /></div>
+          </div>
+        </div>
+
+        <div class="twoup-quote">Custom AI either protects your knowledge or hands it to the consultant.</div>
+        <div class="twoup-foot">
+          Children's Health replaced a growing dependency on OpenAI consultants with
+          in-house skillsets — every line of logic stayed at Children's Health. Itochu's
+          workflows live on-prem, editable by their team, inside their firewall.
+        </div>
+      </div>
+    </div>
+
+    <div class="headlines">
+      <div class="headlines-head">
+        <div class="headlines-label">Market signal · Why this lands now</div>
+        <div class="headlines-meta">4 recent headlines</div>
+      </div>
+      <div class="headlines-grid">
+
+        <a class="headline-card" href="https://www.computing.co.uk/news/2026/ai/ey-cybersecurity-report-withdrawn-ai-hallucinations" target="_blank" rel="noopener">
+          <div class="headline-meta">
+            <div class="headline-pub">Computing</div>
+            <div class="headline-date">2026</div>
+          </div>
+          <div class="headline-title">EY cybersecurity report pulled after probe finds 'AI hallucinations'</div>
+          <div class="headline-cta">Read article</div>
+        </a>
+
+        <a class="headline-card" href="https://www.lawyer-monthly.com/2026/05/ey-ai-report-fake-citations/" target="_blank" rel="noopener">
+          <div class="headline-meta">
+            <div class="headline-pub">Lawyer Monthly</div>
+            <div class="headline-date">May 2026</div>
+          </div>
+          <div class="headline-title">EY Withdraws AI Report After Fake Citations Discovered as Corporate AI Oversight Comes Under Pressure</div>
+          <div class="headline-cta">Read article</div>
+        </a>
+
+        <a class="headline-card" href="https://restofworld.org/2026/government-ai-hallucinations-south-africa-deloitte/" target="_blank" rel="noopener">
+          <div class="headline-meta">
+            <div class="headline-pub">Rest of World</div>
+            <div class="headline-date">2026</div>
+          </div>
+          <div class="headline-title">Five times AI hallucinations embarrassed governments</div>
+          <div class="headline-cta">Read article</div>
+        </a>
+
+        <a class="headline-card" href="https://www.swfte.com/blog/avoid-ai-vendor-lock-in-enterprise-guide" target="_blank" rel="noopener">
+          <div class="headline-meta">
+            <div class="headline-pub">Swfte AI</div>
+            <div class="headline-date">2026</div>
+          </div>
+          <div class="headline-title">Breaking Free: How Enterprises Are Escaping AI Vendor Lock-in in 2026</div>
+          <div class="headline-cta">Read article</div>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="deploy">
+      <div class="deploy-label">Deploy this when</div>
+      <div class="deploy-text">
+        The prospect mentions a consulting RFP, an active vendor selection, or hears that
+        "OpenAI's enterprise team is pitching us." Also a strong renewal-season message —
+        and a board-meeting talking point for the CTO to defend a NeuralSeek investment.
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSER -->
+  <section class="closer">
+    <div class="closer-label">How to sequence all three in one call</div>
+    <div class="closer-statement">
+      Open with <span style="color:var(--cyan);">advisor</span>. Move into
+      <span style="color:#D69EFF;">knowledge</span>. Close with
+      <span style="color:#7BABFF;">safety</span>.
+    </div>
+    <div class="closer-sequence">
+      <div class="seq-chip"><strong>01</strong>Earn the trust</div>
+      <div class="seq-arrow">→</div>
+      <div class="seq-chip"><strong>02</strong>Surface the threat</div>
+      <div class="seq-arrow">→</div>
+      <div class="seq-chip"><strong>03</strong>Give them the defense</div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    Source · NeuralSeek Knowledge from Calls / 13-cto-ciso-selling-angles.md
+  </footer>
+
+</div>
+
+</body>
+</html>

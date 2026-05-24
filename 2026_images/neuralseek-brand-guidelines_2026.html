@@ -1,0 +1,2745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuralSeek — Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Foundation — dark-first (rolling purple canvas, brand v2.1) */
+    --ink: #0B1220;            /* legacy ink (deepest callout) */
+    --ink-2: #2A2638;           /* elevated dark surface (cards) */
+    --ink-3: #332F42;           /* higher elevation */
+    --nav-bg: #0B0A0F;          /* masthead / nav (slightly deeper than canvas) */
+
+    --canvas: #131316;          /* body canvas — receives rolling purple glow */
+    --surface: #2A2638;         /* primary card surface — purple-tinted, lifted */
+    --surface-2: #1F1C28;       /* recessed surface (table headers, code blocks) */
+    --surface-elev: #332F42;    /* highest card elevation */
+    --surface-light: #FFFFFF;   /* reserved for print/export light-mode */
+
+    --rule: rgba(255, 255, 255, 0.18);
+    --rule-soft: rgba(255, 255, 255, 0.12);
+
+    --text: rgba(255, 255, 255, 0.95);     /* primary text on dark */
+    --text-muted: rgba(255, 255, 255, 0.62);
+    --text-subtle: rgba(255, 255, 255, 0.45);
+
+    /* Logo-derived accents */
+    --cyan: #1FB6FF;
+    --trust-blue: #2D5BFF;
+    --indigo: #5B2DFF;
+    --magenta: #A24BFF;
+
+    /* Status — calibrated for dark canvas */
+    --approve: #22C55E;
+    --warn: #F59E0B;
+    --block: #EF4444;
+
+    /* Shadows — calibrated for dark canvas. Tuned deep enough that
+     * cards visibly float off the rolling purple base. */
+    --shadow-xs: 0 2px 4px rgba(0, 0, 0, 0.55);
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.50);
+    --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.52), 0 4px 8px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 32px 64px rgba(0, 0, 0, 0.60), 0 12px 24px rgba(0, 0, 0, 0.40);
+    --shadow-xl: 0 48px 96px rgba(0, 0, 0, 0.68), 0 20px 40px rgba(0, 0, 0, 0.46);
+    --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.10);
+    --shadow-glow-blue: 0 0 0 1px rgba(45, 91, 255, 0.25), 0 8px 24px rgba(45, 91, 255, 0.25), 0 24px 48px rgba(45, 91, 255, 0.18);
+    --shadow-glow-purple: 0 0 0 1px rgba(162, 75, 255, 0.28), 0 8px 24px rgba(162, 75, 255, 0.28), 0 24px 48px rgba(91, 45, 255, 0.20);
+
+    /* Brand gradient — rationed */
+    --gradient: linear-gradient(135deg, #1FB6FF 0%, #2D5BFF 35%, #5B2DFF 70%, #A24BFF 100%);
+
+    /* Title / accent gradients — always left → right, always start near-white */
+    --title-gradient: linear-gradient(90deg, #FDFEFF 0%, #7BABFF 100%);   /* Governance · Blue */
+    --title-gradient-pink: linear-gradient(90deg, #FDFEFF 0%, #E170FC 100%); /* Creation · Pink */
+
+    /* Action gradient — indigo → magenta */
+    --action-gradient: linear-gradient(135deg, #5B2DFF 0%, #A24BFF 100%);
+
+    /* Type */
+    --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-sans);
+    /* Brand v2.1 canvas — soft rolling gradient between #301E4C
+     * (deep regal purple) and #131316 (near-black base). Multiple
+     * overlapping radial blobs at varied positions produce an
+     * organic, "rolling" feel instead of a flat band of color. */
+    background-color: #131316;
+    background-image:
+      radial-gradient(ellipse 1100px 900px at 18% 8%, #301E4C 0%, transparent 55%),
+      radial-gradient(ellipse 900px 750px at 82% 26%, rgba(48, 30, 76, 0.72), transparent 55%),
+      radial-gradient(ellipse 1300px 850px at 8% 72%, rgba(48, 30, 76, 0.55), transparent 60%),
+      radial-gradient(ellipse 1050px 900px at 92% 96%, #301E4C 0%, transparent 55%),
+      radial-gradient(ellipse 800px 600px at 50% 50%, rgba(48, 30, 76, 0.18), transparent 70%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--text);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection { background: rgba(91, 45, 255, 0.35); color: #fff; }
+
+  /* GRADIENT TEXT UTILITIES — apply to important phrases
+     Always left → right. Left stop is always #FDFEFF (near-white).
+     Blue variant (default) = governance · system phrases.
+     Pink variant            = creation · generative phrases.
+     Use ONE per heading or statement. Never two in the same line. */
+  .gradient-text {
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    /* preserves inheritance of font-weight, size, line-height from parent */
+  }
+
+  .gradient-text.pink,
+  .gradient-text-pink {
+    background: var(--title-gradient-pink);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  ::-webkit-scrollbar { width: 12px; height: 12px; }
+  ::-webkit-scrollbar-track { background: var(--ink); }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 6px; border: 3px solid var(--ink); }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
+
+  .page {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 56px;
+  }
+
+  /* HEADER */
+  .masthead-bar {
+    background: var(--nav-bg);
+    color: var(--text);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.04), var(--shadow-md);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: 80px;
+  }
+
+  header.masthead {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 28px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0;
+  }
+
+  .wordmark {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+
+  .meta-line {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    display: flex;
+    gap: 24px;
+  }
+
+  .meta-line span::before {
+    content: '';
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    margin-right: 8px;
+    transform: translateY(-1px);
+  }
+
+  /* HERO */
+  .hero { margin-bottom: 120px; }
+
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 36px; height: 1px;
+    background: var(--cyan);
+  }
+
+  .hero h1 {
+    font-weight: 600;
+    font-size: clamp(48px, 6.5vw, 84px);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 40px;
+    padding: 0.08em 0;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    align-items: end;
+    margin-top: 48px;
+  }
+
+  .hero-lede {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    font-weight: 400;
+    max-width: 560px;
+  }
+
+  .hero-meta {
+    display: grid;
+    gap: 18px;
+    padding: 28px 32px;
+    background: var(--surface);
+    border-radius: 4px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--rule-soft);
+  }
+
+  .hero-meta-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+
+  .hero-meta-row span:first-child {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-subtle);
+  }
+
+  .hero-meta-row span:last-child {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* SECTION */
+  section { margin-bottom: 120px; }
+
+  .section-head {
+    margin-bottom: 56px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--rule-soft);
+    max-width: 820px;
+  }
+
+  .section-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-bottom: 16px;
+  }
+
+  .section-head h2 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 16px;
+    padding: 0.05em 0;
+  }
+
+  .section-head p {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 640px;
+    line-height: 1.6;
+  }
+
+  .subhead {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-bottom: 20px;
+    margin-top: 48px;
+    font-weight: 500;
+  }
+  .subhead:first-of-type { margin-top: 0; }
+
+  /* LOGO */
+  .logo-showcase {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 32px;
+  }
+
+  .logo-stage {
+    background: var(--surface);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    padding: 80px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    min-height: 480px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .logo-stage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(31,182,255,0.06), transparent 55%),
+      radial-gradient(ellipse at 80% 80%, rgba(162,75,255,0.07), transparent 55%);
+    pointer-events: none;
+  }
+
+  .logo-meta-stack { display: grid; gap: 16px; }
+
+  .logo-meta-card {
+    background: var(--surface);
+    border: 1px solid var(--rule-soft);
+    border-radius: 4px;
+    padding: 28px 32px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .logo-meta-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .logo-meta-card .label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .logo-meta-card .body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  .logo-meta-card .body strong {
+    font-weight: 700;
+    color: #7EA4FF;
+  }
+
+  /* COLOR */
+  .color-intro {
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 400;
+    max-width: 760px;
+    margin-bottom: 56px;
+    color: var(--text);
+  }
+  .color-intro strong {
+    font-weight: 700;
+    color: #7EA4FF;
+  }
+
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .swatch {
+    background: var(--surface);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--rule-soft);
+  }
+
+  .swatch:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .swatch-color { height: 200px; }
+
+  .swatch-info { padding: 22px 24px 26px; }
+
+  .swatch-name {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    letter-spacing: -0.005em;
+    color: var(--text);
+  }
+
+  .swatch-role {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+
+  .swatch-hex {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-muted);
+    padding-top: 12px;
+    border-top: 1px solid var(--rule-soft);
+  }
+
+  .swatch-grid-foundation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .swatch-foundation .swatch-color { height: 140px; }
+
+  .rule-card {
+    margin-top: 56px;
+    padding: 48px 56px;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rule-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gradient);
+  }
+
+  .rule-card .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .rule-card .quote {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+    margin-bottom: 28px;
+    color: var(--text);
+  }
+
+  .rule-card .quote .accent-blue { color: var(--cyan); }
+  .rule-card .quote .accent-purple { color: var(--magenta); }
+
+  .rule-card .body {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 720px;
+  }
+
+  /* TYPOGRAPHY */
+  .type-showcase { display: grid; gap: 24px; }
+
+  .type-card {
+    background: var(--surface);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    padding: 48px 56px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .type-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+
+  .type-card-name {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    font-weight: 500;
+  }
+
+  .type-card-role {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  .type-display {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--text);
+  }
+
+  .type-weights {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    margin-top: 24px;
+    border-top: 1px solid var(--rule-soft);
+  }
+
+  .type-weight {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .type-weight .label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    font-weight: 500;
+  }
+
+  .type-weight .sample {
+    font-size: 22px;
+    color: var(--text);
+  }
+
+  .type-sans-sample {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--text);
+    max-width: 720px;
+    font-weight: 400;
+  }
+
+  .type-mono-sample {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text);
+    background: var(--surface-2);
+    padding: 28px 32px;
+    border-radius: 4px;
+    border: 1px solid var(--rule-soft);
+    border-left: 3px solid var(--cyan);
+  }
+
+  .type-mono-sample .key { color: var(--text-subtle); }
+  .type-mono-sample .val { color: #BFDFFF; }
+
+  /* FONT SPEC CARD */
+  .font-spec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: var(--surface);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  .font-spec-col {
+    padding: 40px 44px;
+    position: relative;
+  }
+  .font-spec-col + .font-spec-col {
+    border-left: 1px solid var(--rule-soft);
+  }
+
+  .font-spec-col .role {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+
+  .font-spec-col .face-name {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .font-spec-col.mono .face-name {
+    font-family: var(--font-mono);
+    font-weight: 500;
+  }
+
+  .font-spec-col .face-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: 28px;
+    max-width: 440px;
+  }
+
+  .font-spec-row {
+    display: flex;
+    gap: 16px;
+    padding: 12px 0;
+    border-top: 1px solid var(--rule-soft);
+    font-size: 13px;
+    align-items: baseline;
+  }
+  .font-spec-row:last-child { padding-bottom: 0; }
+
+  .font-spec-row .k {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    flex: 0 0 110px;
+    font-weight: 500;
+    padding-top: 3px;
+  }
+
+  .font-spec-row .v {
+    color: var(--text);
+    flex: 1;
+    line-height: 1.55;
+  }
+
+  .font-spec-row .v code {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: #D69EFF;
+    background: rgba(162,75,255,0.12);
+    border: 1px solid rgba(162,75,255,0.20);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  .font-import-card {
+    margin-top: 24px;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    padding: 36px 40px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .font-import-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gradient);
+  }
+
+  .font-import-card .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+
+  .font-import-card .snippet {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.92);
+    background: rgba(255,255,255,0.04);
+    padding: 20px 24px;
+    border-radius: 4px;
+    border-left: 3px solid var(--cyan);
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  .font-import-card .snippet .tag { color: var(--cyan); }
+  .font-import-card .snippet .attr { color: var(--magenta); }
+  .font-import-card .snippet .str { color: #FFD580; }
+
+  @media (max-width: 900px) {
+    .font-spec { grid-template-columns: 1fr; }
+    .font-spec-col + .font-spec-col {
+      border-left: 0;
+      border-top: 1px solid var(--rule-soft);
+    }
+    .font-spec-col { padding: 28px 24px; }
+    .font-import-card { padding: 28px 24px; }
+    .font-spec-row { flex-direction: column; gap: 4px; }
+    .font-spec-row .k { flex: 0 0 auto; padding-top: 0; }
+  }
+
+  /* UI */
+  .ui-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .ui-card {
+    background: var(--surface);
+    border-radius: 6px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    border: 1px solid var(--rule-soft);
+  }
+
+  .ui-card-header {
+    padding: 20px 28px;
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--rule-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ui-card-header .title {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    font-weight: 500;
+  }
+
+  .ui-card-header .badge {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+    border-radius: 3px;
+    background: rgba(45,91,255,0.20);
+    color: #7EA4FF;
+    border: 1px solid rgba(45,91,255,0.35);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .ui-card-header .badge.purple {
+    background: rgba(162,75,255,0.20);
+    color: #D69EFF;
+    border: 1px solid rgba(162,75,255,0.35);
+  }
+
+  .ui-card-body { padding: 32px; }
+
+  .gov-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    font-size: 14px;
+  }
+  .gov-row:last-of-type { border: 0; }
+
+  .gov-row .name {
+    font-weight: 600;
+    color: var(--text);
+    font-size: 14px;
+  }
+  .gov-row .id {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-subtle);
+    margin-top: 2px;
+  }
+
+  .pill {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  .pill.approve { background: rgba(34,197,94,0.16); color: #4ADE80; border: 1px solid rgba(34,197,94,0.30); }
+  .pill.warn { background: rgba(245,158,11,0.16); color: #FBBF24; border: 1px solid rgba(245,158,11,0.30); }
+  .pill.block { background: rgba(239,68,68,0.16); color: #F87171; border: 1px solid rgba(239,68,68,0.30); }
+
+  .gov-cta {
+    margin-top: 24px;
+    background: var(--trust-blue);
+    color: white;
+    border: 0;
+    padding: 14px 24px;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.005em;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm), 0 4px 12px rgba(45,91,255,0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+    transition: all 0.2s ease;
+  }
+  .gov-cta:hover {
+    box-shadow: var(--shadow-md), 0 8px 20px rgba(45,91,255,0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+  }
+
+  .creative-prompt {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--text);
+    padding: 18px 0;
+    margin-bottom: 8px;
+  }
+
+  .creative-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+
+  .creative-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    border: 1px solid rgba(162,75,255,0.25);
+    color: #D69EFF;
+    background: rgba(162,75,255,0.08);
+  }
+
+  .creative-cta {
+    background: linear-gradient(135deg, var(--indigo), var(--magenta));
+    color: white;
+    border: 0;
+    padding: 14px 24px;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm), 0 4px 16px rgba(91,45,255,0.3), 0 8px 32px rgba(162,75,255,0.2), inset 0 1px 0 rgba(255,255,255,0.25);
+    transition: all 0.2s ease;
+  }
+  .creative-cta:hover {
+    box-shadow: var(--shadow-md), 0 8px 24px rgba(91,45,255,0.4), 0 16px 48px rgba(162,75,255,0.3), inset 0 1px 0 rgba(255,255,255,0.25);
+    transform: translateY(-1px);
+  }
+
+  /* DO / DON'T */
+  .principles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .principle {
+    background: var(--surface);
+    border-radius: 6px;
+    padding: 40px 44px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--rule-soft);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .principle::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+  }
+
+  .principle.do::before { background: var(--approve); }
+  .principle.dont::before { background: var(--block); }
+
+  .principle-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+  }
+
+  .principle.do .principle-label { color: var(--approve); }
+  .principle.dont .principle-label { color: var(--block); }
+
+  .principle-label::before {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+  .principle.do .principle-label::before { background: var(--approve); }
+  .principle.dont .principle-label::before { background: var(--block); }
+
+  .principle ul { list-style: none; }
+  .principle li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--text);
+    display: flex;
+    gap: 16px;
+  }
+  .principle li:last-child { border: 0; padding-bottom: 0; }
+
+  .principle li .num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-subtle);
+    flex-shrink: 0;
+    padding-top: 3px;
+    font-weight: 500;
+  }
+
+  /* POSITION */
+  .position-card {
+    padding: 80px 80px;
+    background: linear-gradient(135deg, var(--ink-2) 0%, var(--ink-3) 100%);
+    color: var(--text);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .position-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(31,182,255,0.12), transparent 50%),
+      radial-gradient(ellipse at 100% 100%, rgba(162,75,255,0.14), transparent 50%);
+    pointer-events: none;
+  }
+
+  .position-card .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 32px;
+    position: relative;
+    font-weight: 500;
+  }
+
+  .position-card .statement {
+    font-size: clamp(28px, 3.6vw, 48px);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+    position: relative;
+    max-width: 1000px;
+  }
+
+  .position-card .statement strong {
+    font-weight: 700;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .compliance-row {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    position: relative;
+  }
+
+  .compliance-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.55);
+  }
+
+  /* FOOTER */
+  .colophon-bar {
+    background: var(--nav-bg);
+    color: var(--text);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.04);
+    margin-top: 80px;
+  }
+
+  footer.colophon {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 56px 56px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    border-top: 0;
+  }
+
+  footer .colophon-title {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: var(--text);
+    text-transform: none;
+    letter-spacing: -0.005em;
+    font-weight: 600;
+  }
+
+  /* Entrance */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  section, header.masthead, .hero {
+    animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+
+  header.masthead { animation-delay: 0s; }
+  .hero { animation-delay: 0.08s; }
+
+  /* WORDMARK IMAGE */
+  .wordmark-img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+
+  /* LOGO IMAGE */
+  .logo-mark-image {
+    width: 260px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 24px 48px rgba(91, 45, 255, 0.22))
+            drop-shadow(0 8px 16px rgba(45, 91, 255, 0.12));
+  }
+
+  /* LOGO VARIATIONS */
+  .logo-variations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+  }
+
+  .logo-variation {
+    background: var(--surface);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .logo-variation:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+  }
+
+  .logo-variation .stage {
+    padding: 56px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+  }
+
+  .logo-variation.dark .stage { background: var(--ink); }
+  .logo-variation.canvas .stage { background: hsl(0, 0%, 94%); }
+  .logo-variation.surface .stage { background: #FFFFFF; }
+
+  .logo-variation .stage img {
+    max-width: 100%;
+    max-height: 90px;
+    object-fit: contain;
+  }
+
+  .logo-variation.mark-only .stage img {
+    max-height: 130px;
+  }
+
+  .logo-variation .info {
+    padding: 20px 24px 24px;
+    background: var(--surface);
+    border-top: 1px solid var(--rule-soft);
+  }
+
+  .logo-variation .info .name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+    letter-spacing: -0.005em;
+  }
+
+  .logo-variation .info .role {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    font-weight: 500;
+  }
+
+  /* PRODUCT CHROME — dark-mode default surface */
+  .chrome-stage {
+    background: radial-gradient(ellipse at 85% 18%, rgba(162,75,255,0.22), transparent 55%),
+                radial-gradient(ellipse at 10% 90%, rgba(45,91,255,0.10), transparent 55%),
+                linear-gradient(180deg, #0B1220 0%, #0E1530 100%);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(255,255,255,0.06);
+    position: relative;
+  }
+
+  .chrome-nav {
+    background: #05080F;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .chrome-nav .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 18px;
+    border-right: 1px solid rgba(255,255,255,0.10);
+    margin-right: 4px;
+  }
+
+  .chrome-nav .brand img { height: 18px; width: auto; display: block; }
+
+  .chrome-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    padding: 0; margin: 0;
+    flex: 1;
+  }
+
+  .chrome-nav li {
+    font-family: var(--font-sans);
+    font-size: 12.5px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: -0.005em;
+    padding: 4px 2px;
+    position: relative;
+  }
+
+  .chrome-nav li.active {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .chrome-nav .chrome-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .chrome-toggle {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    width: 44px; height: 22px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .chrome-toggle::after {
+    content: '';
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: var(--cyan);
+    position: absolute;
+    right: 3px;
+    box-shadow: 0 0 12px rgba(31,182,255,0.6);
+  }
+
+  .chrome-avatar {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .chrome-body { padding: 48px 56px 56px; }
+
+  .chrome-title {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 12px;
+    padding: 0.08em 0;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .chrome-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 28px;
+  }
+
+  .chrome-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(91,45,255,0.18);
+    border: 1px solid rgba(91,45,255,0.35);
+    color: rgba(255,255,255,0.85);
+    border-radius: 999px;
+    padding: 7px 16px 7px 14px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .chrome-pill::before {
+    content: '';
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #22C55E;
+    box-shadow: 0 0 8px rgba(34,197,94,0.7);
+  }
+
+  .chrome-pill .count {
+    color: var(--text);
+    font-weight: 600;
+    background: rgba(255,255,255,0.10);
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-left: 4px;
+  }
+
+  .chrome-searchbar {
+    margin-top: 32px;
+    display: flex;
+    gap: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .chrome-search-btn {
+    background: linear-gradient(135deg, var(--indigo), var(--magenta));
+    color: white;
+    border: 0;
+    padding: 9px 22px;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 13px;
+    box-shadow: 0 4px 16px rgba(91,45,255,0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+  }
+
+  .chrome-search-input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    color: rgba(255,255,255,0.5);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    padding: 0 8px;
+  }
+
+  .chrome-anatomy {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .chrome-anatomy .item {
+    background: var(--surface-elev);
+    border: 1px solid var(--rule-soft);
+    border-radius: 4px;
+    padding: 18px 20px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .chrome-anatomy .item .k {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .chrome-anatomy .item .v {
+    font-size: 13.5px;
+    color: var(--text);
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  /* ── CARD ELEVATION SECTION ─────────────────────────────────────
+   * Live demo of the brand v2.1 card system: three-tier surface
+   * ladder, a sample card with shadow + border + inset highlight,
+   * a spec table, and a copy-paste CSS snippet. */
+  .elev-ladder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 56px;
+  }
+  .elev-tier {
+    position: relative;
+    padding: 28px 28px 32px;
+    border-radius: 6px;
+    border: 1px solid var(--rule-soft);
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .elev-tier:hover { transform: translateY(-4px); }
+  .elev-canvas {
+    background: var(--canvas);
+    border-style: dashed;
+  }
+  .elev-surface {
+    background: var(--surface);
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.10);
+  }
+  .elev-elev {
+    background: var(--surface-elev);
+    box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.18);
+  }
+  .elev-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .elev-hex {
+    font-family: var(--font-mono);
+    font-size: 22px;
+    color: var(--text);
+    font-weight: 500;
+    margin-bottom: 16px;
+    letter-spacing: -0.005em;
+  }
+  .elev-role {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+
+  /* Demo card — shows the full anatomy with callouts */
+  .card-demo-stage {
+    background: transparent;
+    padding: 72px 56px;
+    border-radius: 6px;
+    position: relative;
+    margin-bottom: 56px;
+    border: 1px dashed rgba(255,255,255,0.08);
+  }
+  .card-demo {
+    position: relative;
+    max-width: 440px;
+    margin: 0 auto;
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    padding: 32px 36px 28px;
+    box-shadow:
+      0 12px 32px rgba(0,0,0,0.52),
+      0 4px 8px rgba(0,0,0,0.35),
+      inset 0 1px 0 rgba(255,255,255,0.10);
+  }
+  .card-demo-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .card-demo-title {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .card-demo-body {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin-bottom: 22px;
+  }
+  .card-demo-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .card-demo-pill {
+    background: rgba(34,197,94,0.16);
+    color: #4ADE80;
+    border: 1px solid rgba(34,197,94,0.30);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  .card-demo-id {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-subtle);
+  }
+  /* Callouts pointing at the four card layers */
+  .card-demo-callout {
+    position: absolute;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 5px 9px;
+    border-radius: 3px;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .card-demo-callout::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background: rgba(255,255,255,0.20);
+  }
+  .card-demo-callout-bg {
+    top: 50%;
+    left: -180px;
+    transform: translateY(-50%);
+  }
+  .card-demo-callout-bg::before { right: -36px; top: 50%; }
+  .card-demo-callout-border {
+    top: 18%;
+    right: -210px;
+  }
+  .card-demo-callout-border::before { left: -36px; top: 50%; }
+  .card-demo-callout-shadow {
+    bottom: -10px;
+    right: -200px;
+    transform: translateY(50%);
+  }
+  .card-demo-callout-shadow::before { left: -36px; top: 50%; }
+  .card-demo-callout-inset {
+    top: -10px;
+    left: -180px;
+    transform: translateY(-50%);
+  }
+  .card-demo-callout-inset::before { right: -36px; top: 50%; }
+  @media (max-width: 1100px) {
+    .card-demo-callout { display: none; }
+  }
+
+  /* Spec rows — same look as the font-spec rows for visual consistency */
+  .card-spec {
+    background: var(--surface);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    padding: 32px 40px;
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.10);
+  }
+  .card-spec-row {
+    display: flex;
+    gap: 24px;
+    padding: 14px 0;
+    border-top: 1px solid var(--rule-soft);
+    align-items: baseline;
+  }
+  .card-spec-row:first-child { padding-top: 0; border-top: 0; }
+  .card-spec-row .card-spec-k {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    flex: 0 0 160px;
+    font-weight: 500;
+    padding-top: 3px;
+  }
+  .card-spec-row .card-spec-v {
+    color: var(--text);
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .card-spec-row .card-spec-v code {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: #D69EFF;
+    background: rgba(162,75,255,0.12);
+    border: 1px solid rgba(162,75,255,0.20);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  @media (max-width: 900px) {
+    .elev-ladder { grid-template-columns: 1fr; }
+    .card-demo-stage { padding: 36px 16px; }
+    .card-spec { padding: 24px 22px; }
+    .card-spec-row { flex-direction: column; gap: 4px; }
+    .card-spec-row .card-spec-k { flex: 0 0 auto; padding-top: 0; }
+  }
+
+  /* CATEGORY STRIP */
+  .category-strip {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 40px 0 18px;
+  }
+  .category-strip:first-of-type { margin-top: 0; }
+
+  .category-strip .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .category-strip::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--trust-blue);
+    flex-shrink: 0;
+  }
+  .category-strip.purple::before { background: var(--magenta); }
+  .category-strip.cyan::before { background: var(--cyan); }
+  .category-strip.indigo::before { background: var(--indigo); }
+  .category-strip.warn::before { background: var(--warn); }
+  .category-strip.approve::before { background: var(--approve); }
+
+  .category-strip .rule {
+    flex: 1;
+    height: 1px;
+    background: var(--rule-soft);
+  }
+
+  .category-strip .count {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-subtle);
+    letter-spacing: 0.1em;
+    font-weight: 500;
+  }
+
+  /* NODE VOCABULARY — render the actual node UI as the brand asset */
+  .node-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .node-tile {
+    background: #FFFFFF;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--rule-soft);
+  }
+
+  .node-tile:hover {
+    box-shadow: var(--shadow-md), 0 0 0 1px rgba(45,91,255,0.35);
+    transform: translateY(-2px);
+  }
+
+  .node-tile img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* CONNECTORS */
+  .connector-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+  }
+
+  .connector-tile {
+    background: var(--surface);
+    border: 1px solid var(--rule-soft);
+    border-radius: 4px;
+    aspect-ratio: 1 / 1;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-xs);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .connector-tile::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: var(--ink);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 4px;
+    transform: translateY(100%);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .connector-tile:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    border-color: var(--rule);
+  }
+
+  .connector-tile:hover::after {
+    transform: translateY(0);
+  }
+
+  .connector-tile {
+    background: #FFFFFF;
+  }
+
+  .connector-tile img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    opacity: 1;
+    transition: all 0.25s ease;
+  }
+
+  .connector-tile:hover {
+    box-shadow: var(--shadow-md), 0 0 0 1px rgba(45,91,255,0.35);
+  }
+
+  /* INTEGRATIONS LAYOUT */
+  .integration-block {
+    background: var(--surface);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    padding: 40px 44px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 24px;
+  }
+
+  .integration-block h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.015em;
+    margin-bottom: 6px;
+  }
+
+  .integration-block p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 640px;
+  }
+
+  /* ECOSYSTEM SUMMARY (numbers) */
+  .ecosystem-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--rule-soft);
+    border-radius: 6px;
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    margin-top: 48px;
+    position: relative;
+  }
+
+  .ecosystem-stats::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gradient);
+  }
+
+  .stat-cell {
+    padding: 36px 32px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+  }
+  .stat-cell:last-child { border-right: 0; }
+
+  .stat-cell .label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+
+  .stat-cell .value {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .stat-cell .value .accent {
+    color: var(--cyan);
+  }
+
+  .stat-cell .desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.55;
+  }
+
+  @media (max-width: 900px) {
+    .page { padding: 0 24px; }
+    header.masthead, footer.colophon { padding-left: 24px; padding-right: 24px; }
+    .swatch-grid, .ui-grid, .principles-grid, .logo-showcase, .hero-grid, .swatch-grid-foundation,
+    .logo-variations, .ecosystem-stats, .chrome-anatomy { grid-template-columns: 1fr; }
+    .chrome-nav { flex-wrap: wrap; gap: 12px; padding: 12px 18px; }
+    .chrome-nav ul { gap: 14px; flex-wrap: wrap; }
+    .chrome-body { padding: 32px 24px 36px; }
+    .chrome-title { font-size: 36px; }
+    .node-grid { grid-template-columns: repeat(3, 1fr); }
+    .connector-grid { grid-template-columns: repeat(4, 1fr); }
+    .position-card { padding: 48px 32px; }
+    .type-card { padding: 32px 28px; }
+    .integration-block { padding: 28px 24px; }
+    .type-display { font-size: 40px; }
+    .rule-card { padding: 36px 32px; }
+    .rule-card .quote { font-size: 22px; }
+    .section-head h2 { font-size: 30px; }
+    .stat-cell { border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .stat-cell:last-child { border-bottom: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead-bar">
+  <header class="masthead">
+    <div class="wordmark">
+      <img src="NeuralSeek%20Logos/color_logo_white_text.svg" alt="NeuralSeek" class="wordmark-img">
+    </div>
+    <div class="meta-line">
+      <span>Brand System</span>
+      <span>v 2.1 — Regulated · Dark-First</span>
+    </div>
+  </header>
+</div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">Brand Guidelines · 2026</div>
+    <h1>Built to be trusted<br>in regulated rooms.</h1>
+    <div class="hero-grid">
+      <p class="hero-lede">
+        A visual system designed for the people who sign off on AI in deep government, strict-regulated hospitals, and high-stakes banking. Built for governance, not for vibes.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-row"><span>Audience</span><span>CISO · CRO · CCO</span></div>
+        <div class="hero-meta-row"><span>Industries</span><span>Gov · Healthcare · Banking</span></div>
+        <div class="hero-meta-row"><span>Posture</span><span>SOC 2 · HIPAA · FedRAMP</span></div>
+        <div class="hero-meta-row"><span>Product Chrome</span><span>Dark default · Light toggle</span></div>
+        <div class="hero-meta-row"><span>Released</span><span>2026.05.18</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGO -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">The Mark</div>
+      <h2>An infinity of <span class="gradient-text">trust and creation</span>.</h2>
+      <p>The mark sweeps cool to warm in a single gesture — institutional blue grounds the system; magenta tips into intelligence. Used at full color always; never recolored, never flattened, never placed on busy imagery.</p>
+    </div>
+
+    <div class="logo-showcase">
+      <div class="logo-stage">
+        <img src="NeuralSeek%20Logos/neuralseek_colored_just_logo.png" alt="NeuralSeek mark" class="logo-mark-image">
+      </div>
+
+      <div class="logo-meta-stack">
+        <div class="logo-meta-card">
+          <div class="label">Construction</div>
+          <div class="body">Two interlocked <strong>N</strong> forms tracing a single conductive path — input on one side, governed output on the other.</div>
+        </div>
+        <div class="logo-meta-card">
+          <div class="label">Gradient direction</div>
+          <div class="body">Cool cyan, through trust blue and indigo, to magenta. Top-left to bottom-right. <strong>Never</strong> reversed, never recolored.</div>
+        </div>
+        <div class="logo-meta-card">
+          <div class="label">Clear space</div>
+          <div class="body">Minimum padding equal to <strong>1×</strong> the cap height of the wordmark on every side. No imagery inside the clear zone.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-strip">
+      <span class="label">Logo Variations</span>
+      <span class="rule"></span>
+      <span class="count">3 LOCKUPS</span>
+    </div>
+
+    <div class="logo-variations">
+      <div class="logo-variation canvas">
+        <div class="stage">
+          <img src="NeuralSeek%20Logos/neuralseek__colored_logo_and_name.png" alt="NeuralSeek primary lockup">
+        </div>
+        <div class="info">
+          <div class="name">Primary lockup</div>
+          <div class="role">Default · light surfaces</div>
+        </div>
+      </div>
+      <div class="logo-variation dark">
+        <div class="stage">
+          <img src="NeuralSeek%20Logos/color_logo_white_text.svg" alt="NeuralSeek monochrome lockup">
+        </div>
+        <div class="info">
+          <div class="name">Monochrome reverse</div>
+          <div class="role">Dark surfaces · video · print</div>
+        </div>
+      </div>
+      <div class="logo-variation surface mark-only">
+        <div class="stage">
+          <img src="NeuralSeek%20Logos/neuralseek_colored_just_logo.png" alt="NeuralSeek mark only">
+        </div>
+        <div class="info">
+          <div class="name">Mark only</div>
+          <div class="role">App icon · favicon · avatar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLOR -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Color</div>
+      <h2><span class="gradient-text">Restraint</span> at the center, brand at the edges.</h2>
+      <p>The system runs on a near-black, canvas, and rule-line foundation. Logo accents enter only where they earn meaning — never as decoration. The discipline is the brand.</p>
+    </div>
+
+    <p class="color-intro">
+      The accent palette is pulled directly from the mark — but applied with a strict semantic rule. <strong>Blue governs. Purple creates.</strong> Cyan signals state. Magenta accents rare moments of generation.
+    </p>
+
+    <h3 class="subhead">Brand accents — from the mark</h3>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background: #1FB6FF;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Cyan</div>
+          <div class="swatch-role">Signal · State only</div>
+          <div class="swatch-hex">#1FB6FF</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #2D5BFF;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Trust Blue</div>
+          <div class="swatch-role">Primary · Governance</div>
+          <div class="swatch-hex">#2D5BFF</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #5B2DFF;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Indigo</div>
+          <div class="swatch-role">Depth · Creation</div>
+          <div class="swatch-hex">#5B2DFF</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background: #A24BFF;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Magenta</div>
+          <div class="swatch-role">Accent · Generative</div>
+          <div class="swatch-hex">#A24BFF</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="subhead">Foundation — the dark-first base</h3>
+    <div class="swatch-grid-foundation">
+      <div class="swatch swatch-foundation">
+        <div class="swatch-color" style="background: #131316;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Canvas</div>
+          <div class="swatch-role">Page background · Rolling purple base</div>
+          <div class="swatch-hex">#131316</div>
+        </div>
+      </div>
+      <div class="swatch swatch-foundation">
+        <div class="swatch-color" style="background: #2A2638;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Surface</div>
+          <div class="swatch-role">Elevated card · Lifted ~2 shades above canvas</div>
+          <div class="swatch-hex">#2A2638</div>
+        </div>
+      </div>
+      <div class="swatch swatch-foundation">
+        <div class="swatch-color" style="background: #0B0A0F;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Nav Black</div>
+          <div class="swatch-role">Masthead · Footer chrome</div>
+          <div class="swatch-hex">#0B0A0F</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="subhead">Canvas accent — the rolling glow</h3>
+    <div class="swatch-grid-foundation">
+      <div class="swatch swatch-foundation">
+        <div class="swatch-color" style="background: #301E4C;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Regal Purple</div>
+          <div class="swatch-role">Canvas glow stops · 5 rolling blobs</div>
+          <div class="swatch-hex">#301E4C</div>
+        </div>
+      </div>
+      <div class="swatch swatch-foundation">
+        <div class="swatch-color" style="background: #1F1C28;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Surface-2</div>
+          <div class="swatch-role">Recessed surface · Table headers · Code</div>
+          <div class="swatch-hex">#1F1C28</div>
+        </div>
+      </div>
+      <div class="swatch swatch-foundation">
+        <div class="swatch-color" style="background: #332F42;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Surface-elev</div>
+          <div class="swatch-role">Highest card elevation · Hovered or modal-top</div>
+          <div class="swatch-hex">#332F42</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="subhead">Light surfaces — reserved for export</h3>
+    <div class="swatch-grid-foundation">
+      <div class="swatch swatch-foundation">
+        <div class="swatch-color" style="background: hsl(0, 0%, 94%); box-shadow: inset 0 0 0 1px var(--rule-soft);"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Light Canvas</div>
+          <div class="swatch-role">Print · PDF export · Theme toggle</div>
+          <div class="swatch-hex">hsl(0, 0%, 94%)</div>
+        </div>
+      </div>
+      <div class="swatch swatch-foundation">
+        <div class="swatch-color" style="background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--rule-soft);"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Light Surface</div>
+          <div class="swatch-role">Light-mode cards · Compliance exports</div>
+          <div class="swatch-hex">#FFFFFF</div>
+        </div>
+      </div>
+      <div class="swatch swatch-foundation">
+        <div class="swatch-color" style="background: rgba(255,255,255,0.08); position: relative;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Rule</div>
+          <div class="swatch-role">Borders · Dividers on dark</div>
+          <div class="swatch-hex">rgba(255,255,255,0.08)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule-card">
+      <div class="label">The Discipline Rule</div>
+      <div class="quote"><span class="accent-blue">Blue governs.</span> <span class="accent-purple">Purple creates.</span> Cyan signals. Magenta accents.</div>
+      <div class="body">Any single screen uses no more than two accent colors plus neutrals. Governance, audit, security, and admin surfaces stay blue. AI-creation surfaces shift to indigo and magenta. They never collide. This is the rule that keeps the energy of the mark from undermining the seriousness of the buyer.</div>
+    </div>
+  </section>
+
+  <!-- TYPOGRAPHY -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Typography</div>
+      <h2>One face for <span class="gradient-text">everything human</span>. One face for the system.</h2>
+      <p>Open Sans carries every word the buyer reads — headlines, body, navigation, forms. It is widely supported, neutrally professional, and instantly legible at any scale. JetBrains Mono carries every identifier the system writes — model names, run IDs, policy references — to signal a system of record.</p>
+    </div>
+
+    <div class="type-showcase">
+
+      <div class="type-card">
+        <div class="type-card-head">
+          <span class="type-card-name">Open Sans · Display &amp; Body</span>
+          <span class="type-card-role">For every human-readable surface</span>
+        </div>
+        <div class="type-display">Trusted by the regulated.</div>
+        <div class="type-weights">
+          <div class="type-weight">
+            <span class="label">Light · 300</span>
+            <span class="sample" style="font-weight: 300;">Aa Bb Cc</span>
+          </div>
+          <div class="type-weight">
+            <span class="label">Regular · 400</span>
+            <span class="sample" style="font-weight: 400;">Aa Bb Cc</span>
+          </div>
+          <div class="type-weight">
+            <span class="label">Semibold · 600</span>
+            <span class="sample" style="font-weight: 600;">Aa Bb Cc</span>
+          </div>
+          <div class="type-weight">
+            <span class="label">Bold · 700</span>
+            <span class="sample" style="font-weight: 700;">Aa Bb Cc</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-card">
+        <div class="type-card-head">
+          <span class="type-card-name">Open Sans · Body Sample</span>
+          <span class="type-card-role">For documentation, marketing, operator clarity</span>
+        </div>
+        <div class="type-sans-sample">
+          NeuralSeek deploys AI under policy. Every agent, every model, every output is governed by guardrails that compliance officers already require — with full audit lineage, role-based access, and data residency controls built in from the first deployment.
+        </div>
+      </div>
+
+      <div class="type-card">
+        <div class="type-card-head">
+          <span class="type-card-name">JetBrains Mono · System</span>
+          <span class="type-card-role">For identifiers, references, and system state</span>
+        </div>
+        <div class="type-mono-sample">
+<span class="key">model_id:</span>           <span class="val">claude-4-sonnet-20260208</span><br>
+<span class="key">policy_ref:</span>         <span class="val">NS-GOV-2026.05-PII-REDACT-v3</span><br>
+<span class="key">run_id:</span>             <span class="val">run_8f3a92e1-c4d0-4b7e-9f12</span><br>
+<span class="key">attestation:</span>        <span class="val">SOC2-T2 · HIPAA · FedRAMP-IL4</span><br>
+<span class="key">data_residency:</span>     <span class="val">us-gov-west-1</span>
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="subhead">Font specifications</h3>
+    <div class="font-spec">
+      <div class="font-spec-col sans">
+        <div class="role">Primary · Human-readable type</div>
+        <div class="face-name">Open Sans</div>
+        <div class="face-desc">Used for every word the buyer reads — headlines, body copy, navigation, forms, marketing surfaces, product chrome. Open, neutral, and broadly licensed for regulated environments.</div>
+        <div class="font-spec-row"><span class="k">Family</span><span class="v">Open Sans</span></div>
+        <div class="font-spec-row"><span class="k">Weights</span><span class="v">300 Light · 400 Regular · 500 Medium · 600 Semibold · 700 Bold</span></div>
+        <div class="font-spec-row"><span class="k">Source</span><span class="v">Google Fonts — <code>fonts.google.com/specimen/Open+Sans</code></span></div>
+        <div class="font-spec-row"><span class="k">License</span><span class="v">SIL Open Font License 1.1 — free for commercial &amp; regulated use</span></div>
+        <div class="font-spec-row"><span class="k">CSS Stack</span><span class="v"><code>'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif</code></span></div>
+        <div class="font-spec-row"><span class="k">Min Size</span><span class="v">12px (footnotes, captions) · 14px body floor · 16px preferred body</span></div>
+      </div>
+
+      <div class="font-spec-col mono">
+        <div class="role">System · Identifiers &amp; state</div>
+        <div class="face-name">JetBrains Mono</div>
+        <div class="face-desc">Reserved for the system of record — model IDs, policy references, run hashes, residency tags, code, and audit lineage. Never used for body copy or marketing headlines.</div>
+        <div class="font-spec-row"><span class="k">Family</span><span class="v">JetBrains Mono</span></div>
+        <div class="font-spec-row"><span class="k">Weights</span><span class="v">400 Regular · 500 Medium</span></div>
+        <div class="font-spec-row"><span class="k">Source</span><span class="v">Google Fonts — <code>fonts.google.com/specimen/JetBrains+Mono</code></span></div>
+        <div class="font-spec-row"><span class="k">License</span><span class="v">SIL Open Font License 1.1 — free for commercial &amp; regulated use</span></div>
+        <div class="font-spec-row"><span class="k">CSS Stack</span><span class="v"><code>'JetBrains Mono', ui-monospace, monospace</code></span></div>
+        <div class="font-spec-row"><span class="k">Min Size</span><span class="v">10px (uppercase eyebrows w/ letter-spacing) · 13px in-product use</span></div>
+      </div>
+    </div>
+
+    <div class="font-import-card" style="margin-bottom: 24px;">
+      <div class="label">Accent Phrase Utility — the one phrase that pops</div>
+      <div style="font-size: 17px; line-height: 1.55; color: rgba(255,255,255,0.88); margin-bottom: 22px; max-width: 760px;">
+        Every heading and every key statement gets <span class="gradient-text">one gradient phrase</span> — the word the reader should leave with. The gradient inherits the parent's font size, weight, and line-height — drop it anywhere.
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;">
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid var(--rule-soft); border-radius: 4px; padding: 22px 24px;">
+          <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 14px;">Blue · Governance</div>
+          <div style="font-size: 28px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; margin-bottom: 14px;">Deployed <span class="gradient-text">under policy</span></div>
+          <div style="display:flex; align-items:center; gap:14px; padding-top: 14px; border-top: 1px solid var(--rule-soft);">
+            <div style="display:flex; gap:0; border-radius: 4px; overflow:hidden; box-shadow: inset 0 0 0 1px var(--rule-soft); flex:1;">
+              <span style="flex:1; height:24px; background:#FDFEFF;"></span>
+              <span style="flex:1; height:24px; background:linear-gradient(90deg,#FDFEFF 0%,#7BABFF 100%);"></span>
+              <span style="flex:1; height:24px; background:#7BABFF;"></span>
+            </div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-subtle); margin-top: 12px;"><span style="color:#FDFEFF;">#FDFEFF</span> &nbsp;→&nbsp; <span style="color:#7BABFF;">#7BABFF</span></div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid var(--rule-soft); border-radius: 4px; padding: 22px 24px;">
+          <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 14px;">Pink · Creation</div>
+          <div style="font-size: 28px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; margin-bottom: 14px;">Generate <span class="gradient-text-pink">at the speed of intent</span></div>
+          <div style="display:flex; align-items:center; gap:14px; padding-top: 14px; border-top: 1px solid var(--rule-soft);">
+            <div style="display:flex; gap:0; border-radius: 4px; overflow:hidden; box-shadow: inset 0 0 0 1px var(--rule-soft); flex:1;">
+              <span style="flex:1; height:24px; background:#FDFEFF;"></span>
+              <span style="flex:1; height:24px; background:linear-gradient(90deg,#FDFEFF 0%,#E170FC 100%);"></span>
+              <span style="flex:1; height:24px; background:#E170FC;"></span>
+            </div>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-subtle); margin-top: 12px;"><span style="color:#FDFEFF;">#FDFEFF</span> &nbsp;→&nbsp; <span style="color:#E170FC;">#E170FC</span></div>
+        </div>
+      </div>
+
+      <div class="snippet">&lt;<span class="tag">h2</span>&gt;Deployed <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="str">"gradient-text"</span><span class="tag">&gt;</span>under policy<span class="tag">&lt;/span&gt;</span>&lt;<span class="tag">/h2</span>&gt;
+&lt;<span class="tag">h2</span>&gt;Generate <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="str">"gradient-text-pink"</span><span class="tag">&gt;</span>at the speed of intent<span class="tag">&lt;/span&gt;</span>&lt;<span class="tag">/h2</span>&gt;</div>
+
+      <div style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 8px;">Direction</div>
+          <div style="font-size: 14px; color: var(--text-muted); line-height: 1.55;">
+            Always <strong style="color: #BFDFFF; font-weight: 600;">left → right</strong> (90deg). Never vertical, never diagonal, never reversed.
+          </div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 8px;">Stops</div>
+          <div style="font-size: 14px; color: var(--text-muted); line-height: 1.55;">
+            Left is always <strong style="color: #BFDFFF; font-weight: 600;">#FDFEFF</strong>. Right is either <strong style="color: #BFDFFF; font-weight: 600;">#7BABFF</strong> (governance) or <strong style="color: #F8B8FF; font-weight: 600;">#E170FC</strong> (creation).
+          </div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 8px;">Rule of one</div>
+          <div style="font-size: 14px; color: var(--text-muted); line-height: 1.55;">
+            One gradient phrase per heading. One per body statement. Two flattens the emphasis to zero.
+          </div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 8px;">Never mix</div>
+          <div style="font-size: 14px; color: var(--text-muted); line-height: 1.55;">
+            Never put a blue accent and a pink accent on the same surface — the surface is governance <em>or</em> creation, not both.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="font-import-card">
+      <div class="label">Web import — drop into &lt;head&gt;</div>
+      <div class="snippet">&lt;<span class="tag">link</span> <span class="attr">rel</span>=<span class="str">"preconnect"</span> <span class="attr">href</span>=<span class="str">"https://fonts.googleapis.com"</span>&gt;
+&lt;<span class="tag">link</span> <span class="attr">rel</span>=<span class="str">"preconnect"</span> <span class="attr">href</span>=<span class="str">"https://fonts.gstatic.com"</span> <span class="attr">crossorigin</span>&gt;
+&lt;<span class="tag">link</span> <span class="attr">href</span>=<span class="str">"https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"</span> <span class="attr">rel</span>=<span class="str">"stylesheet"</span>&gt;</div>
+    </div>
+  </section>
+
+  <!-- VOCABULARY / NODES -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Vocabulary</div>
+      <h2>The workspace speaks in <span class="gradient-text">nodes</span>.</h2>
+      <p>Every capability inside the NeuralSeek workspace — every model, every connector, every guardrail — is rendered as a single, square, neutrally-styled node. The visual grammar is the same whether the operator is wiring a model, redacting PII, or pushing to SharePoint. Complexity drops in; clutter does not.</p>
+    </div>
+
+    <div class="category-strip purple">
+      <span class="label">Models</span>
+      <span class="rule"></span>
+      <span class="count">04 OF 12+</span>
+    </div>
+    <div class="node-grid">
+      <div class="node-tile"><img src="nodes/send_to_claude_4_sonnet.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/send_to_managed_gpt_5_4.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/send_to_llama_3_2_90b_vision.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/send_to_deepseek_v3.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/embeddings.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/translate.png" alt=""></div>
+    </div>
+
+    <div class="category-strip">
+      <span class="label">Knowledge &amp; Retrieval</span>
+      <span class="rule"></span>
+      <span class="count">06 NODES</span>
+    </div>
+    <div class="node-grid">
+      <div class="node-tile"><img src="nodes/seek.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/ns_kb_search.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/ns_kb_add_document.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/ns_kb_delete_document.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/semantic_score.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/curate.png" alt=""></div>
+    </div>
+
+    <div class="category-strip approve">
+      <span class="label">Guardrails &amp; Governance</span>
+      <span class="rule"></span>
+      <span class="count">06 NODES</span>
+    </div>
+    <div class="node-grid">
+      <div class="node-tile"><img src="nodes/protect_prompt_injection.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/remove_pii.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/profanity_filter.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/http_guardrails.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/condition.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/stop.png" alt=""></div>
+    </div>
+
+    <div class="category-strip cyan">
+      <span class="label">Data &amp; Connectors</span>
+      <span class="rule"></span>
+      <span class="count">06 NODES</span>
+    </div>
+    <div class="node-grid">
+      <div class="node-tile"><img src="nodes/postgres.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/snowflake.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/databricks.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/db2_database.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/neo4j.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/redshift.png" alt=""></div>
+    </div>
+
+    <div class="category-strip indigo">
+      <span class="label">Generation &amp; Output</span>
+      <span class="rule"></span>
+      <span class="count">06 NODES</span>
+    </div>
+    <div class="node-grid">
+      <div class="node-tile"><img src="nodes/create_doc.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/create_pdf.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/create_powerpoint.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/generate_image.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/generate_speech.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/generate_video.png" alt=""></div>
+    </div>
+
+    <div class="category-strip warn">
+      <span class="label">Logic, Protocol &amp; I/O</span>
+      <span class="rule"></span>
+      <span class="count">06 NODES</span>
+    </div>
+    <div class="node-grid">
+      <div class="node-tile"><img src="nodes/mcp.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/a2a.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/rest.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/extract.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/mathematical_calculation.png" alt=""></div>
+      <div class="node-tile"><img src="nodes/read_cache.png" alt=""></div>
+    </div>
+  </section>
+
+  <!-- PRODUCT CHROME -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Product Chrome</div>
+      <h2><span class="gradient-text">Dark canvas</span> by default. Light on request.</h2>
+      <p>The 2026 product UI runs on a near-black canvas with a subtle indigo-to-magenta atmosphere — never the page; always the room behind it. A persistent theme toggle in the masthead lets the operator drop to a light surface for print-aligned review. Page titles take a cyan-to-soft-blue gradient — readable at 14pt of distance from a CISO's monitor, and instantly identifiable as a NeuralSeek surface.</p>
+    </div>
+
+    <div class="chrome-stage">
+      <div class="chrome-nav">
+        <div class="brand">
+          <img src="NeuralSeek%20Logos/color_logo_white_text.svg" alt="NeuralSeek">
+        </div>
+        <ul>
+          <li>Home</li>
+          <li>Neural Config</li>
+          <li>Seek</li>
+          <li class="active">KnowledgeBase</li>
+          <li>mAIstro</li>
+          <li>NeuralEdit</li>
+          <li>Governance</li>
+          <li>Run Agents</li>
+          <li>Admin Tools</li>
+        </ul>
+        <div class="chrome-actions">
+          <span class="chrome-toggle" aria-label="Theme toggle"></span>
+          <span class="chrome-avatar" aria-label="User"></span>
+        </div>
+      </div>
+
+      <div class="chrome-body">
+        <h3 class="chrome-title">Knowledgebase Manager</h3>
+        <div class="chrome-sub">Manage your indexed documents, search content, and remove outdated records.</div>
+
+        <span class="chrome-pill">Document Count <span class="count">0</span></span>
+
+        <div class="chrome-searchbar">
+          <button class="chrome-search-btn">Search</button>
+          <input class="chrome-search-input" placeholder="Search documents…" readonly>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="subhead">Anatomy of the dark canvas</h3>
+    <div class="chrome-anatomy">
+      <div class="item">
+        <div class="k">Canvas</div>
+        <div class="v">Ink → Ink-2 vertical wash with rationed indigo+magenta radial glow at corners.</div>
+      </div>
+      <div class="item">
+        <div class="k">Page Title</div>
+        <div class="v">Cyan → soft-blue vertical text gradient. Reserved for top-level page H1.</div>
+      </div>
+      <div class="item">
+        <div class="k">Status Pill</div>
+        <div class="v">Indigo-tinted capsule with leading state dot. Count rendered in its own inner pill.</div>
+      </div>
+      <div class="item">
+        <div class="k">Primary Action</div>
+        <div class="v">Indigo → magenta gradient. One per surface — never two action gradients on one screen.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SURFACES -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Surfaces</div>
+      <h2>Two systems, <span class="gradient-text">one canvas</span>.</h2>
+      <p>Governance surfaces stay flat, blue, and unmistakably administrative. Creation surfaces are allowed depth and gradient — but only inside the work, never around it. Both now live on the unified dark canvas; the chrome is the same, the spectrum it draws from is different. The buyer's compliance officer sees the same product as their data scientist.</p>
+    </div>
+
+    <div class="ui-grid">
+
+      <div class="ui-card">
+        <div class="ui-card-header">
+          <span class="title">Governance · Policy Audit</span>
+          <span class="badge">Blue System</span>
+        </div>
+        <div class="ui-card-body">
+          <div class="gov-row">
+            <div>
+              <div class="name">PII Redaction Policy</div>
+              <div class="id">NS-GOV-2026.05-PII-v3</div>
+            </div>
+            <span class="pill approve">Active</span>
+          </div>
+          <div class="gov-row">
+            <div>
+              <div class="name">Model Deployment Lineage</div>
+              <div class="id">claude-4-sonnet · gov-west-1</div>
+            </div>
+            <span class="pill approve">Attested</span>
+          </div>
+          <div class="gov-row">
+            <div>
+              <div class="name">Cross-Region Data Flow</div>
+              <div class="id">flow_4d8a1b · pending review</div>
+            </div>
+            <span class="pill warn">Review</span>
+          </div>
+          <div class="gov-row">
+            <div>
+              <div class="name">Unsigned Agent Output</div>
+              <div class="id">agent_19f · failed signature</div>
+            </div>
+            <span class="pill block">Blocked</span>
+          </div>
+          <button class="gov-cta">Sign &amp; deploy</button>
+        </div>
+      </div>
+
+      <div class="ui-card">
+        <div class="ui-card-header">
+          <span class="title">Creation · Agent Generator</span>
+          <span class="badge purple">Purple System</span>
+        </div>
+        <div class="ui-card-body">
+          <div class="creative-prompt">
+            Draft a quarterly compliance summary using only sources from the governed knowledge base, with full citation lineage.
+          </div>
+          <div class="creative-tags">
+            <span class="creative-tag">↳ governed_kb</span>
+            <span class="creative-tag">↳ cite_sources</span>
+            <span class="creative-tag">↳ format: pdf</span>
+            <span class="creative-tag">↳ pii: redacted</span>
+          </div>
+          <button class="creative-cta">Generate under policy</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CARD ELEVATION -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Card Elevation</div>
+      <h2>Cards <span class="gradient-text">lift just enough</span> to feel handled.</h2>
+      <p>The brand canvas rolls in soft purple. Every card surface sits two shades above that base so it reads as a distinct, handled object — never a flat patch of the same color, never a glowing slab. The whole system is three lines of tokens: surface, border, shadow.</p>
+    </div>
+
+    <!-- Three-tier elevation ladder -->
+    <h3 class="subhead">Three tiers, no more</h3>
+    <div class="elev-ladder">
+      <div class="elev-tier elev-canvas">
+        <div class="elev-label">Canvas</div>
+        <div class="elev-hex">#131316</div>
+        <div class="elev-role">Page background. Receives the rolling purple glow. Never used for cards.</div>
+      </div>
+      <div class="elev-tier elev-surface">
+        <div class="elev-label">Surface</div>
+        <div class="elev-hex">#2A2638</div>
+        <div class="elev-role">Default card surface. Lifted ~2 shades above canvas so the edge reads without a heavy border.</div>
+      </div>
+      <div class="elev-tier elev-elev">
+        <div class="elev-label">Surface-elev</div>
+        <div class="elev-hex">#332F42</div>
+        <div class="elev-role">Modal-top, popover, hovered card, highest-importance KPI tile. Use sparingly — too many breaks the hierarchy.</div>
+      </div>
+    </div>
+
+    <!-- Live demo card showing shadow + border + inset highlight -->
+    <h3 class="subhead">Anatomy of a card</h3>
+    <div class="card-demo-stage">
+      <div class="card-demo">
+        <div class="card-demo-eyebrow">Policy · NS-GOV-2026.05</div>
+        <div class="card-demo-title">PII Redaction</div>
+        <div class="card-demo-body">Mask names, account numbers, and contact data on every prompt and response. Per-tenant policy, audit-trailed by run id.</div>
+        <div class="card-demo-meta">
+          <span class="card-demo-pill">Attested</span>
+          <span class="card-demo-id">run_8f3a92e1</span>
+        </div>
+        <!-- Callouts pointing at the four layers -->
+        <span class="card-demo-callout card-demo-callout-bg">Surface · #2A2638</span>
+        <span class="card-demo-callout card-demo-callout-border">Border · rgba(255,255,255,0.12)</span>
+        <span class="card-demo-callout card-demo-callout-shadow">Shadow · --shadow-md</span>
+        <span class="card-demo-callout card-demo-callout-inset">Inset · rgba(255,255,255,0.10) top-edge</span>
+      </div>
+    </div>
+
+    <!-- Spec table -->
+    <h3 class="subhead">The spec — four lines</h3>
+    <div class="card-spec">
+      <div class="card-spec-row">
+        <span class="card-spec-k">Background</span>
+        <span class="card-spec-v"><code>var(--surface)</code> &nbsp;·&nbsp; <code>#2A2638</code></span>
+      </div>
+      <div class="card-spec-row">
+        <span class="card-spec-k">Border</span>
+        <span class="card-spec-v"><code>1px solid rgba(255,255,255,0.12)</code> at rest. Hover bumps to <code>0.18</code>.</span>
+      </div>
+      <div class="card-spec-row">
+        <span class="card-spec-k">Shadow</span>
+        <span class="card-spec-v"><code>0 12px 32px rgba(0,0,0,0.52), 0 4px 8px rgba(0,0,0,0.35)</code></span>
+      </div>
+      <div class="card-spec-row">
+        <span class="card-spec-k">Inset highlight</span>
+        <span class="card-spec-v"><code>inset 0 1px 0 rgba(255,255,255,0.10)</code> — fakes the top-edge light from above.</span>
+      </div>
+      <div class="card-spec-row">
+        <span class="card-spec-k">Border radius</span>
+        <span class="card-spec-v"><code>6px</code> — same radius across every card. No 8/12/16 variants.</span>
+      </div>
+      <div class="card-spec-row">
+        <span class="card-spec-k">Hover lift</span>
+        <span class="card-spec-v"><code>translateY(-4px)</code> over 300ms, shadow steps to <code>--shadow-lg</code>, border to <code>rgba(255,255,255,0.18)</code>.</span>
+      </div>
+      <div class="card-spec-row">
+        <span class="card-spec-k">Transition</span>
+        <span class="card-spec-v"><code>cubic-bezier(0.4, 0, 0.2, 1)</code> · 300ms — the standard ease across the brand.</span>
+      </div>
+    </div>
+
+    <!-- CSS snippet for the intern -->
+    <div class="font-import-card" style="margin-top: 24px;">
+      <div class="label">Drop-in CSS — every card on the brand uses this</div>
+      <div class="snippet">.card {
+  background: <span class="str">#2A2638</span>;
+  border: <span class="str">1px solid rgba(255,255,255,0.12)</span>;
+  border-radius: <span class="str">6px</span>;
+  box-shadow:
+    <span class="str">0 12px 32px rgba(0,0,0,0.52)</span>,
+    <span class="str">0 4px 8px  rgba(0,0,0,0.35)</span>,
+    <span class="str">inset 0 1px 0 rgba(255,255,255,0.10)</span>;
+  transition: <span class="str">all 300ms cubic-bezier(0.4, 0, 0.2, 1)</span>;
+}
+.card:hover {
+  transform: <span class="str">translateY(-4px)</span>;
+  border-color: <span class="str">rgba(255,255,255,0.18)</span>;
+  box-shadow:
+    <span class="str">0 32px 64px rgba(0,0,0,0.60)</span>,
+    <span class="str">0 12px 24px rgba(0,0,0,0.40)</span>,
+    <span class="str">inset 0 1px 0 rgba(255,255,255,0.12)</span>;
+}</div>
+    </div>
+
+    <!-- Do / Don't compact -->
+    <div class="principles-grid" style="margin-top: 32px;">
+      <div class="principle do">
+        <div class="principle-label">Do</div>
+        <ul>
+          <li><span class="num">01</span><span>Use one surface tier per UI region. Cards within cards is a hierarchy smell — move them apart or merge them.</span></li>
+          <li><span class="num">02</span><span>Keep the top-edge inset highlight on every card. It's the difference between a "panel" and a "card."</span></li>
+          <li><span class="num">03</span><span>Hover-lift the entire card body in one motion — never tilt, scale, or rotate.</span></li>
+          <li><span class="num">04</span><span>Reserve Surface-elev for the one card per surface that earns top-of-stack attention.</span></li>
+        </ul>
+      </div>
+      <div class="principle dont">
+        <div class="principle-label">Don't</div>
+        <ul>
+          <li><span class="num">01</span><span>No pure-black shadows on dark canvas at &gt;0.70 opacity. The card stops floating and starts cutting a hole.</span></li>
+          <li><span class="num">02</span><span>No coloured drop-shadows on governance cards. Glow is rationed to creation surfaces only.</span></li>
+          <li><span class="num">03</span><span>No more than one surface-elev card per visible region. Two competing top-tier cards reads as "neither is important."</span></li>
+          <li><span class="num">04</span><span>No 1px white borders. Even at 100% opacity it's too loud — keep borders at the 12 / 18% ladder.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECTIONS -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Connections</div>
+      <h2>Where the work <span class="gradient-text">already lives</span>.</h2>
+      <p>NeuralSeek does not ask the enterprise to move its data. The platform speaks to the systems of record where the work already lives, and to the third-party data sources that augment it — under the same governance perimeter as everything else.</p>
+    </div>
+
+    <div class="integration-block">
+      <h3>Systems of record · Enterprise applications</h3>
+      <p>Native connectors for the platforms compliance officers already inventory. Identity, role, and audit lineage flow through unchanged.</p>
+
+      <div class="connector-grid">
+        <div class="connector-tile" data-name="Salesforce"><img src="Enterprise%20Apps/salesforce.webp" alt="Salesforce"></div>
+        <div class="connector-tile" data-name="HubSpot"><img src="Enterprise%20Apps/hubspot.png" alt="HubSpot"></div>
+        <div class="connector-tile" data-name="Slack"><img src="Enterprise%20Apps/slack.png" alt="Slack"></div>
+        <div class="connector-tile" data-name="Teams"><img src="Enterprise%20Apps/teams.png" alt="Microsoft Teams"></div>
+        <div class="connector-tile" data-name="Gmail"><img src="Enterprise%20Apps/gmail.png" alt="Gmail"></div>
+        <div class="connector-tile" data-name="Zoom"><img src="Enterprise%20Apps/zoom.png" alt="Zoom"></div>
+        <div class="connector-tile" data-name="SharePoint"><img src="Enterprise%20Apps/sharepoint.png" alt="SharePoint"></div>
+        <div class="connector-tile" data-name="Google Drive"><img src="Enterprise%20Apps/googledrive.png" alt="Google Drive"></div>
+        <div class="connector-tile" data-name="Box"><img src="Enterprise%20Apps/box.png" alt="Box"></div>
+        <div class="connector-tile" data-name="Calendar"><img src="Enterprise%20Apps/googleCalendar.webp" alt="Google Calendar"></div>
+        <div class="connector-tile" data-name="Jira"><img src="Enterprise%20Apps/jira.png" alt="Jira"></div>
+        <div class="connector-tile" data-name="Trello"><img src="Enterprise%20Apps/trello.svg" alt="Trello"></div>
+        <div class="connector-tile" data-name="ClickUp"><img src="Enterprise%20Apps/clickup.png" alt="ClickUp"></div>
+        <div class="connector-tile" data-name="Workday"><img src="Enterprise%20Apps/workday.png" alt="Workday"></div>
+        <div class="connector-tile" data-name="Snowflake"><img src="Enterprise%20Apps/snowflake.png" alt="Snowflake"></div>
+        <div class="connector-tile" data-name="Databricks"><img src="Enterprise%20Apps/databricks.png" alt="Databricks"></div>
+        <div class="connector-tile" data-name="BigQuery"><img src="Enterprise%20Apps/bigquery.svg" alt="BigQuery"></div>
+        <div class="connector-tile" data-name="Postgres"><img src="Enterprise%20Apps/Postgresql.png" alt="Postgres"></div>
+        <div class="connector-tile" data-name="Oracle"><img src="Enterprise%20Apps/oracle.png" alt="Oracle"></div>
+        <div class="connector-tile" data-name="Db2"><img src="Enterprise%20Apps/db2.webp" alt="IBM Db2"></div>
+        <div class="connector-tile" data-name="Neo4j"><img src="Enterprise%20Apps/neo4j.png" alt="Neo4j"></div>
+        <div class="connector-tile" data-name="Elastic"><img src="Enterprise%20Apps/elastic.webp" alt="Elastic"></div>
+        <div class="connector-tile" data-name="Azure"><img src="Enterprise%20Apps/azure.png" alt="Microsoft Azure"></div>
+        <div class="connector-tile" data-name="watsonx"><img src="Enterprise%20Apps/watsonx.png" alt="IBM watsonx"></div>
+        <div class="connector-tile" data-name="Epic"><img src="Enterprise%20Apps/epic.webp" alt="Epic"></div>
+        <div class="connector-tile" data-name="ERP"><img src="Enterprise%20Apps/erp.webp" alt="ERP"></div>
+      </div>
+    </div>
+
+    <div class="integration-block">
+      <h3>Third-party data sources</h3>
+      <p>External signals brought into governed context — search, market data, real-estate, regulatory filings, and prospecting — never left raw, never left alone.</p>
+
+      <div class="connector-grid">
+        <div class="connector-tile" data-name="Bing"><img src="3rd%20Party%20Data%20Sources/bing.png" alt="Bing"></div>
+        <div class="connector-tile" data-name="Brave"><img src="3rd%20Party%20Data%20Sources/brave.png" alt="Brave"></div>
+        <div class="connector-tile" data-name="Google"><img src="3rd%20Party%20Data%20Sources/google%20search.svg" alt="Google Search"></div>
+        <div class="connector-tile" data-name="Tavily"><img src="3rd%20Party%20Data%20Sources/tavilylogo.png" alt="Tavily"></div>
+        <div class="connector-tile" data-name="HuggingFace"><img src="3rd%20Party%20Data%20Sources/huggingface.svg" alt="Hugging Face"></div>
+        <div class="connector-tile" data-name="SEC EDGAR"><img src="3rd%20Party%20Data%20Sources/sec_edgar.png" alt="SEC EDGAR"></div>
+        <div class="connector-tile" data-name="Nasdaq"><img src="3rd%20Party%20Data%20Sources/nasdaq.png" alt="Nasdaq"></div>
+        <div class="connector-tile" data-name="Zillow"><img src="3rd%20Party%20Data%20Sources/zillow.png" alt="Zillow"></div>
+        <div class="connector-tile" data-name="ATTOM"><img src="3rd%20Party%20Data%20Sources/attom.png" alt="ATTOM"></div>
+        <div class="connector-tile" data-name="Clay"><img src="3rd%20Party%20Data%20Sources/clay.webp" alt="Clay"></div>
+        <div class="connector-tile" data-name="Instantly"><img src="3rd%20Party%20Data%20Sources/instantly.png" alt="Instantly"></div>
+        <div class="connector-tile" data-name="HeyReach"><img src="3rd%20Party%20Data%20Sources/heyreach.png" alt="HeyReach"></div>
+        <div class="connector-tile" data-name="PowerPoint"><img src="3rd%20Party%20Data%20Sources/powerpoint.png" alt="PowerPoint"></div>
+      </div>
+    </div>
+
+    <div class="ecosystem-stats">
+      <div class="stat-cell">
+        <div class="label">Logo Lockups</div>
+        <div class="value">3</div>
+        <div class="desc">Primary, monochrome reverse, mark-only — covering every surface from app icon to print.</div>
+      </div>
+      <div class="stat-cell">
+        <div class="label">Workspace Nodes</div>
+        <div class="value">60<span class="accent">+</span></div>
+        <div class="desc">A consistent visual grammar across models, knowledge, governance, data, and output.</div>
+      </div>
+      <div class="stat-cell">
+        <div class="label">Enterprise Apps</div>
+        <div class="value">25<span class="accent">+</span></div>
+        <div class="desc">Native, audited connectors to the systems of record the regulated buyer already trusts.</div>
+      </div>
+      <div class="stat-cell">
+        <div class="label">External Sources</div>
+        <div class="value">13<span class="accent">+</span></div>
+        <div class="desc">Search, market, regulatory, and prospecting signals — brought inside the policy perimeter.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DO / DON'T -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Principles</div>
+      <h2>The half most AI brands <span class="gradient-text">get wrong</span>.</h2>
+      <p>For this audience, restraint is the differentiator. Every choice that signals "consumer AI" is a choice that costs trust. These principles are not preferences — they are the perimeter.</p>
+    </div>
+
+    <div class="principles-grid">
+
+      <div class="principle do">
+        <div class="principle-label">Do</div>
+        <ul>
+          <li><span class="num">01</span><span>Lead with operator nouns: guardrails, policy, lineage, attestation, evidence, controls.</span></li>
+          <li><span class="num">02</span><span>Show dense product screens — governance panels, audit logs, policy editors. Complexity handled, not hidden.</span></li>
+          <li><span class="num">03</span><span>Render every ID, hash, and reference in the mono face. The system of record is in the typography.</span></li>
+          <li><span class="num">04</span><span>Default the product to the dark canvas; reserve the light surface for print, export, and the explicit theme toggle.</span></li>
+          <li><span class="num">05</span><span>Apply the gradient (always left→right, always starting at <code style="font-family:var(--font-mono);font-size:12px;color:#BFDFFF;background:rgba(127,200,255,0.10);padding:1px 6px;border-radius:3px;">#FDFEFF</code>) on the page title and on the single most important phrase per heading. Use <code style="font-family:var(--font-mono);font-size:12px;color:#BFDFFF;background:rgba(127,200,255,0.10);padding:1px 6px;border-radius:3px;">.gradient-text</code> for governance (ends <code style="font-family:var(--font-mono);font-size:12px;color:#BFDFFF;background:rgba(127,200,255,0.10);padding:1px 6px;border-radius:3px;">#7BABFF</code>) or <code style="font-family:var(--font-mono);font-size:12px;color:#F8B8FF;background:rgba(225,112,252,0.10);padding:1px 6px;border-radius:3px;">.gradient-text-pink</code> for creation (ends <code style="font-family:var(--font-mono);font-size:12px;color:#F8B8FF;background:rgba(225,112,252,0.10);padding:1px 6px;border-radius:3px;">#E170FC</code>). One per heading — never two, never mixed on a single surface.</span></li>
+          <li><span class="num">06</span><span>Limit primary actions to one indigo→magenta button per surface. The CTA is the loudest thing on the page; it should be alone.</span></li>
+          <li><span class="num">07</span><span>Show compliance posture in a persistent footer. SOC 2 · HIPAA · FedRAMP · ISO 27001 · GDPR · PCI DSS.</span></li>
+        </ul>
+      </div>
+
+      <div class="principle dont">
+        <div class="principle-label">Don't</div>
+        <ul>
+          <li><span class="num">01</span><span>No purple-pink gradients on white marketing surfaces. No "AI sparkle" iconography. No glow effects on flat compliance UI.</span></li>
+          <li><span class="num">02</span><span>No casual voice. No emojis. No "Let's build something amazing!" CTAs.</span></li>
+          <li><span class="num">03</span><span>No hero imagery of robots, brains, or neural-network swooshes. No floating 3D objects.</span></li>
+          <li><span class="num">04</span><span>No superlatives. "The only," "world-class," "best-in-class" weaken the page for this audience.</span></li>
+          <li><span class="num">05</span><span>No magenta gradient inside the audit, lineage, or signed-record panels. Those rows stay neutral on dark, with state shown only in the pill.</span></li>
+          <li><span class="num">06</span><span>No gradient on body, labels, or mono identifiers — ever. The gradient is for headings and the one accent phrase per heading. Two gradient phrases in the same heading flattens the emphasis.</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POSITION -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Position</div>
+      <h2>One sentence the buyer <span class="gradient-text">remembers</span>.</h2>
+      <p>If everything else is forgotten, this is what stays. Built to be repeated by a Chief Risk Officer to a Chief Information Officer without rewording.</p>
+    </div>
+
+    <div class="position-card">
+      <div class="label">Brand Position · 2026</div>
+      <div class="statement">
+        NeuralSeek is the AI development environment regulated enterprises <strong>deploy under policy</strong> — guardrails, governance, and audit lineage built in.
+      </div>
+      <div class="compliance-row">
+        <span class="compliance-badge">SOC 2 Type II</span>
+        <span class="compliance-badge">HIPAA</span>
+        <span class="compliance-badge">FedRAMP</span>
+        <span class="compliance-badge">ISO 27001</span>
+        <span class="compliance-badge">GDPR</span>
+        <span class="compliance-badge">PCI DSS</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="colophon-bar">
+  <footer class="colophon">
+    <span>NS · Brand System · 2026.05</span>
+    <span class="colophon-title">Quietly engineered.</span>
+    <span>v 2.1 — Regulated · Dark-First</span>
+  </footer>
+</div>
+
+</body>
+</html>

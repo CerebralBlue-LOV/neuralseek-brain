@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Trashes
+.Spotlight-V100
+.fseventsd
+._*
+
+# Office lock files (created while a doc is open)
+~$*
+
+# Editor swap/backup files
+*.swp
+*.swo
+*~
+
+# Temporary
+*.tmp
+*.bak
+
+# OS / IDE
+Thumbs.db
+.vscode/
+.idea/

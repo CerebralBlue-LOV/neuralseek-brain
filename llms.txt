@@ -1,0 +1,89 @@
+# NeuralSeek Central Brain
+
+> Canonical knowledge base for NeuralSeek — product reference, client deployments, sales/positioning insights from calls, partnership materials, company story, and brand assets. Optimized for retrieval by AI agents. Markdown is the canonical format; original PDFs/DOCX live in `source/` subfolders.
+
+NeuralSeek is an LLM-agnostic orchestration platform that serves as the governance and control layer between frontend AI experiences (ChatGPT-style UIs, Copilot, custom apps, Slack) and backend LLMs (OpenAI Enterprise, Azure GPT-4.5, Claude, Gemini, and others). It enforces guardrails, policy, semantic scoring, and per-tenant isolation — making AI safe enough for regulated enterprises (healthcare, financial services, government).
+
+## Product features and reference docs
+
+- [AI Tuning & Guardrails](NeuralSeek%20Knowledge/Features/all-ai-tuning-and-guardrails.md): Complete Configure-tab reference. Part 1 covers AI tuning (data connection, document ranking, answer generation). Part 2 covers guardrails for governing user input and model output.
+- [Platform-Level AI Ops Settings](NeuralSeek%20Knowledge/Features/platform-level-ai-ops-settings.md): Every platform-wide Configure-tab control — timeouts, context, language, caching, governance, prompt engineering, secrets. Distinct from per-call API parameters.
+- [LLM API-Level Tuning](NeuralSeek%20Knowledge/Features/llm-api-level-tuning.md): How the "Send To LLM" node controls prompts, generation parameters, caching, and message overrides on a per-call basis inside mAIstro flows.
+- [NeuralSeek Governance Framework](NeuralSeek%20Knowledge/Features/neuralseek-governance.md): Enterprise AI governance — real-time safety, compliance, integrity. Prompt injection protection, PII redaction, content filtering, audit.
+- [Detailed RFP Response](NeuralSeek%20Knowledge/Features/detailed-rfp-response.md): NeuralSeek's response to a detailed RFP. Covers LLM-agnostic orchestration, integrations (OpenAI Enterprise, Azure GPT-4.5, Claude, Gemini), policy enforcement, semantic scoring, token tracking, frontend flexibility.
+- [NeuralSeek Documentation Knowledge Base](NeuralSeek%20Knowledge/Features/NeuralSeek_Documentation_KB.md): Aggregated documentation knowledge base.
+- [118 AI Guardrails Listing](NeuralSeek%20Knowledge/Features/neuralseek_118_ai_guardrails_listing.md): Full catalog of NeuralSeek's 118 AI guardrails.
+- [mAIstro Governance Analysis](NeuralSeek%20Knowledge/Features/maistro_governance_analysis.md): Analysis of governance controls in mAIstro (the multi-agent orchestration layer).
+- [Seek Governance Analysis](NeuralSeek%20Knowledge/Features/seek_governance_analysis.md): Analysis of governance controls in NeuralSeek Seek (the retrieval layer).
+
+## Client stories
+
+- [Itochu — Hybrid RAG with 107 agents](NeuralSeek%20Knowledge/Client%20Stories/itochu.md): Itochu International (Japan's big-5 sogo shosha, ~$90B revenue). 107 specialized agents combining SEC EDGAR filings, live web research, and private documents. Microsoft Entra SSO, JWT validation, per-tenant document isolation.
+- [Children's Health — Five enterprise AI use cases](NeuralSeek%20Knowledge/Client%20Stories/childrens-health.md): Pediatric healthcare. Five AI use cases inside Children's controlled environment with role-based access, audit logging, content filtering, IAM integration. No PHI/PII outside their infrastructure.
+- [Great Day Improvements — yETI governed AI chat](NeuralSeek%20Knowledge/Client%20Stories/great-day-improvements.md): Home improvement. ChatGPT-style chat (yETI) covering HR and Call Center, multi-LLM, pre-loaded knowledge, Phase II Databricks integration. Delivered on existing Azure.
+- [Adobe](NeuralSeek%20Knowledge/Client%20Stories/Adobe.md): Adobe client story.
+- [Verizon](NeuralSeek%20Knowledge/Client%20Stories/Verizon.md): Verizon client story.
+- [Snap](NeuralSeek%20Knowledge/Client%20Stories/Snap.md): Snap client story.
+- [NatWest](NeuralSeek%20Knowledge/Client%20Stories/NatWest.md): NatWest (UK banking) client story.
+- [AFP Capital](NeuralSeek%20Knowledge/Client%20Stories/AFP-Capital.md): AFP Capital client story.
+- [BROU](NeuralSeek%20Knowledge/Client%20Stories/BROU.md): BROU (Uruguay banking) client story.
+- [Clip](NeuralSeek%20Knowledge/Client%20Stories/Clip.md): Clip (Mexico fintech) — RAG chatbot with Salesforce Cloud integration.
+- [AdMed](NeuralSeek%20Knowledge/Client%20Stories/AdMed.md): AdMed client story.
+- [PennState](NeuralSeek%20Knowledge/Client%20Stories/PennState.md): PennState client story.
+- [Historical Client Stories — Aggregate](NeuralSeek%20Knowledge/Client%20Stories/historical-client-stories.md): Aggregated historical client stories in challenge/solution/outcome format.
+
+## Knowledge from sales and discovery calls
+
+These are distilled insights extracted from six recent calls — sales/training, discovery/demos, partnership conversations, and brand interviews. The most current view of how NeuralSeek positions, sells, and handles objections.
+
+- [Index of Knowledge from Calls](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/00-INDEX.md): Master index — describes each source call and links every distilled file.
+- [Strategic Positioning](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/01-strategic-positioning.md): How Lawrence frames NeuralSeek in the market.
+- [Powerful Quotes](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/02-powerful-quotes.md): High-impact verbatim quotes ready to reuse.
+- [Objection Handling](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/03-objection-handling.md): Common objections and Lawrence's responses.
+- [Competitive Differentiation](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/04-competitive-differentiation.md): vs. N8N, AlphaSense, Copilot, and custom-build.
+- [Customer Stories (from calls)](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/05-customer-stories.md): Case studies and proof points by account, as told in calls.
+- [Sales Talk Tracks](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/06-sales-talk-tracks.md): Repeatable pitch frameworks and openers.
+- [Product Talking Points](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/07-product-talking-points.md): Feature explanations that resonate in conversations.
+- [Pricing & Deal Mechanics](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/08-pricing-deal-mechanics.md): Pricing models, contract structures, channel/VAR/VAD architecture.
+- [Market & Industry Insights](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/09-market-industry-insights.md): Macro narrative, hardware play, AI-engineer threat, FDE as the 2027 job.
+- [Lawrence's Voice and Tone](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/10-lawrence-voice-and-tone.md): Replication guide for Lawrence's voice, vibe, and linguistic patterns.
+- [Brand & Marketing Strategy](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/11-brand-marketing-strategy.md): Brand architecture, content strategy, website thinking, distribution.
+- [Punch-Line Talk Tracks](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/12-punch-line-talk-tracks.md): Ready-to-deploy punch-line talk tracks (Fox in the Hen House, Design-Build-Power-Maintain, Maintenance Era Is Ending).
+- [CTO/CISO Selling Angles](NeuralSeek%20Knowledge/Knowledge%20from%20Calls/13-cto-ciso-selling-angles.md): Three CTO/CISO selling angles derived from the punch lines (AI Advisement, Safety & Long-Term Vision, Knowledge Protection).
+
+## Partnerships
+
+- [NeuralSeek + IBM Fusion Solution Brief](NeuralSeek%20Knowledge/Partnerships/ibm-fusion-ns-solution-brief.md): Joint brief on secure, no-code AI for regulated enterprises (HIPAA, PCI-DSS, FINRA, GDPR, CJIS). Addresses data sovereignty and access control gaps that public-cloud LLMs cannot meet.
+- [NeuralSeek + eDelta Strategic Partnership](NeuralSeek%20Knowledge/Partnerships/edelta-complements-neuralseek.md): Partnership with eDelta Consulting — combines decades of IT audit, regulatory alignment, and AI deployment expertise. Serves financial services, healthcare, government.
+
+## Company story
+
+- [NeuralSeek Executive Team Bios](NeuralSeek%20Knowledge/NeuralSeek%20Story/neuralseek-executive-team.md): Bios — starting with founder & CEO Garrett Rowe (US Navy pilot, IBM AI executive). For company overviews, investor decks, and partnership conversations.
+- [AI Salon Keynote Outline](NeuralSeek%20Knowledge/NeuralSeek%20Story/AI-Salon-Keynote-Outline.md): Outline of Lawrence's AI Salon keynote.
+
+## Brand and image assets
+
+The `2026_images/` directory holds 266+ image files for use in branded content, presentations, and articles. Organized by topic:
+
+- `2026_images/NeuralSeek Logos/` — NeuralSeek brand marks.
+- `2026_images/Client Logos (colored)/` — Logos of clients (colored versions).
+- `2026_images/whited_logos/` — White / monochrome client logos.
+- `2026_images/Companies Logos/` — Partner and ecosystem company logos.
+- `2026_images/Demo Logos/` — Logos used in demo materials.
+- `2026_images/LLM Logos/` — Logos of LLM providers (OpenAI, Claude, Gemini, etc.).
+- `2026_images/3rd Party Data Sources/` — Logos of integrated data sources.
+- `2026_images/People photos/` — Headshots of team and execs.
+- `2026_images/CISO_icons/` — Iconography for CISO-themed content.
+- `2026_images/Seek Governance/` — Visuals for NeuralSeek's governance story.
+- `2026_images/mAIstro Governance/` — Visuals for mAIstro's governance story.
+- `2026_images/Guardrails Images/` — Visuals for the guardrails story.
+- `2026_images/Enterprise Apps/` — App / product screenshots and renders.
+- `2026_images/Custom Client Apps/` — Screenshots of custom-built client deployments.
+- `2026_images/HealthCareAgentStack/` — Visuals for the healthcare agent stack.
+- `2026_images/IBM Fusion + NeuralSeek/` — Co-branded IBM Fusion visuals.
+- `2026_images/nodes/` — mAIstro node icons.
+- [Brand Guidelines (HTML)](2026_images/neuralseek-brand-guidelines_2026.html): NeuralSeek 2026 brand guidelines.
+
+## Optional / source files
+
+Original DOCX, PDF, and PPTX files are preserved under `source/` subfolders inside each topic directory. Markdown is canonical for retrieval; the originals are kept for sending to humans (decks, formal documents) or as fallback if conversion was lossy.
