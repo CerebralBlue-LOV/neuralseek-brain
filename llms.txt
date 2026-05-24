@@ -82,7 +82,8 @@ The `2026_images/` directory holds 266+ image files for use in branded content, 
 - `2026_images/HealthCareAgentStack/` — Visuals for the healthcare agent stack.
 - `2026_images/IBM Fusion + NeuralSeek/` — Co-branded IBM Fusion visuals.
 - `2026_images/nodes/` — mAIstro node icons.
-- [Brand Guidelines (HTML)](2026_images/neuralseek-brand-guidelines_2026.html): NeuralSeek 2026 brand guidelines.
+- [Brand Guidelines (Markdown)](2026_images/neuralseek-brand-guidelines_2026.md): NeuralSeek 2026 brand system v2.1 — logo, color, typography, voice, taglines. **Preferred format for AI tools.**
+- [Brand Guidelines (HTML — visual)](2026_images/neuralseek-brand-guidelines_2026.html): Same content as the markdown above but as a rendered visual page (for humans).
 
 ## Optional / source files
 
