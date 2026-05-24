@@ -23,3 +23,7 @@
 Thumbs.db
 .vscode/
 .idea/
+
+# Sensitive — never commit raw call transcripts (kept locally at ~/Desktop/NeuralSeek_Private_Backup/)
+Raw Call Transcripts/
+**/Raw Call Transcripts/
