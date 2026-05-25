@@ -154,7 +154,7 @@ For any on-prem / air-gapped concern:
 
 ## The "We're Bootstrapped and Hungry" Credibility Frame
 
-Used in early-stage / startup conversations (Santander, YourAI):
+Used in early-stage / startup conversations (Santander, Anonymous AI Startup):
 
 > "A little about NeuralSeek — we're a bootstrap startup. We've been in the market for three years. We have some large paying customers. We've been strategic about money. We're about to get a seed round but we don't want to go under. I like my job. We're raising right now and we're pretty hungry."
 

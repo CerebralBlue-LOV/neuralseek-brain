@@ -103,7 +103,7 @@ How Lawrence explains specific product features in a way that resonates with buy
 
 **The PHI extension (Children's Health):** Built-in PII + RegEx + LLM-based filtering customized for PHI categories.
 
-**Lawrence on the YourAI 100% confidence ask:** Honest — won't catch-all SLA. But the layered approach can stack to extremely high confidence.
+**Lawrence on the Anonymous AI Startup 100% confidence ask:** Honest — won't catch-all SLA. But the layered approach can stack to extremely high confidence.
 
 ---
 

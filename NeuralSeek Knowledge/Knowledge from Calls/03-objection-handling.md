@@ -141,7 +141,7 @@ Common objections raised in calls, with the responses Lawrence uses to handle th
 
 ## Objection 10: "We can't trust the PII / PHI / compliance story"
 
-**Where it came up:** Children's Health (HIPAA), Santander, YourAI (legal industry, asking about confidence intervals on PII detection).
+**Where it came up:** Children's Health (HIPAA), Santander, Anonymous AI Startup (legal industry, asking about confidence intervals on PII detection).
 
 **Multi-layered response:**
 1. Built-in PII detectors (came from NatWest go-live — includes UK phone numbers, etc.)
@@ -150,7 +150,7 @@ Common objections raised in calls, with the responses Lawrence uses to handle th
 4. Optional LLM-based PII filtering (route through a small on-prem model)
 5. Containerized deployment means PII never leaves the firewall
 
-**For YourAI's "100% confidence" ask:** Lawrence is honest — won't catch-all SLA accountability, but the layered approach (built-in + RegEx + LLM-based + on-prem LLM option) can stack to extremely high confidence.
+**For Anonymous AI Startup's "100% confidence" ask:** Lawrence is honest — won't catch-all SLA accountability, but the layered approach (built-in + RegEx + LLM-based + on-prem LLM option) can stack to extremely high confidence.
 
 ---
 

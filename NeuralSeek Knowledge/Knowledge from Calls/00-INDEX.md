@@ -5,7 +5,7 @@ Knowledge extracted from 6 NeuralSeek call transcripts:
 1. **CPP/NeuralSeek Sales/Presales Training** (May 22, 2026) — Lawrence's deep-dive training session with CPP (channel partner) sales team. Covers strategy, ICP, deal structure, Itochu/Children's Health deals, and the GPU/hardware infrastructure expansion play.
 2. **NeuralSeek Demo for Santander** (May 14, 2026) — Discovery + demo with Bilal Akrout (manages Capital Markets/CIB infrastructure & risk apps at Santander). Focus on flexibility, code gen pairing, and risk use cases.
 3. **NeuralSeek Platform Demo — Children's Health** (Apr 17, 2026) — Implementation kickoff demo for Children's Health team (security, IAM, digital products, architects). Focus on policy chatbot scope, security/GRC concerns, knowledge base mechanics.
-4. **NeuralSeek w/ YourAI (Founding CRO Mihir Sanghavi)** (May 19, 2026) — Partnership/white-label discussion with a startup building legal + healthcare AI. Focus on rev share model, OEM-ing NeuralSeek, technical demo.
+4. **NeuralSeek w/ Anonymous AI Startup (Founding CRO)** (May 19, 2026) — Partnership/white-label discussion with a startup building legal + healthcare AI. Focus on rev share model, OEM-ing NeuralSeek, technical demo.
 5. **Interview 1 with Oy** (May 2026) — Brand & messaging discovery for the upcoming hero brand film. Surfaces the "fear of ownership" enemy, "AI vendor sloppy room," CTO/CISO unifier campaign, and the new positioning architecture.
 6. **Interview 2 with Oy** (May 2026) — Story sprint + ICP deep-dive. Surfaces the "AI engineer in a box" framing, "broccoli" analogy, pressure-aware buyer insight, VAR/VAD channel strategy, and Lawrence's voice/vibe.
 

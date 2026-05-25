@@ -99,7 +99,7 @@ Two-tier offering — NeuralSeek FDE + Channel Partner FDE.
 
 **Cannot:** White-label + unlimited resale.
 
-Lawrence's policy (from YourAI call):
+Lawrence's policy (from Anonymous AI Startup call):
 > "I cannot sell you a containerized license and then let you sell unlimited on top of us. We can do rev-share stuff — if you're charging people $2,000/mo, we can come up with a per-something rate aligned to your pricing. But we'd have to have a conversation about protecting us."
 
 **The rev-share model exists** for partners building branded products on top of NeuralSeek — needs to be aligned to their downstream pricing.

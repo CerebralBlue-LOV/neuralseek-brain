@@ -219,9 +219,9 @@ Cited by Paul O'Dell as a "prime example" of how the AI/NeuralSeek practice grow
 
 ---
 
-## YourAI — Channel/White-Label Discussion (May 19)
+## Anonymous AI Startup — Channel/White-Label Discussion (May 19)
 
-**Context:** Pre-revenue startup building in legal + healthcare. CEO is Ryan (non-technical). Mihir Sanghavi (Founding CRO) + Michael Petretta (CTO, ex-Amazon/Apple) drove the call.
+**Context:** Pre-revenue startup building in legal + healthcare. The CEO is non-technical. the Founding CRO and their CTO drove the call.
 
 **Discussed deal mechanics:**
 - White-label allowed for "pointed solutions" (vs. horizontal AI middleware plays)

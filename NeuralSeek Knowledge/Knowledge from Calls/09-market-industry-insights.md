@@ -180,7 +180,7 @@ Children's Health validates:
 
 > "This is the best time to be an entrepreneur and take out these legacy companies. At Itochu, you not only can beat N8N — the coolest thing is I beat S&P and I beat AlphaSense. It was a research agent stack. Why is that so crazy? Like, S&P Global. Smoke them at a bake-off."
 
-**Use this with startup partners (YourAI, etc.):** the legacy vertical SaaS landscape is ripe for disruption, and NeuralSeek is the platform that lets startups punch above their weight.
+**Use this with startup partners (Anonymous AI Startup, etc.):** the legacy vertical SaaS landscape is ripe for disruption, and NeuralSeek is the platform that lets startups punch above their weight.
 
 ---
 
