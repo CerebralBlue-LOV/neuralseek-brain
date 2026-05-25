@@ -42,6 +42,17 @@ NeuralSeek is an LLM-agnostic orchestration platform that serves as the governan
 - [PennState](NeuralSeek%20Knowledge/Client%20Stories/PennState.md): PennState client story.
 - [Historical Client Stories — Aggregate](NeuralSeek%20Knowledge/Client%20Stories/historical-client-stories.md): Aggregated historical client stories in challenge/solution/outcome format.
 
+## ROI, TCO, and competitive math — *use whenever a prompt asks about cost, savings, time-to-production, build-vs-buy, or guardrail volume*
+
+These are the defensible, source-cited numbers. Pull from here for any pricing, ROI, payback, deployment-speed, or competitive-comparison conversation — instead of inventing figures or pulling them from the broader corpus.
+
+- [ROI Analysis — Index](NeuralSeek%20Knowledge/ROI_Analysis/00-INDEX.md): Map of when to use each ROI file, with headline numbers and usage guardrails. **Read this first if the prompt touches cost, savings, or competitive math.**
+- [Days to MVP](NeuralSeek%20Knowledge/ROI_Analysis/A-days-to-mvp.md): Time-to-production by named customer (Children's Health 2 weeks, Great Day Improvements 10, NatWest 12, Itochu 13, Clip 15). Use for "how fast does NeuralSeek ship?", deployment-speed framing, "weeks not quarters" headlines.
+- [Itochu Analyst ROI](NeuralSeek%20Knowledge/ROI_Analysis/B-itochu-analyst-roi.md): Defensible $-saved math on 500 analysts going from 3 weeks to 13 minutes per research deliverable. ~$10.5M/yr at conservative assumptions. Use for analyst-productivity ROI, knowledge-worker time savings, the Itochu economics story. Inputs sourced from BLS, Glassdoor, Robert Half.
+- [Itochu Bake-off vs. "N8N + 4 security tools"](NeuralSeek%20Knowledge/ROI_Analysis/C-itochu-bakeoff-vs-stack.md): Tony Chang's on-record quote, fully costed. $2.07M/yr to assemble the equivalent stack vs. $240K/yr NeuralSeek — ~$1.83M/yr saved before any productivity gain. Also includes AlphaSense ($5–7.5M/yr) and S&P Capital IQ ($2.5–6M/yr) replacement math. Use vs. N8N, point-tool stacks, "we'll integrate it ourselves" objections.
+- [Build-vs-Buy TCO (3-year, 5 use cases)](NeuralSeek%20Knowledge/ROI_Analysis/D-build-vs-buy-tco.md): Three paths to 5 production AI use cases costed over 3 years: build-it-yourself ($8.1M), best-of-breed vendor stack ($6.3M), NeuralSeek ($1.2M). Anchored to Children's Health's actual 5-use-case scope. Use for build-vs-buy decisions, "we have an internal AI team" objection, CFO TCO conversations.
+- [Guardrails in Action (illustrative)](NeuralSeek%20Knowledge/ROI_Analysis/E-guardrails-in-action.md): Modeled monthly guardrail-trigger volumes for Itochu (~5K semantic-grounding interventions, ~10K PII redactions) and Children's Health (~2K PHI redactions, ~500 policy-violation deflections). **Illustrative model, not customer telemetry — label as such in any external use and confirm with the customer before attribution.**
+
 ## Knowledge from sales and discovery calls
 
 These are distilled insights extracted from six recent calls — sales/training, discovery/demos, partnership conversations, and brand interviews. The most current view of how NeuralSeek positions, sells, and handles objections.
