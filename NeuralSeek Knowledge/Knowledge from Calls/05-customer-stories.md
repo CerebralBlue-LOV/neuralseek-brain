@@ -221,7 +221,7 @@ Cited by Paul O'Dell as a "prime example" of how the AI/NeuralSeek practice grow
 
 ## Anonymous AI Startup — Channel/White-Label Discussion (May 19)
 
-**Context:** Pre-revenue startup building in legal + healthcare. The CEO is non-technical. the Founding CRO and their CTO drove the call.
+**Context:** Pre-revenue startup building in legal + healthcare. The CEO is non-technical. The Founding CRO and their CTO drove the call.
 
 **Discussed deal mechanics:**
 - White-label allowed for "pointed solutions" (vs. horizontal AI middleware plays)
