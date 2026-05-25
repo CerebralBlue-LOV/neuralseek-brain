@@ -7,7 +7,15 @@ The canonical, read-only knowledge base for NeuralSeek — optimized for both hu
 
 ## 🚨 If you're an AI agent — read [`BRAND_RULES.md`](./BRAND_RULES.md) first
 
-Before generating any NeuralSeek-branded visual (HTML page, slide, mockup, social card, dashboard, marketing image), read [`BRAND_RULES.md`](./BRAND_RULES.md). It specifies the mandatory canvas background (rolling purple radial gradient — **never dots, grids, mesh, noise, particles, or any pattern**), the logo rule, fonts, and color discipline. The full brand book is at [`2026_images/neuralseek-brand-guidelines_2026.md`](./2026_images/neuralseek-brand-guidelines_2026.md), with the canvas rule pinned at the very top.
+**Applies to every output format** — Word docs (`.docx`), PowerPoint decks (`.pptx`), PDFs, HTML pages, slides, social cards, banners, images, emails. Not just web.
+
+Before generating any NeuralSeek-branded deliverable, read [`BRAND_RULES.md`](./BRAND_RULES.md). It specifies:
+
+- The mandatory canvas background (rolling purple radial gradient — **never dots, grids, mesh, noise, particles, or any pattern**)
+- Logo, fonts (Open Sans + JetBrains Mono), and color discipline
+- **Format-specific guidance** (RULE 7) for `.pptx`, `.docx`, PDF, HTML, images, emails — so an AI generating a PowerPoint via `python-pptx`, a Word doc via `python-docx`, or a PDF via `weasyprint` has actionable per-format instructions, not just CSS
+
+The full brand book is at [`2026_images/neuralseek-brand-guidelines_2026.md`](./2026_images/neuralseek-brand-guidelines_2026.md), with the canvas rule pinned at the very top.
 
 ## What's in here
 

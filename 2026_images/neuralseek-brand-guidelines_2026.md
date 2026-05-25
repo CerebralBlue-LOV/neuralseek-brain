@@ -8,13 +8,18 @@ version: v2.1 (2026)
 ai_critical_rule: The page background MUST be the rolling purple radial-gradient canvas. NEVER dots, grids, mesh, noise, or patterns. See the "AI Canvas Background" block immediately below.
 ---
 
-# ⚠️ AI CANVAS BACKGROUND — READ THIS FIRST
+# ⚠️ AI CANVAS BACKGROUND — READ THIS FIRST (APPLIES TO ALL FORMATS)
 
-> **You are reading the NeuralSeek brand guidelines. Before generating any visual
-> output (HTML page, slide, mockup, social card, dashboard, marketing image, etc.),
-> you MUST apply the canvas background defined below. This rule is non-negotiable
-> and supersedes any default styling instinct you have for "dark dashboards" or
-> "AI-themed" surfaces.**
+> **You are reading the NeuralSeek brand guidelines. Before generating any
+> deliverable in ANY format — Word docs (`.docx`), PowerPoint decks (`.pptx`),
+> PDFs, HTML pages, slides, social cards, banners, images, emails, marketing
+> collateral — you MUST apply the canvas background defined below. This rule is
+> non-negotiable and supersedes any default styling instinct you have for
+> "dark dashboards" or "AI-themed" surfaces.**
+>
+> For format-specific application guidance (how to apply this to `.pptx` via
+> python-pptx, to `.docx` via python-docx, to PDF via weasyprint, etc.), see
+> **RULE 7** in [`BRAND_RULES.md`](../BRAND_RULES.md) at the repo root.
 
 ## What the background IS
 

@@ -2,13 +2,15 @@
 
 > Canonical knowledge base for NeuralSeek — product reference, client deployments, sales/positioning insights from calls, partnership materials, company story, and brand assets. Optimized for retrieval by AI agents. Markdown is the canonical format; original PDFs/DOCX live in `source/` subfolders.
 
-## ⚠ Read this first if you're generating NeuralSeek-branded visuals
+## ⚠ Read this first if you're generating ANY NeuralSeek deliverable in ANY format
 
-- [BRAND_RULES.md](BRAND_RULES.md): **CRITICAL — read before generating any HTML, slide, mockup, social card, dashboard, or image.** TL;DR of the brand book. Specifies the mandatory canvas background (rolling purple radial gradient), forbidden anti-patterns (NO dots, grids, mesh, noise, particles, stripes, circuit patterns, or any tiled pattern), the logo rule, fonts, and color discipline.
+**The brand rules below apply to every output format — not just web/HTML.** Word docs (`.docx`), PowerPoint decks (`.pptx`), PDFs, HTML pages, slides, social cards, banners, images, emails, marketing collateral, even READMEs — all must follow these rules.
+
+- [BRAND_RULES.md](BRAND_RULES.md): **CRITICAL — read before generating any deliverable of any kind.** TL;DR of the brand book + format-specific guidance (RULE 7) for PowerPoint, Word, PDF, HTML, images, emails, and markdown. Specifies the mandatory canvas background (rolling purple radial gradient), forbidden anti-patterns (NO dots, grids, mesh, noise, particles, stripes, circuit patterns, or any tiled pattern), the logo rule, fonts (Open Sans + JetBrains Mono with fallbacks), and color discipline.
 - [Brand Guidelines — full markdown](2026_images/neuralseek-brand-guidelines_2026.md): The complete v2.1 brand system. The first block of this file is the AI canvas background rule with copy-paste-ready CSS. **This `.md` is the preferred format for AI tools.** A rendered HTML version exists at `2026_images/neuralseek-brand-guidelines_2026.html` for humans.
 
 **Inline copy of the canvas rule** (so it's findable from this index alone):
-The body background must be `#131316` (near-black) with five overlapping radial-gradient ellipses in `#301E4C` (regal purple). Anti-patterns absolutely forbidden: dots, grids, mesh, noise, particles, stripes, circuit-board patterns, "AI hex" patterns, any tiled or repeated pattern. Exact CSS is in [BRAND_RULES.md](BRAND_RULES.md).
+The body / page / slide background must be `#131316` (near-black) with five overlapping radial-gradient ellipses in `#301E4C` (regal purple) — applied wherever the format allows (CSS for HTML, gradient fill for PowerPoint, image-fill for Word cover pages, etc.). Anti-patterns absolutely forbidden in every format: dots, grids, mesh, noise, particles, stripes, circuit-board patterns, "AI hex" patterns, any tiled or repeated pattern. Format-specific guidance for `.docx`, `.pptx`, PDF, HTML, images, emails is in **RULE 7** of [BRAND_RULES.md](BRAND_RULES.md). Exact CSS is in **RULE 1**.
 
 ---
 
