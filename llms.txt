@@ -55,6 +55,40 @@ These are the defensible, source-cited numbers. Pull from here for any pricing, 
 - [Build-vs-Buy TCO (3-year, 5 use cases)](NeuralSeek%20Knowledge/ROI_Analysis/D-build-vs-buy-tco.md): Three paths to 5 production AI use cases costed over 3 years: build-it-yourself ($8.1M), best-of-breed vendor stack ($6.3M), NeuralSeek ($1.2M). Anchored to Children's Health's actual 5-use-case scope. Use for build-vs-buy decisions, "we have an internal AI team" objection, CFO TCO conversations.
 - [Guardrails in Action (illustrative)](NeuralSeek%20Knowledge/ROI_Analysis/E-guardrails-in-action.md): Modeled monthly guardrail-trigger volumes for Itochu (~5K semantic-grounding interventions, ~10K PII redactions) and Children's Health (~2K PHI redactions, ~500 policy-violation deflections). **Illustrative model, not customer telemetry — label as such in any external use and confirm with the customer before attribution.**
 
+## Talk tracks — *use whenever a prompt asks for a quote, soundbite, opener, persona-specific pitch line, LinkedIn lead, or a way to explain something to a specific audience*
+
+Eighteen formally-curated, single-thesis talk tracks. Each follows the same shape: **Punchline** (the line itself, ready to lift verbatim), **Why this lands** (the cognitive mechanism), **NeuralSeek tie-in** (the product bridge), **Use** (the audience and context). **Different from** the call-derived patterns in `Knowledge from Calls/06-sales-talk-tracks.md` and `12-punch-line-talk-tracks.md` — these Talk Tracks are validated against a top-tier venture firm's published agentic-AI thesis and designed to be lifted directly into pitches, posts, and decks.
+
+- [Talk Tracks — Index](NeuralSeek%20Knowledge/Talk%20Tracks/00-INDEX.md): By-category map (mental models / why-now / market position / explainers / POV) + audience-to-track selection guide (CFO, CISO, CTO, procurement, investors, channel, technical). **Read this first to pick the right talk track for the prompt.**
+
+**Mental models** (the cleanest analogies):
+- [TT-01 Calculator → Strategist](NeuralSeek%20Knowledge/Talk%20Tracks/TT-01-from-calculator-to-strategist.md): The cleanest mental model — chatbot=calculator, agent=strategist. Opener with non-technical CFOs / board members / new prospects.
+- [TT-02 The Loop is the Agent](NeuralSeek%20Knowledge/Talk%20Tracks/TT-02-the-loop-is-the-agent.md): ReAct loop demystified — perceive, plan, act, observe, repeat. Use for whiteboarding "what even is an AI agent?"
+
+**Why now / macro context**:
+- [TT-03 Every major computing paradigm](NeuralSeek%20Knowledge/Talk%20Tracks/TT-03-every-major-computing-paradigm.md): Reframes AI from "fad?" to "20-year cycle?" — investor-grade framing. Conference keynote opener, LinkedIn lead.
+- [TT-04 Inference costs fell ~1000× in 3 years](NeuralSeek%20Knowledge/Talk%20Tracks/TT-04-why-now-inference-costs-fell.md): The "why now" answer with numbers, not vibes ($60/M → pennies/M tokens). Pair with any "AI is finally ready for enterprise" pitch.
+- [TT-05 Agents proliferate per workflow, not per user](NeuralSeek%20Knowledge/Talk%20Tracks/TT-05-agents-proliferate-per-workflow.md): Token-cost-scale reframing — pair with NeuralSeek's 4-layer token throttling pitch. CFO / CTO budget conversations.
+- [TT-06 Always-on attack surface](NeuralSeek%20Knowledge/Talk%20Tracks/TT-06-always-on-attack-surface.md): M365 Copilot EchoLeak exploit named with specifics. Every CISO conversation, every healthcare / financial-services discovery call.
+
+**Where NeuralSeek sits in the market**:
+- [TT-07 As models commoditize, advantage shifts to coordinators](NeuralSeek%20Knowledge/Talk%20Tracks/TT-07-as-models-commoditize.md): Third-party validation of NeuralSeek's LLM-agnostic thesis. The single most important positioning point. Every investor / partnership conversation.
+- [TT-08 Whoever owns the workflow owns the value](NeuralSeek%20Knowledge/Talk%20Tracks/TT-08-whoever-owns-the-workflow.md): Direct restatement of the NeuralSeek value prop, written by a third party. Maps 1:1 to category routing + dynamic LLM selection + governance + replay + iteration. THE opener slide.
+- [TT-09 The 5-Layer Agent Stack](NeuralSeek%20Knowledge/Talk%20Tracks/TT-09-the-5-layer-agent-stack.md): Table of Intelligence / Action / Governance / Orchestration / Economics — competitors live in one layer, NeuralSeek touches all five. Sales kit one-pager, investor deck.
+- [TT-10 Salesforce moved to consumption pricing](NeuralSeek%20Knowledge/Talk%20Tracks/TT-10-salesforce-consumption-pricing.md): April 15, 2026 Salesforce Headless 360 announcement names the world's largest enterprise SaaS doing what NeuralSeek already does. Salesforce-aware buyers, channel / VAR conversations.
+- [TT-11 The OpenClaw parallel](NeuralSeek%20Knowledge/Talk%20Tracks/TT-11-open-source-coding-layer-parallel.md): "OpenClaw is the agent harness for coding. NeuralSeek is the agent harness for regulated enterprise workflows." Technical buyers familiar with Claude Code / Cursor.
+
+**Explaining NeuralSeek to non-technical people**:
+- [TT-12 Three Pillars of Agentic Intelligence](NeuralSeek%20Knowledge/Talk%20Tracks/TT-12-three-pillars-of-agentic-intelligence.md): Reasoning (MoE) + Memory (MLA) + Knowledge (RAG) visualized as a Greek temple. Beautiful brain analogy. Maps to NeuralSeek's category routing. Whiteboard explanation.
+- [TT-13 Seek node = agent harness, compressed](NeuralSeek%20Knowledge/Talk%20Tracks/TT-13-seek-node-agent-harness-compressed.md): One NTL line ≈ 6,000 lines of TypeScript that Anthropic / OpenAI hand-build. Technical buyer demo, especially after Claude Code exposure.
+- [TT-14 AI engineer in a box](NeuralSeek%20Knowledge/Talk%20Tracks/TT-14-ai-engineer-in-a-box.md): Existing pitch now validated by economics — a $20 sub generates $163 of compute; even Anthropic loses money. Buy-vs-build conversations.
+
+**The compelling POV — why NeuralSeek's architecture is correct**:
+- [TT-15 Governance is a property of the architecture, not the model](NeuralSeek%20Knowledge/Talk%20Tracks/TT-15-governance-is-architecture.md): **THE watershed quote.** Top-tier VC firm validates NeuralSeek's 3-year-old architectural thesis. Every other AI safety story puts boundaries in the model; NeuralSeek puts them in the architecture. CISO conversations, board presentations, regulatory-defense narratives.
+- [TT-16 Even Anthropic can't get governance right](NeuralSeek%20Knowledge/Talk%20Tracks/TT-16-even-anthropic-cant-get-governance-right.md): March 2026 Claude Code source-code leak (512K lines), Amazon Q production-deletion outages (13-hour AWS China outage, 120K lost orders), 250K failed API calls/day at Anthropic. Three of the most sophisticated AI orgs publicly failing at exactly what NeuralSeek's 118 guardrails were built to prevent. Highest-leverage CISO / CTO talk track available.
+- [TT-17 Price per completed task, not cost per token](NeuralSeek%20Knowledge/Talk%20Tracks/TT-17-price-per-completed-task.md): Independent analysis names per-token pricing as the wrong metric. NeuralSeek's containerized flat-fee model is now the architecturally-correct answer. Pricing / TCO conversations, procurement objections.
+- [TT-18 Companies that act now will lead](NeuralSeek%20Knowledge/Talk%20Tracks/TT-18-companies-that-act-now.md): The urgency message — the next 12 months are when category leadership gets decided. Closing slide of every pitch deck.
+
 ## Knowledge from sales and discovery calls
 
 These are distilled insights extracted from six recent calls — sales/training, discovery/demos, partnership conversations, and brand interviews. The most current view of how NeuralSeek positions, sells, and handles objections.
