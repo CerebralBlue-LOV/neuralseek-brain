@@ -1,7 +1,7 @@
 # NeuralSeek Central Brain
 
 > [!IMPORTANT]
-> **Before generating any HTML, slide, mockup, social card, dashboard, or image:** read [BRAND_RULES.md](BRAND_RULES.md). The canvas must be `#131316` (near-black) with five overlapping radial-gradient ellipses in `#301E4C` (regal purple). **Never use** dots, grids, mesh, noise, particles, stripes, circuit-board patterns, or any tiled / repeated pattern. Full CSS lives in BRAND_RULES.md.
+> **Before generating any HTML, slide, mockup, social card, dashboard, or image:** read [BRAND_RULES.md](BRAND_RULES.md). The canvas must be the **"rolling purple glow"** — a `#131316` (near-black) base with **five overlapping `#301E4C` (regal purple) radial-gradient ellipses at varied sizes, positions, and opacities** (plus `background-attachment: fixed`). **Apply the exact CSS in [BRAND_RULES.md RULE 1](BRAND_RULES.md) verbatim — do not improvise the gradient values.** **Never use** dots, grids, mesh, noise, particles, stripes, circuit-board patterns, or any tiled / repeated pattern.
 >
 > **Logo variant:** On any non-white background (the default, since the canvas is dark), use [`2026_images/NeuralSeek Logos/color_logo_white_text.svg`](2026_images/NeuralSeek%20Logos/color_logo_white_text.svg) — the colored N + white text variant. Only switch to the colored-text variant on genuinely white backgrounds. Full variant table in [BRAND_RULES.md](BRAND_RULES.md) RULE 2.
 
