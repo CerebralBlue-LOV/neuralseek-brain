@@ -29,6 +29,7 @@ All figures are triangulated from public benchmarks (BLS, Glassdoor, Robert Half
 
 ## Cross-references
 
+- **Companion pack:** [`../Marketing Alignment Pack/`](../Marketing%20Alignment%20Pack/) — files F, G, H from the same Marketing Alignment Pack (positioning, why-now segment, CISO playbook). A–E are here in ROI_Analysis; F–H are there.
 - Source case studies: [`../Client Stories/itochu.md`](../Client%20Stories/itochu.md), [`../Client Stories/childrens-health.md`](../Client%20Stories/childrens-health.md), [`../Client Stories/great-day-improvements.md`](../Client%20Stories/great-day-improvements.md), [`../Client Stories/NatWest.md`](../Client%20Stories/NatWest.md), [`../Client Stories/Clip.md`](../Client%20Stories/Clip.md)
 - Guardrail catalog: [`../Features/neuralseek_118_ai_guardrails_listing.md`](../Features/neuralseek_118_ai_guardrails_listing.md)
 - Sales talk tracks that use these numbers: [`../Knowledge from Calls/06-sales-talk-tracks.md`](../Knowledge%20from%20Calls/06-sales-talk-tracks.md), [`../Knowledge from Calls/08-pricing-deal-mechanics.md`](../Knowledge%20from%20Calls/08-pricing-deal-mechanics.md)
