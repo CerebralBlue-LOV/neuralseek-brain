@@ -1,5 +1,8 @@
 # NeuralSeek Central Brain
 
+> [!IMPORTANT]
+> **Before generating any HTML, slide, mockup, social card, dashboard, or image:** read [BRAND_RULES.md](BRAND_RULES.md). The canvas must be `#131316` (near-black) with five overlapping radial-gradient ellipses in `#301E4C` (regal purple). **Never use** dots, grids, mesh, noise, particles, stripes, circuit-board patterns, or any tiled / repeated pattern. Full CSS lives in BRAND_RULES.md.
+
 The canonical, read-only knowledge base for NeuralSeek — optimized for both humans browsing on GitHub and AI tools retrieving content programmatically.
 
 **Single writer**: Lawrence (lawrence@neuralseek.com).
