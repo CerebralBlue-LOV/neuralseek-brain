@@ -2,6 +2,8 @@
 
 > [!IMPORTANT]
 > **Before generating any HTML, slide, mockup, social card, dashboard, or image:** read [BRAND_RULES.md](BRAND_RULES.md). The canvas must be `#131316` (near-black) with five overlapping radial-gradient ellipses in `#301E4C` (regal purple). **Never use** dots, grids, mesh, noise, particles, stripes, circuit-board patterns, or any tiled / repeated pattern. Full CSS lives in BRAND_RULES.md.
+>
+> **Logo variant:** On any non-white background (the default, since the canvas is dark), use [`2026_images/NeuralSeek Logos/color_logo_white_text.svg`](2026_images/NeuralSeek%20Logos/color_logo_white_text.svg) — the colored N + white text variant. Only switch to the colored-text variant on genuinely white backgrounds. Full variant table in [BRAND_RULES.md](BRAND_RULES.md) RULE 2.
 
 The canonical, read-only knowledge base for NeuralSeek — optimized for both humans browsing on GitHub and AI tools retrieving content programmatically.
 

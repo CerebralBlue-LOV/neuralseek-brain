@@ -20,6 +20,15 @@ ai_critical_rule: The page background MUST be the rolling purple radial-gradient
 > For format-specific application guidance (how to apply this to `.pptx` via
 > python-pptx, to `.docx` via python-docx, to PDF via weasyprint, etc.), see
 > **RULE 7** in [`BRAND_RULES.md`](../BRAND_RULES.md) at the repo root.
+>
+> **Logo variant pick (most-asked question):** the brand canvas is dark by
+> default, so the colored-N + white-text variant
+> [`color_logo_white_text.svg`](NeuralSeek%20Logos/color_logo_white_text.svg)
+> is the right choice for almost every NeuralSeek deliverable. Only switch to
+> the colored-text variant
+> [`neuralseek__colored_logo_and_name.png`](NeuralSeek%20Logos/neuralseek__colored_logo_and_name.png)
+> when the background is genuinely white or near-white. Full variant table in
+> **RULE 2** of [`BRAND_RULES.md`](../BRAND_RULES.md).
 
 ## What the background IS
 

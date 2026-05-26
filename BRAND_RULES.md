@@ -81,12 +81,30 @@ to CISO / compliance buyers.
 
 ---
 
-## RULE 2 — Logo is full-color, always
+## RULE 2 — Logo is full-color, always — and pick the right variant for the background
 
 - The NeuralSeek mark sweeps **cyan → trust blue → indigo → magenta**, top-left
   to bottom-right.
 - **Never** recolor it. **Never** flatten it. **Never** place it on busy imagery.
 - Minimum clear space: 1× the cap-height of the wordmark on every side.
+
+### Logo variant selection — pick by background
+
+The brand canvas is dark by default, so the **colored N + white text** variant
+is the right choice for nearly every NeuralSeek deliverable. Only switch to the
+colored-text variant when the background is genuinely white or near-white (print
+docs, light-mode exports, formal letterhead).
+
+| Background | Use this file | Path |
+|---|---|---|
+| **Dark / brand canvas / any non-white surface (DEFAULT)** | `color_logo_white_text.svg` — colored N mark with white wordmark | [`2026_images/NeuralSeek Logos/color_logo_white_text.svg`](2026_images/NeuralSeek%20Logos/color_logo_white_text.svg) |
+| **White / near-white / light-mode print** | `neuralseek__colored_logo_and_name.png` — colored N mark with colored wordmark | [`2026_images/NeuralSeek Logos/neuralseek__colored_logo_and_name.png`](2026_images/NeuralSeek%20Logos/neuralseek__colored_logo_and_name.png) |
+| **Mark only — no wordmark needed (small UI, favicon, footer chip)** | `neuralseek_colored_just_logo.png` — colored N mark alone | [`2026_images/NeuralSeek Logos/neuralseek_colored_just_logo.png`](2026_images/NeuralSeek%20Logos/neuralseek_colored_just_logo.png) |
+| **All-white fallback** when even the colored N would clash (overlaid on photography, single-color print, etched/embossed) | `neuralseek_all_white_logo_and_name.png` — monochrome white wordmark + mark | [`2026_images/NeuralSeek Logos/neuralseek_all_white_logo_and_name.png`](2026_images/NeuralSeek%20Logos/neuralseek_all_white_logo_and_name.png) |
+
+**Default presumption:** If you cannot inspect the background or you are unsure,
+use `color_logo_white_text.svg`. The brand canvas is dark; the colored-N + white-text
+combination is the workhorse logo for almost every NeuralSeek visual.
 
 ---
 
@@ -173,9 +191,11 @@ Mono, brand-palette colors, full-color logo, no anti-patterns.
 - **Code / identifiers:** JetBrains Mono 14pt (fallback: Consolas, Courier New).
 - **Accent color for key callouts:** `#A24BFF` (creation/AI surfaces) or
   `#1FB6FF` (signals/highlights). Never both on the same slide.
-- **Logo placement:** put `2026_images/NeuralSeek Logos/color_logo_white_text.svg`
-  (or the PNG fallback in the same folder) in the masthead or footer of the
-  slide master so it appears on every slide.
+- **Logo placement:** the slide canvas is dark, so use
+  `2026_images/NeuralSeek Logos/color_logo_white_text.svg` (colored N + white
+  text) in the masthead or footer of the slide master so it appears on every
+  slide. See the logo variant table in RULE 2 — use the white-text variant on
+  any non-white background.
 - **Charts:** use the brand palette — cyan, trust-blue, indigo, magenta — in
   that order for series. Use Approve/Warn/Block colors only for status data.
 - **Forbidden:** dot-grid backgrounds, mesh patterns, noise textures, particle
@@ -236,7 +256,12 @@ PDFs inherit the rules of their source format:
   and explicitly state "gradient unavailable in this format." **Never** fall
   back to dots, grids, mesh, or "AI"-aesthetic patterns.
 - **Logo:** always full-color, from `2026_images/NeuralSeek Logos/`. Never
-  recolor, flatten, or place on busy imagery.
+  recolor, flatten, or place on busy imagery. **For the dark brand canvas
+  (the default case for almost every image), use the colored-N + white-text
+  variant: `color_logo_white_text.svg`.** Only switch to the colored-text
+  variant (`neuralseek__colored_logo_and_name.png`) if the background is
+  genuinely white or near-white. See the variant table in RULE 2 for the
+  full picker.
 - **Templates to copy from:** the existing LinkedIn banners
   ([`neuralseek-linkedin-banner-company.svg`](2026_images/NeuralSeek%20Logos/neuralseek-linkedin-banner-company.svg),
   [`neuralseek-linkedin-banner-personal.svg`](2026_images/NeuralSeek%20Logos/neuralseek-linkedin-banner-personal.svg))

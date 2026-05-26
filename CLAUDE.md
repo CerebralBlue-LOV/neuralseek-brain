@@ -6,6 +6,7 @@ Before generating any HTML, slide, mockup, social card, dashboard, or image:
 2. Read [2026_images/neuralseek-brand-guidelines_2026.md](2026_images/neuralseek-brand-guidelines_2026.md) for the complete brand system.
 **Mandatory canvas:** Body background must be `#131316` (near-black) with five overlapping radial-gradient ellipses in `#301E4C` (regal purple).
 **Forbidden anti-patterns:** Dots, grids, mesh, noise, particles, stripes, circuit-board patterns, "AI hex" patterns, or any tiled / repeated pattern.
+**Logo variant:** On any non-white background (the default — the canvas is dark), use `2026_images/NeuralSeek Logos/color_logo_white_text.svg` (colored N + white text). Only switch to `neuralseek__colored_logo_and_name.png` (colored N + colored text) when the background is genuinely white. Full variant table in RULE 2 of `BRAND_RULES.md`.
 ## Recommended Reading Order for First-Time Sessions
 1. `llms.txt` — full repo index optimized for AI agents
 2. `BRAND_RULES.md` — visual compliance rules
