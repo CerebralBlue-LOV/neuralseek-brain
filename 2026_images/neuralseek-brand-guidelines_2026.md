@@ -465,7 +465,7 @@ External signals brought into governed context — search, market data, real-est
 ![Brave](3rd%20Party%20Data%20Sources/brave.png)
 ![Google Search](3rd%20Party%20Data%20Sources/google%20search.svg)
 ![Tavily](3rd%20Party%20Data%20Sources/tavilylogo.png)
-![Hugging Face](3rd%20Party%20Data%20Sources/huggingface.svg)
+![Hugging Face](LLM%20Logos/huggingface.svg)
 ![SEC EDGAR](3rd%20Party%20Data%20Sources/sec_edgar.png)
 ![Nasdaq](3rd%20Party%20Data%20Sources/nasdaq.png)
 ![Zillow](3rd%20Party%20Data%20Sources/zillow.png)
@@ -473,7 +473,7 @@ External signals brought into governed context — search, market data, real-est
 ![Clay](3rd%20Party%20Data%20Sources/clay.webp)
 ![Instantly](3rd%20Party%20Data%20Sources/instantly.png)
 ![HeyReach](3rd%20Party%20Data%20Sources/heyreach.png)
-![PowerPoint](3rd%20Party%20Data%20Sources/powerpoint.png)
+![PowerPoint](Enterprise%20Apps/powerpoint.png)
 Logo Lockups
 3
 Primary, monochrome reverse, mark-only — covering every surface from app icon to print.

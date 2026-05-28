@@ -296,6 +296,149 @@ If you cannot find your format in the list above, default to:
 
 ---
 
+## RULE 8 — Visual asset catalog: use these exact files
+
+When a deliverable needs to show a NeuralSeek workspace node, an enterprise app
+connector, a third-party data source, or a logo lockup, **use the canonical
+brand-approved asset from `2026_images/`**. Do not pull logos from Google
+Images, vendor websites, or any other source — those won't match the brand
+treatment, and many vendor logos have specific monochrome/color restrictions
+the brand-approved versions already handle.
+
+This catalog mirrors the assets shown in
+[`2026_images/neuralseek-brand-guidelines_2026.md`](2026_images/neuralseek-brand-guidelines_2026.md).
+The two files stay aligned — that brand book is the priority source if anything
+diverges.
+
+### 8.1 Logo lockups (4 variants)
+
+Already covered in detail in RULE 2 above. Summary:
+
+- Dark / non-white background (DEFAULT): `2026_images/NeuralSeek Logos/color_logo_white_text.svg`
+- White / light-mode background: `2026_images/NeuralSeek Logos/neuralseek__colored_logo_and_name.png`
+- Mark only (small UI, favicon): `2026_images/NeuralSeek Logos/neuralseek_colored_just_logo.png`
+- All-white monochrome fallback: `2026_images/NeuralSeek Logos/neuralseek_all_white_logo_and_name.png`
+
+### 8.2 Workspace nodes — the visual grammar of mAIstro flows
+
+Every capability in the NeuralSeek workspace is rendered as a square, neutrally-styled node icon. Use these when showing mAIstro flow diagrams, architecture slides, or "what NeuralSeek does" overviews. All paths are under `2026_images/nodes/`.
+
+**Models** (Send To LLM variants — extend with additional `send_to_*.png` files in the folder when you need a specific model):
+- `nodes/send_to_claude_4_sonnet.png`
+- `nodes/send_to_managed_gpt_5_4.png`
+- `nodes/send_to_llama_3_2_90b_vision.png`
+- `nodes/send_to_deepseek_v3.png`
+- `nodes/embeddings.png`
+- `nodes/translate.png`
+
+**Knowledge & Retrieval:**
+- `nodes/seek.png` — the canonical Seek node (= one drag-and-drop = ~6,000 lines of TypeScript per TT-13)
+- `nodes/ns_kb_search.png`
+- `nodes/ns_kb_add_document.png`
+- `nodes/ns_kb_delete_document.png`
+- `nodes/semantic_score.png`
+- `nodes/curate.png`
+
+**Guardrails & Governance:**
+- `nodes/protect_prompt_injection.png`
+- `nodes/remove_pii.png`
+- `nodes/profanity_filter.png`
+- `nodes/http_guardrails.png`
+- `nodes/condition.png`
+- `nodes/stop.png`
+
+**Data & Connectors:**
+- `nodes/postgres.png`
+- `nodes/snowflake.png`
+- `nodes/databricks.png`
+- `nodes/db2_database.png`
+- `nodes/neo4j.png`
+- `nodes/redshift.png`
+
+**Generation & Output:**
+- `nodes/create_doc.png`
+- `nodes/create_pdf.png`
+- `nodes/create_powerpoint.png`
+- `nodes/generate_image.png`
+- `nodes/generate_speech.png`
+- `nodes/generate_video.png`
+
+**Logic, Protocol & I/O:**
+- `nodes/mcp.png`
+- `nodes/a2a.png`
+- `nodes/rest.png`
+- `nodes/extract.png`
+- `nodes/mathematical_calculation.png`
+- `nodes/read_cache.png`
+
+> The brand book calls out "60+ workspace nodes" — the catalog above is the curated subset shown in the brand book itself. For other nodes (additional models, additional connectors), browse `2026_images/nodes/` directly and follow the same square-icon visual grammar.
+
+### 8.3 Enterprise app connectors — systems of record
+
+Use these when showing NeuralSeek's native connector ecosystem (one-pagers, RFP responses, integration diagrams). All paths are under `2026_images/Enterprise Apps/`.
+
+- `Enterprise Apps/salesforce.webp`
+- `Enterprise Apps/hubspot.png`
+- `Enterprise Apps/slack.png`
+- `Enterprise Apps/teams.png` — Microsoft Teams
+- `Enterprise Apps/gmail.png`
+- `Enterprise Apps/zoom.png`
+- `Enterprise Apps/sharepoint.png`
+- `Enterprise Apps/googledrive.png`
+- `Enterprise Apps/box.png`
+- `Enterprise Apps/googleCalendar.webp`
+- `Enterprise Apps/jira.png`
+- `Enterprise Apps/trello.svg`
+- `Enterprise Apps/clickup.png`
+- `Enterprise Apps/workday.png`
+- `Enterprise Apps/snowflake.png`
+- `Enterprise Apps/databricks.png`
+- `Enterprise Apps/bigquery.svg`
+- `Enterprise Apps/Postgresql.png`
+- `Enterprise Apps/oracle.png`
+- `Enterprise Apps/db2.webp` — IBM Db2
+- `Enterprise Apps/neo4j.png`
+- `Enterprise Apps/elastic.webp`
+- `Enterprise Apps/azure.png` — Microsoft Azure
+- `Enterprise Apps/watsonx.png` — IBM watsonx
+- `Enterprise Apps/epic.webp`
+- `Enterprise Apps/erp.webp`
+
+### 8.4 Third-party data sources — external signals
+
+Use these when showing the search/data/regulatory/prospecting sources NeuralSeek brings inside the policy perimeter. All paths are under `2026_images/3rd Party Data Sources/` unless noted (Hugging Face lives in `LLM Logos/`, PowerPoint in `Enterprise Apps/`).
+
+- `3rd Party Data Sources/bing.png`
+- `3rd Party Data Sources/brave.png`
+- `3rd Party Data Sources/google search.svg`
+- `3rd Party Data Sources/tavilylogo.png`
+- `LLM Logos/huggingface.svg` — Hugging Face
+- `3rd Party Data Sources/sec_edgar.png`
+- `3rd Party Data Sources/nasdaq.png`
+- `3rd Party Data Sources/zillow.png`
+- `3rd Party Data Sources/attom.png`
+- `3rd Party Data Sources/clay.webp`
+- `3rd Party Data Sources/instantly.png`
+- `3rd Party Data Sources/heyreach.png`
+- `Enterprise Apps/powerpoint.png` — PowerPoint (used as a data source for ingestion)
+
+### 8.5 LinkedIn banner templates
+
+For social posts / banners, copy the proportions and treatment from these existing SVGs rather than designing from scratch:
+
+- `2026_images/NeuralSeek Logos/neuralseek-linkedin-banner-company.svg` — company-page banner ("Deploy AI under policy.")
+- `2026_images/NeuralSeek Logos/neuralseek-linkedin-banner-personal.svg` — personal/exec banner ("Built to be trusted." + 118 guardrails callout)
+
+### Rules for using these assets
+
+- **Use the exact filename** — do not substitute variants from elsewhere on the web.
+- **Vendor logos are full color by default.** If a deliverable requires monochrome (single-color print, embossed surface), check `2026_images/whited_logos/` for white-only variants before recoloring anything.
+- **Keep aspect ratios.** All logos and node icons are designed at the proportions stored on disk; do not stretch or squash.
+- **Sizing.** Logo lockups need 1× the cap-height of the wordmark as minimum clear space on every side (per RULE 2). Node icons render at square aspect, sizes typically 40–80px in flow diagrams, 120–240px when featured.
+- **If you need a logo or node icon not listed here**, browse the relevant `2026_images/<folder>/` first. If it's not in the repo, ask before improvising — the brand-approved version may exist but not yet be linked.
+
+---
+
 ## If this file conflicts with the full brand book
 
 The full brand book at `2026_images/neuralseek-brand-guidelines_2026.md` is the
