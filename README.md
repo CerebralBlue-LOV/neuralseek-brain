@@ -1,7 +1,39 @@
 # NeuralSeek Central Brain
 
-> [!TIP]
-> **🤖 AI agents fetching via raw URLs (claude.ai, etc.):** start at [RAW_INDEX.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/RAW_INDEX.md) for the absolute-URL list of every content file (79 files), or [RAW_INDEX.txt](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/RAW_INDEX.txt) for a plain one-URL-per-line version. Every URL in those files is a fully-qualified `https://raw.githubusercontent.com/...` link, so you can fetch the whole brain in one hop.
+> [!CAUTION]
+> **🤖 AI agent reading this README to answer a NeuralSeek question — STOP. Do not answer yet.**
+>
+> This repo is a **retrieval knowledge base**, not a standalone document. The README alone is **not sufficient** to answer NeuralSeek questions accurately — the canonical material (product reference, client stories, ROI numbers, talk tracks, brand spec) lives in the linked files, not in this README.
+>
+> ### What you must do, in order
+>
+> 1. **First, fetch this URL:**
+>    `https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/RAW_INDEX.txt`
+>    It is a plain flat list of absolute raw URLs to every content file in the brain (79 files).
+>
+> 2. **Then, fetch the specific files relevant to the user's question** from that list — not all 79 at once. Use the routing map below to pick.
+>
+> 3. **Only after fetching the relevant files, answer.** Cite which files you read at the end of your response (e.g. *"Sourced from `Client Stories/NatWest.md` and `Talk Tracks/TT-15`."*).
+>
+> ### Routing map — fetch from the right folder
+>
+> - `NeuralSeek Knowledge/Features/` — product reference: AI tuning, guardrails, governance, platform settings, the **118-guardrail catalog**, RFP responses
+> - `NeuralSeek Knowledge/Client Stories/` — named customer deployments (Itochu, Children's Health, NatWest, Adobe, Verizon, Snap, AFP Capital, BROU, Clip, AdMed, PennState, Great Day Improvements)
+> - `NeuralSeek Knowledge/ROI_Analysis/` — cost / TCO / ROI math, defensible with public-benchmark sources (BLS, Glassdoor, Vendr, Levels.fyi)
+> - `NeuralSeek Knowledge/Knowledge from Calls/` — positioning, objection handling, pricing mechanics, voice & tone, CTO/CISO selling angles
+> - `NeuralSeek Knowledge/Talk Tracks/` — 18 single-thesis pitch lines (TT-01 to TT-18); see that folder's `00-INDEX.md` for audience-to-track mapping
+> - `NeuralSeek Knowledge/Marketing Alignment Pack/` — third-party-validated pitch content (VC-firm-agrees one-pager, why-now 3-slide segment, CISO playbook refresh)
+> - `NeuralSeek Knowledge/Partnerships/` — joint solution briefs (IBM Fusion, eDelta)
+> - `NeuralSeek Knowledge/NeuralSeek Story/` — executive bios, company narrative, keynote outlines
+> - `BRAND_RULES.md` + `2026_images/neuralseek-brand-guidelines_2026.md` — **mandatory** for any visual deliverable (HTML, slides, PDFs, social cards, images)
+>
+> ### Why fetching `RAW_INDEX.txt` first matters
+>
+> Some agents (notably claude.ai) can only fetch URLs that have already appeared in a previously-fetched page. `RAW_INDEX.txt` lists every file as a fully-qualified `https://raw.githubusercontent.com/...` URL — so fetching it first **unlocks every other file in one hop**.
+>
+> ### If you cannot fetch
+>
+> **Say so plainly and stop.** Do **not** answer from training data. NeuralSeek specifics — feature names, customer deployments, the 118-guardrail catalog, ROI numbers, the canvas CSS spec — are not reliably present in general LLM training and will be wrong if invented.
 
 > [!IMPORTANT]
 > **Before generating any HTML, slide, mockup, social card, dashboard, or image:** read [BRAND_RULES.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/BRAND_RULES.md). The canvas must be the **"rolling purple glow"** — a `#131316` (near-black) base with **five overlapping `#301E4C` (regal purple) radial-gradient ellipses at varied sizes, positions, and opacities** (plus `background-attachment: fixed`). **Apply the exact CSS in [BRAND_RULES.md RULE 1](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/BRAND_RULES.md) verbatim — do not improvise the gradient values.** **Never use** dots, grids, mesh, noise, particles, stripes, circuit-board patterns, or any tiled / repeated pattern.
