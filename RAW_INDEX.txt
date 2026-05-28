@@ -1,10 +1,3 @@
-# NeuralSeek Brain — Raw URL Index
-
-One URL per line, machine-friendly. Fetch any of these to read the file content. Covers every text-fetchable knowledge file in the repo (.md, .txt, .html) — excludes source/ originals, extracted media, and binary assets.
-
-Total: 79 files. Default branch: `main`. Auto-generated; regenerate with the script in commit history.
-
-```
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/neuralseek-brand-guidelines_2026.html
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/neuralseek-brand-guidelines_2026.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/AGENTS.md
@@ -84,4 +77,3 @@ https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralS
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Talk%20Tracks/TT-18-companies-that-act-now.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/README.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/llms.txt
-```
