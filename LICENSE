@@ -1,0 +1,40 @@
+NeuralSeek Central Brain — License & Use Terms
+
+Copyright (c) 2026 NeuralSeek, Inc. All rights reserved.
+
+This repository is the canonical public knowledge base for NeuralSeek
+(https://neuralseek.ai). The content is made publicly available for
+reference, citation, and AI-agent retrieval.
+
+Permitted uses (no prior permission required):
+  - Reading, sharing, and quoting with attribution to NeuralSeek
+  - Embedding excerpts in AI-assistant responses, search-engine
+    snippets, and analyst reports
+  - Linking to any file in this repository from external sites,
+    documents, or applications
+  - Fetching content via the raw URLs listed in RAW_INDEX.md and
+    RAW_INDEX.txt for AI ingestion
+
+Restricted uses (require prior written permission from NeuralSeek):
+  - Redistribution of the repository or substantial portions of it
+    under any other name or branding
+  - Modification of customer stories, ROI figures, talk tracks, or
+    brand guidelines to misrepresent NeuralSeek or its customers
+  - Commercial republication of bulk content (training a competing
+    model on the corpus, packaging it as a paid product, etc.)
+  - Use of the NeuralSeek name, logo, or brand identity in a way
+    that implies endorsement or affiliation when none exists
+
+Brand assets (logos, color system, typography, visual identity)
+under 2026_images/ remain the trademarked property of NeuralSeek
+and may only be used to refer to NeuralSeek itself, per the
+guidelines in BRAND_RULES.md and
+2026_images/neuralseek-brand-guidelines_2026.md.
+
+Customer names, deployment details, and financial figures referenced
+in this repository are published with the consent of the named
+parties. If you spot a factual error, please open an issue or
+contact lawrence@neuralseek.com.
+
+For licensing questions or commercial-use requests:
+  lawrence@neuralseek.com
