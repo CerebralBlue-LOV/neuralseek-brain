@@ -4,7 +4,7 @@
 
 > For a plain flat list (one URL per line, no markdown), see [`RAW_INDEX.txt`](RAW_INDEX.txt).
 
-**Repo:** `CerebralBlue-LOV/neuralseek-brain` · **Branch:** `main` · **Files indexed:** 79 (`.md`, `.txt`, `.html`)
+**Repo:** `CerebralBlue-LOV/neuralseek-brain` · **Branch:** `main` · **Files indexed:** 80 (`.md`, `.txt`, `.html`)
 
 **Excluded:** `source/` originals, `media/` extracted images, `.git`, binary assets (PNG/SVG/JPG/WebP/PPTX/AVIF), lock files, backups.
 
@@ -50,6 +50,7 @@
 - [maistro_governance_analysis.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Features/maistro_governance_analysis.md)
 - [neuralseek-governance.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Features/neuralseek-governance.md)
 - [neuralseek_118_ai_guardrails_listing.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Features/neuralseek_118_ai_guardrails_listing.md)
+- [neuralworks-ai-notetaker.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Features/neuralworks-ai-notetaker.md)
 - [platform-level-ai-ops-settings.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Features/platform-level-ai-ops-settings.md)
 - [seek_governance_analysis.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Features/seek_governance_analysis.md)
 

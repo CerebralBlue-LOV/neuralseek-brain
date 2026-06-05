@@ -25,6 +25,7 @@ https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralS
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Features/maistro_governance_analysis.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Features/neuralseek-governance.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Features/neuralseek_118_ai_guardrails_listing.md
+https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Features/neuralworks-ai-notetaker.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Features/platform-level-ai-ops-settings.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Features/seek_governance_analysis.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Knowledge%20from%20Calls/00-INDEX.md
