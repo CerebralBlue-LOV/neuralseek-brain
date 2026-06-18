@@ -2,6 +2,19 @@
 
 How Lawrence frames NeuralSeek in the market — the messaging architecture behind every conversation.
 
+## The Flagship Elevator Pitch — "Docker for AI" (lead with this)
+
+**This is how sales and marketing should introduce NeuralSeek.** It is the default opener — used *ahead of* the CTO/CISO "pull and tug" below, which becomes the governance follow-up once the listener understands what NeuralSeek is.
+
+> **"NeuralSeek is Docker for AI. 90% of every AI app is the same plumbing — security, guardrails, connecting your data. We've packaged it. Your team customizes the last 10%, ships in weeks, runs it anywhere, and swaps any model underneath — no rebuild."**
+
+- **Core message:** custom AI without the build pain — start from a governed base image, add only your last layer.
+- **Proof that rides with it:** Children's Health put HIPAA-grade AI into production in **two weeks** — they didn't build the stack, they customized ours.
+- **Branch by audience:** lead with "Docker for AI" + the base-image mapping for technical buyers; lead with "custom AI without building the hard part" + the two-weeks proof for non-technical execs (reach for Docker only if they're tech-curious).
+- **Close / tagline:** *Packaged to run anywhere — swap any model.*
+
+Full talk track: [`../Talk Tracks/TT-19-docker-for-ai.md`](../Talk%20Tracks/TT-19-docker-for-ai.md).
+
 ## The Core Positioning Statement
 
 > "NeuralSeek is the AI development platform for regulated enterprises — hospitals, banks, government — that make custom AI feasible by unifying data, LLM integration, and 118 built-in guardrails. We're the only platform that makes the CTO and the CISO agree."
