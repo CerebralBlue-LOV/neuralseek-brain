@@ -1,6 +1,6 @@
 # Talk Tracks — Index
 
-Eighteen single-thesis talk tracks for NeuralSeek conversations. Each file follows the same shape: **Punchline** (the line itself), **Why this lands** (the mechanism), **NeuralSeek tie-in** (the bridge to product), **Use** (when to deploy it).
+Nineteen single-thesis talk tracks for NeuralSeek conversations. Each file follows the same shape: **Punchline** (the line itself), **Why this lands** (the mechanism), **NeuralSeek tie-in** (the bridge to product), **Use** (when to deploy it).
 
 Use these when a prompt asks for: a quote, a soundbite, a pitch opener, a CISO line, a board-deck zinger, an objection-handler, a LinkedIn-post lead, or "how do I explain [thing] to a [persona]?"
 
@@ -14,6 +14,7 @@ These are **different from** [`../Knowledge from Calls/06-sales-talk-tracks.md`]
 |---|---|---|
 | [TT-01](TT-01-from-calculator-to-strategist.md) | "Chatbot = calculator. Agent = strategist." | Opening with a non-technical CFO, board member, or new prospect |
 | [TT-02](TT-02-the-loop-is-the-agent.md) | "The loop is the agent" (ReAct — perceive/plan/act/observe/repeat) | Whiteboarding "what is an AI agent?" |
+| [TT-19](TT-19-docker-for-ai.md) | "NeuralSeek = Docker for AI" — one package bundles the model, your data, and the guardrails; runs the same everywhere | First conversation / mixed room; when you need ONE analogy that works for technical and non-technical at once |
 
 ### Why now / macro context
 
@@ -62,6 +63,7 @@ These are **different from** [`../Knowledge from Calls/06-sales-talk-tracks.md`]
 | **Investors** | TT-03 → TT-07 → TT-08 → TT-15 | Pair with [`../NeuralSeek Story/neuralseek-executive-team.md`](../NeuralSeek%20Story/neuralseek-executive-team.md) |
 | **Channel / VAR partners** | TT-10 → TT-11 → TT-08 | Pair with [`../Knowledge from Calls/08-pricing-deal-mechanics.md`](../Knowledge%20from%20Calls/08-pricing-deal-mechanics.md) |
 | **Technical demo audience** | TT-09 → TT-12 → TT-13 | Pair with the seek-node visual + 118 guardrails listing |
+| **Mixed / first-touch room** | TT-19 → TT-01 → TT-08 | Lean on "no vendor lock-in" for the enterprise close |
 
 ## Cross-references
 
