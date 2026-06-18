@@ -4,6 +4,8 @@ Nineteen single-thesis talk tracks for NeuralSeek conversations. Each file follo
 
 Use these when a prompt asks for: a quote, a soundbite, a pitch opener, a CISO line, a board-deck zinger, an objection-handler, a LinkedIn-post lead, or "how do I explain [thing] to a [persona]?"
 
+> ★ **Start here — [TT-19 "Docker for AI"](TT-19-docker-for-ai.md) is the flagship elevator pitch:** the default way sales & marketing introduce NeuralSeek. Lead with it; the other eighteen tracks support it.
+
 These are **different from** [`../Knowledge from Calls/06-sales-talk-tracks.md`](../Knowledge%20from%20Calls/06-sales-talk-tracks.md) and [`../Knowledge from Calls/12-punch-line-talk-tracks.md`](../Knowledge%20from%20Calls/12-punch-line-talk-tracks.md) — those are call-derived patterns. The Talk Tracks here are formally curated single-thesis lines validated by a top-tier venture firm's published agentic-AI thesis, designed to be lifted into pitches and posts verbatim.
 
 ## By category
@@ -14,7 +16,7 @@ These are **different from** [`../Knowledge from Calls/06-sales-talk-tracks.md`]
 |---|---|---|
 | [TT-01](TT-01-from-calculator-to-strategist.md) | "Chatbot = calculator. Agent = strategist." | Opening with a non-technical CFO, board member, or new prospect |
 | [TT-02](TT-02-the-loop-is-the-agent.md) | "The loop is the agent" (ReAct — perceive/plan/act/observe/repeat) | Whiteboarding "what is an AI agent?" |
-| [TT-19](TT-19-docker-for-ai.md) | "NeuralSeek = Docker for AI" — one package bundles the model, your data, and the guardrails; runs the same everywhere | First conversation / mixed room; when you need ONE analogy that works for technical and non-technical at once |
+| [TT-19](TT-19-docker-for-ai.md) ★ | **"NeuralSeek = Docker for AI" — FLAGSHIP** — 90% of every AI app is pre-packaged (model + your data + 118 guardrails); customize the last 10%, ship in weeks, run anywhere, swap any model | **The default elevator pitch — how sales & marketing introduce NeuralSeek.** Branch by audience: Docker-first for technical, outcome-first for non-technical |
 
 ### Why now / macro context
 
