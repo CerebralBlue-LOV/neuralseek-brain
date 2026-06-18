@@ -1,84 +1,83 @@
-# NeuralSeek = Docker for AI
-**Talk track · First conversation**
+# NeuralSeek = Docker for AI  ★ FLAGSHIP ELEVATOR PITCH
+**Talk track · The default way sales & marketing introduce NeuralSeek**
 
-*One package that bundles the model, your data, and the guardrails — and runs your custom AI the same way everywhere.*
+*90% of every AI app is the same plumbing — security, guardrails, connecting your data. We've packaged it. Your team customizes the last 10%, ships in weeks, runs anywhere, and swaps any model underneath — no rebuild.*
 
-**How to use it:** Open with the Hook → Read the room → Pick a register → Land the close.
-
----
-
-## The 10-second hook
-
-> "You know how **Docker** lets you run the same app on any machine without it breaking? **NeuralSeek does that for custom AI.**"
+**How to use it:** Read the room → pick a register → land the proof → close.
 
 ---
 
-## Step 1 — Read the room
+## The core idea (everyone, in one breath)
 
-| If you're talking to… | Use this register |
-|---|---|
-| **Non-technical** (exec, line-of-business, first exposure to AI) | Register A — the **Kitchen** version |
-| **Technical / enterprise** (engineer, architect, security buyer) | Register B — the **Container mapping** |
+> Docker means you never rebuild an app for every machine — you start from a base image and add your layer. NeuralSeek is the **governed base image for AI**: the model, your data, and 118 guardrails already packaged. Your team adds the last layer and ships.
 
-Either way, open with the Foundation below.
+You don't custom-build everything. You don't custom-build *nothing*. You custom-build the **10% that's actually yours** — on top of a stack that's already governed, auditable, and portable.
 
 ---
 
-## Foundation — everyone hears this first
+## Read the room
 
-> Normally you build software with all its dependencies, then it breaks on someone else's setup. Docker fixes that by packing the app and everything it needs into one standardized container that runs the same on a laptop, a server, or the cloud.
->
-> **NeuralSeek does the same thing — but for custom AI applications.**
-
----
-
-## Register A — the kitchen version
-*For non-technical listeners*
-
-> "Think of your AI as a cake recipe. Hand it to a friend and it comes out different — their oven, their flour, a colder kitchen."
->
-> "Docker is a box with everything inside: the exact flour, the right pan, the oven already set. Same cake every time, in any kitchen."
->
-> **"NeuralSeek puts your AI in that box — it works the same everywhere instead of breaking when people use it differently."**
-
----
-
-## Register B — the container mapping
-*For technical / enterprise listeners. Docker concept → what it means in NeuralSeek.*
-
-| Docker concept | → In NeuralSeek | Why it lands |
+| If you're talking to… | Lead with | Register |
 |---|---|---|
-| **Containerization** | Bundles the model + your enterprise data + guardrails into one unit — no hand-wiring each time | Nothing to reassemble per deployment |
-| **Runs the same everywhere** | Same behavior across AWS, Azure, IBM Cloud, on-prem, and hybrid | Enterprises run all of those at once |
-| **Infrastructure abstraction** | **LLM-agnostic** — swap the underlying model with no rebuild&nbsp; ★ *lead here* | Vendor lock-in is a board-level fear; this removes it |
-| **Isolation** | Governance: security, source citations, audit trails, on-script guardrails | The controlled boundary often makes the deal legally possible |
-| **Standard workflow** | One repeatable way to ship AI across every team | No reinventing the wheel per project |
+| **Technical / enterprise** (engineer, architect, security buyer) | "Docker for AI" + the base-image mapping | **B** |
+| **Non-technical** (CEO, line-of-business, first AI exposure) | "Custom AI without building the hard part" + the 2-weeks proof | **A** |
+
+> ⚠ **The Drew lesson:** don't open a non-technical CEO with "Docker AI platform" — it goes over their head and you lose the room. Lead with the outcome; reach for Docker only if they're tech-curious.
 
 ---
 
-## Don't bury this — the point that wins enterprise rooms
+## Register B — technical / enterprise *(lead with Docker)*
 
-> If they're enterprise, lean hardest on **no vendor lock-in**. You can swap the LLM anytime, with no rebuild. Lock-in is the fear that kills AI deals — and this is the one-line answer to it.
+**10-sec:**
+> "NeuralSeek is Docker for AI. Docker means you never rebuild an app for each machine — you start *from* a base image and add your layer. We're the governed base image for AI: the model, your data, and 118 guardrails already packaged. Your team adds the last layer and ships."
+
+**30-sec:**
+> "NeuralSeek is Docker for AI. Just like you don't write a Dockerfile from scratch — you start from a base image — you don't rebuild security, governance, and data integration for every AI project. We've packaged the hard 90% into one container; your team customizes the last mile. That's how Children's Health put **HIPAA-grade AI into production in two weeks** — they didn't build the stack, they customized ours. And it's **packaged to run anywhere — your cloud, on-prem, air-gapped — and you swap any model underneath, no rebuild.**"
+
+---
+
+## Register A — non-technical *(lead with the outcome; Docker optional)*
+
+**10-sec:**
+> "Most companies think custom AI means building everything from scratch — a year of work that usually breaks. We've already built the 90% that's the same for everyone. Your team just customizes the last 10% for your business, and it ships in weeks."
+
+**30-sec:**
+> "Every custom AI app is mostly the same plumbing under the hood — security, guardrails, connecting to your data. That's the part that takes a year and breaks. We've already built and packaged all of it. Your team only customizes the 10% that's actually *yours*. That's how a children's hospital went live with safe, compliant AI in **two weeks instead of a year**. And because it's packaged, it runs anywhere — your cloud, your building, even fully offline — and you can switch the underlying AI model anytime without rebuilding."
+
+*If they get tech-curious:* "Engineers call this 'Docker for AI.'"
+
+---
+
+## The proof that rides with it
+
+> **Children's Health: HIPAA-grade AI in production in two weeks.** They didn't build the stack — they customized ours (last-mile PHI redaction on top of our standard PII guardrails). The two-weeks number is the "no build pain" message made real.
+
+Backups by audience: **Itochu** — three weeks of analyst work → 13 minutes; **"the only platform that makes the CTO and the CISO agree"**; **200+ clients across 21+ countries.**
 
 ---
 
 ## Likely questions — quick comebacks
 
 **"Isn't this just RAG, or a wrapper?"**
-RAG is *one ingredient*. NeuralSeek is the container around the whole stack — model, data, governance, and deployment — made repeatable.
+RAG is *one ingredient* in the 90% we pre-packaged. The container is the whole governed stack — model, data, guardrails, deployment. You customize it; you don't rebuild it.
+
+**"Isn't this just a model in a container — like Ollama or BentoML?"**
+Those put *one model* in a box. We put the whole *governed AI app* in a box — your data, 118 guardrails, audit, deployment — and the model is a swappable part, not the product.
 
 **"Are we stuck with one model?"**
-No — it's model-agnostic by design. Swap the underlying LLM whenever you want.
+No — swap any model underneath, no rebuild. That's the whole point of packaging it this way.
 
 **"Is it FedRAMP / compliant?"**
-Compliance comes from *where it runs*. Drop it into your FedRAMP-authorized Azure tenant and it inherits that boundary.
+Compliance comes from *where it runs*. Drop the container into your FedRAMP-authorized tenant and it inherits that boundary.
 
 ---
 
 ## The close
 
-> **Deploy AI once. Run it anywhere. Stay in control.**
+> **Packaged to run anywhere — swap any model.**
+
+*The arc: the body sells speed (don't rebuild the hard 90%); the close adds freedom (run anywhere, never locked to a model). Ship fast **and** stay free.*
 
 ---
 
-*Internal · NeuralSeek Sales Enablement · Docker AI Talk Track*
+*Internal · NeuralSeek Sales Enablement · Flagship Elevator Pitch · Docker for AI*
