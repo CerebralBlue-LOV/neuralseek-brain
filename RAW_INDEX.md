@@ -119,4 +119,5 @@
 - [TT-16-even-anthropic-cant-get-governance-right.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Talk%20Tracks/TT-16-even-anthropic-cant-get-governance-right.md)
 - [TT-17-price-per-completed-task.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Talk%20Tracks/TT-17-price-per-completed-task.md)
 - [TT-18-companies-that-act-now.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Talk%20Tracks/TT-18-companies-that-act-now.md)
+- [TT-19-docker-for-ai.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/NeuralSeek%20Knowledge/Talk%20Tracks/TT-19-docker-for-ai.md)
 
