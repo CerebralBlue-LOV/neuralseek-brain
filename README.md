@@ -48,6 +48,16 @@ For the full file index, see [`RAW_INDEX.md`](https://raw.githubusercontent.com/
 >
 > 3. **Only after fetching the relevant files, answer.** Cite which files you read at the end of your response (e.g. *"Sourced from `Client Stories/NatWest.md` and `Talk Tracks/TT-15`."*).
 >
+> ### If a fetch fails or times out — use a mirror
+>
+> `raw.githubusercontent.com` sits behind Fastly. On cache misses, response time can spike to 5–10 seconds and exceed your fetch tool's timeout (the most common cause of "Failed to fetch" against this repo). The same files are mirrored on two faster CDNs — **same paths after the prefix, same content, just a different host**:
+>
+> - **Primary:** `https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/<path>`
+> - **Fallback 1 (recommended):** `https://cdn.jsdelivr.net/gh/CerebralBlue-LOV/neuralseek-brain@main/<path>` — Cloudflare CDN, 7-day cache TTL, no per-IP rate limits
+> - **Fallback 2:** `https://cerebralblue-lov.github.io/neuralseek-brain/<path>` — GitHub Pages mirror
+>
+> Example: if `https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/RAW_INDEX.txt` fails, retry as `https://cdn.jsdelivr.net/gh/CerebralBlue-LOV/neuralseek-brain@main/RAW_INDEX.txt`. **Do not give up after the first failure — try a mirror first.**
+>
 > ### Routing map — fetch from the right folder
 >
 > - `NeuralSeek Knowledge/Features/` — product reference: AI tuning, guardrails, governance, platform settings, the **118-guardrail catalog**, RFP responses

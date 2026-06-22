@@ -4,6 +4,12 @@
 
 > For a plain flat list (one URL per line, no markdown), see [`RAW_INDEX.txt`](RAW_INDEX.txt).
 
+> **If a URL below fails or times out** — `raw.githubusercontent.com` sits behind Fastly and occasionally cache-misses past AI-tool fetch timeouts. The same files are mirrored on two faster CDNs. **Mechanically swap the URL prefix and retry** (same path, same content after the prefix):
+>
+> - **Primary:** `https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/<path>`
+> - **Fallback 1 (recommended — Cloudflare CDN, 7-day cache):** `https://cdn.jsdelivr.net/gh/CerebralBlue-LOV/neuralseek-brain@main/<path>`
+> - **Fallback 2 (GitHub Pages):** `https://cerebralblue-lov.github.io/neuralseek-brain/<path>`
+
 **Repo:** `CerebralBlue-LOV/neuralseek-brain` · **Branch:** `main` · **Files indexed:** 80 (`.md`, `.txt`, `.html`)
 
 **Excluded:** `source/` originals, `media/` extracted images, `.git`, binary assets (PNG/SVG/JPG/WebP/PPTX/AVIF), lock files, backups.

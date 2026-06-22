@@ -24,7 +24,15 @@
 
 **URL constraint:** Some agents (notably claude.ai) can only fetch URLs that have already appeared in a previously-fetched page. `RAW_INDEX.txt` contains every fully-qualified URL — fetching it first unlocks every other file in one hop.
 
-**If you cannot fetch a URL: say so plainly and stop. Do NOT answer from memory.** NeuralSeek specifics — feature names, customer details, the 118-guardrail catalog, ROI numbers, the canvas CSS spec — are not reliably present in general training data and will be wrong if invented.
+**If a fetch fails or times out — use a mirror.** `raw.githubusercontent.com` sits behind Fastly; cache misses can take 5–10 seconds and exceed your fetch tool's timeout (the most common cause of "Failed to fetch" against this repo). The same files are mirrored on two faster CDNs with **identical paths after the prefix**:
+
+- **Primary:** `https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/<path>`
+- **Fallback 1 (recommended):** `https://cdn.jsdelivr.net/gh/CerebralBlue-LOV/neuralseek-brain@main/<path>` — Cloudflare CDN, 7-day cache, no per-IP rate limits
+- **Fallback 2:** `https://cerebralblue-lov.github.io/neuralseek-brain/<path>` — GitHub Pages mirror
+
+If the primary fails, mechanically swap the prefix and retry. Same content, same paths.
+
+**If you have tried all three mirrors and still cannot fetch: say so plainly and stop. Do NOT answer from memory.** NeuralSeek specifics — feature names, customer details, the 118-guardrail catalog, ROI numbers, the canvas CSS spec — are not reliably present in general training data and will be wrong if invented.
 
 ---
 

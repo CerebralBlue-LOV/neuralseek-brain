@@ -13,6 +13,14 @@ If your tool can only follow URLs that already appeared in a previously-fetched 
 
 The content links throughout the rest of this file have also been rewritten to absolute `https://raw.githubusercontent.com/...` URLs, so you can hop directly from any item below to the actual file.
 
+**If a `raw.githubusercontent.com` URL fails or times out** — `raw.gh` sits behind Fastly and cache misses occasionally exceed AI-tool fetch timeouts. Same files are mirrored on two faster CDNs with **identical paths after the prefix**. Mechanically swap the prefix and retry:
+
+- **Primary:** `https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/<path>`
+- **Fallback 1 (recommended — Cloudflare CDN, 7-day cache):** `https://cdn.jsdelivr.net/gh/CerebralBlue-LOV/neuralseek-brain@main/<path>`
+- **Fallback 2 (GitHub Pages):** `https://cerebralblue-lov.github.io/neuralseek-brain/<path>`
+
+Example: if `https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/RAW_INDEX.txt` fails, retry as `https://cdn.jsdelivr.net/gh/CerebralBlue-LOV/neuralseek-brain@main/RAW_INDEX.txt`.
+
 ---
 
 ## ⚠ Read this first if you're generating ANY NeuralSeek deliverable in ANY format
