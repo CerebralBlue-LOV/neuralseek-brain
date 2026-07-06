@@ -10,7 +10,7 @@
 > - **Fallback 1 (recommended — Cloudflare CDN, 7-day cache):** `https://cdn.jsdelivr.net/gh/CerebralBlue-LOV/neuralseek-brain@main/<path>`
 > - **Fallback 2 (GitHub Pages):** `https://cerebralblue-lov.github.io/neuralseek-brain/<path>`
 
-**Repo:** `CerebralBlue-LOV/neuralseek-brain` · **Branch:** `main` · **Files indexed:** 80 (`.md`, `.txt`, `.html`)
+**Repo:** `CerebralBlue-LOV/neuralseek-brain` · **Branch:** `main` · **Files indexed:** 82 (`.md`, `.txt`, `.html`)
 
 **Excluded:** `source/` originals, `media/` extracted images, `.git`, binary assets (PNG/SVG/JPG/WebP/PPTX/AVIF), lock files, backups.
 
@@ -28,6 +28,7 @@
 
 - [neuralseek-brand-guidelines_2026.html](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/neuralseek-brand-guidelines_2026.html)
 - [neuralseek-brand-guidelines_2026.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/neuralseek-brand-guidelines_2026.md)
+- [Product Screenshots/00-INDEX.md (product-UI screenshot map — full-screen heroes + component close-ups)](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/Product%20Screenshots/00-INDEX.md)
 
 ## NeuralSeek Knowledge / Client Stories
 

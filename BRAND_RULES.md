@@ -429,6 +429,16 @@ For social posts / banners, copy the proportions and treatment from these existi
 - `2026_images/NeuralSeek Logos/neuralseek-linkedin-banner-company.svg` — company-page banner ("Deploy AI under policy.")
 - `2026_images/NeuralSeek Logos/neuralseek-linkedin-banner-personal.svg` — personal/exec banner ("Built to be trusted." + 118 guardrails callout)
 
+### 8.6 Product screenshots — real UI beats mockups
+
+170+ product-UI captures live under `2026_images/Product Screenshots/`, organized
+for navigation: **start at
+[`Product Screenshots/00-INDEX.md`](2026_images/Product%20Screenshots/00-INDEX.md)**.
+The `full-screen/` subfolder holds the 18 full-page hero shots (use these first);
+component close-ups are grouped under `maistro-governance/`, `seek-governance/`,
+`maistro-editor/`, and `neuralworks/`. Never mock up a NeuralSeek UI when a real
+screenshot exists — check the index first.
+
 ### Rules for using these assets
 
 - **Use the exact filename** — do not substitute variants from elsewhere on the web.

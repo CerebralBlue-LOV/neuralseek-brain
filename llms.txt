@@ -155,8 +155,9 @@ These are distilled insights extracted from six recent calls — sales/training,
 
 ## Brand and image assets
 
-The `2026_images/` directory holds 266+ image files for use in branded content, presentations, and articles. Organized by topic:
+The `2026_images/` directory holds 400+ image files for use in branded content, presentations, and articles. Organized by topic:
 
+- [Product Screenshots — Index](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/Product%20Screenshots/00-INDEX.md): **170+ real product-UI captures, organized for agent navigation. Use whenever a deliverable needs a NeuralSeek product surface — never mock up UI when a real screenshot exists.** The `full-screen/` subfolder holds 18 full-page hero shots (preferred, most-frequently-used — e.g. `seek-overview-full.png` for governance, `maistro-agent-insights-full.png` for observability, `seek-semantic-insights-full.png` for anti-hallucination). Component close-ups grouped under `maistro-governance/` (agent details/insights, model comparison, red-team testing, token insights), `seek-governance/` (overview gauges, semantic insights, configuration, documentation, intent, logs, tokens), `maistro-editor/` (drag-and-drop flows, agent visualizer), and `neuralworks/` (AI notetaker UI). The index has quick-picks-by-story routing.
 - `2026_images/NeuralSeek Logos/` — NeuralSeek brand marks.
 - `2026_images/Client Logos (colored)/` — Logos of clients (colored versions).
 - `2026_images/whited_logos/` — White / monochrome client logos.

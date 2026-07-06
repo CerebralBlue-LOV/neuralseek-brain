@@ -24,7 +24,7 @@
 | `Companies Logos/` | Third-party tech/company logos (ecosystem, competitors, partners) | Comparison & landscape slides |
 | `Demo Logos/` | Logos used in live demos | Demo screenshots / walkthroughs |
 | `Custom Client Apps/` | Per-client custom app marks (e.g. Itochu) | That client's deliverables only |
-| `Product Screenshots/` | NeuralSeek product UI captures | Product explainers, feature pages |
+| `Product Screenshots/` | NeuralSeek product UI captures — 170+ shots organized by surface, with a dedicated `full-screen/` hero folder | Product explainers, feature pages. **Start at [`Product Screenshots/00-INDEX.md`](Product%20Screenshots/00-INDEX.md)** — full-screen shots first, component close-ups by area (maistro-governance, seek-governance, maistro-editor, neuralworks) |
 | `Guardrails Images/` | 118-guardrail + regulated-tuning visuals (incl. `Nodes/`) | Governance / guardrails explainers |
 | `Seek Governance/`, `mAIstro Governance/` | Governance-pane diagrams for Seek & mAIstro | Governance deep-dives |
 | `HealthCareAgentStack/` | Healthcare agent-stack diagrams (+ `SubAgents/`) | Children's Health / healthcare decks |

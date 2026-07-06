@@ -1,5 +1,6 @@
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/neuralseek-brand-guidelines_2026.html
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/neuralseek-brand-guidelines_2026.md
+https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/Product%20Screenshots/00-INDEX.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/AGENTS.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/BRAND_RULES.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/CLAUDE.md

@@ -120,9 +120,11 @@ A quick visual sample of the brand assets and product surfaces in this repo. Ful
 | **NeuralSeek logo** (full-color, white text — for dark backgrounds) | <img src="2026_images/NeuralSeek%20Logos/color_logo_white_text.svg" width="220" alt="NeuralSeek logo" /> |
 | **LinkedIn company banner** — *"Deploy AI under policy."* with Verizon, Adobe, Children's Health, Itochu, MetLife | <img src="2026_images/NeuralSeek%20Logos/neuralseek-linkedin-banner-company.svg" width="400" alt="NeuralSeek LinkedIn company banner" /> |
 | **NeuralSeek vs. DIY build timeline** — 3 months live vs. 6–9 months to scaling wall | <img src="2026_images/high%20quality%20visuals/neuralseek-vs-diy-timeline.png" width="400" alt="NeuralSeek vs DIY timeline" /> |
-| **mAIstro Agent Editor** — drag-and-drop flow (Slack search → Databricks → PII removal → Protect → LLM Plan/Act → PowerPoint) | <img src="2026_images/Product%20Screenshots/maistro-agent-editor-slack-databricks-flow.webp" width="400" alt="mAIstro Agent Editor" /> |
-| **Seek Governance Overview** — semantic confidence, prompt injection, PII, HAP gauges + Top Intents | <img src="2026_images/Product%20Screenshots/governance-seek-overview-dashboards.webp" width="400" alt="Seek Governance Overview" /> |
-| **Agent Visualizer** — Patient-Care-Coordination-Orchestrator (multi-agent healthcare flow) | <img src="2026_images/Product%20Screenshots/maistro-agent-visualizer-patient-care.webp" width="400" alt="Agent Visualizer" /> |
+| **mAIstro Agent Editor** — drag-and-drop flow (Slack search → Databricks → PII removal → Protect → LLM Plan/Act → PowerPoint) | <img src="2026_images/Product%20Screenshots/maistro-editor/maistro-agent-editor-slack-databricks-flow.webp" width="400" alt="mAIstro Agent Editor" /> |
+| **Seek Governance Overview** — semantic confidence, prompt injection, PII, HAP gauges + Top Intents | <img src="2026_images/Product%20Screenshots/full-screen/seek-overview-full.png" width="400" alt="Seek Governance Overview" /> |
+| **Agent Visualizer** — Patient-Care-Coordination-Orchestrator (multi-agent healthcare flow) | <img src="2026_images/Product%20Screenshots/maistro-editor/maistro-agent-visualizer-patient-care.webp" width="400" alt="Agent Visualizer" /> |
+
+For 170+ product screenshots organized by surface (governance dashboards, red-team testing, token telemetry, semantic insights, NeuralWorks), start at [`Product Screenshots/00-INDEX.md`](./2026_images/Product%20Screenshots/00-INDEX.md) — full-screen hero shots first, component close-ups by area.
 
 ## How AI tools consume this
 
