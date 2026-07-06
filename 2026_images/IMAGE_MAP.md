@@ -18,7 +18,7 @@
 | `Enterprise Apps/` | Connector / integration logos (Salesforce, Teams, Databricks, Snowflake…) | "Works with your stack" / integration & architecture diagrams |
 | `3rd Party Data Sources/` | External data + search providers (ATTOM, Zillow, Clay, Tavily…) | Enrichment / data-pipeline diagrams |
 | `LLM Logos/` | Model-provider logos (OpenAI, Anthropic, Gemini, watsonx…) | "LLM-agnostic" / model-choice slides |
-| `CISO_icons/` | Compliance framework badges (HIPAA, SOC 2, GDPR, EU AI Act…) | Governance / security / regulated-industry surfaces |
+| `CISO_icons/` | Compliance framework badges (HIPAA, SOC 2, EU AI Act…) | Governance / security / regulated-industry surfaces |
 | `Client Logos (colored)/` | Colored customer logos | Case studies, client-specific decks, logo walls (light bg) |
 | `whited_logos/` | Single-color WHITE customer logos | Customer logo walls on the dark canvas |
 | `Companies Logos/` | Third-party tech/company logos (ecosystem, competitors, partners) | Comparison & landscape slides |
@@ -115,14 +115,13 @@
 | `togetherai.png` | togetherai |
 | `xai.png` | xai |
 
-### `CISO_icons/`  (6 files) — compliance / regulatory framework badges
+### `CISO_icons/`  (5 files) — compliance / regulatory framework badges
 
 | File | Use it for |
 |---|---|
 | `HIPAA.webp` | HIPAA |
 | `ccpa.png` | CCPA |
 | `eu ai act.png` | EU AI Act |
-| `gdpr.webp` | GDPR |
 | `owasp.webp` | OWASP |
 | `soc2.png` | SOC 2 |
 

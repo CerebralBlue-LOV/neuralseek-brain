@@ -284,7 +284,7 @@ Six guardrails were broken out as line items in this revision — they were impl
 | **LLM providers** | **9** |
 | **PII detector categories** | **13** |
 | **PII enforcement actions** | **5** |
-| **Compliance frameworks supported** | **9** (HIPAA, GDPR, PCI-DSS, CCPA, SOC 2, ISO 27001, FedRAMP, ISO 42001, NIST AI RMF) |
+| **Compliance frameworks supported** | **5** (HIPAA, CCPA, SOC 2, ISO 42001, NIST AI RMF) |
 | **Adversarial attack buckets red-teamed** | **5** |
 | **Vault back-ends supported** | **6** |
 | **Log export destinations** | **4+** (S3, Splunk, Datadog, customer SIEM) |

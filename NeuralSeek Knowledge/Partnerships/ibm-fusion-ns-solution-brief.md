@@ -1,8 +1,8 @@
 ---
 title: NeuralSeek + IBM Fusion Solution Brief
 summary: >-
-  Joint solution brief: NeuralSeek on IBM Fusion delivers secure, no-code AI for regulated enterprises (HIPAA, PCI-DSS, FINRA, GDPR, CJIS). Addresses data sovereignty, strict access control, and compliance gaps that public-cloud LLMs and multi-tenant SaaS AI cannot meet. Behind-the-firewall, deterministic, source-grounded.
-tags: [partnership, ibm, ibm-fusion, regulated-industries, compliance, hipaa, pci-dss, finra, gdpr, cjis, no-code, data-sovereignty]
+  Joint solution brief: NeuralSeek on IBM Fusion delivers secure, no-code AI for regulated enterprises (HIPAA, FINRA, CJIS). Addresses data sovereignty, strict access control, and compliance gaps that public-cloud LLMs and multi-tenant SaaS AI cannot meet. Behind-the-firewall, deterministic, source-grounded.
+tags: [partnership, ibm, ibm-fusion, regulated-industries, compliance, hipaa, finra, cjis, no-code, data-sovereignty]
 source: IBM Fusion + NS Solution Brief v5 (5-11-26).docx
 version: v5 (2026-05-11)
 ---

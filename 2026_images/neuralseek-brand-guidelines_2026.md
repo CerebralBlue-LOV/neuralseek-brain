@@ -98,7 +98,7 @@ in regulated rooms.
 A visual system designed for the people who sign off on AI in deep government, strict-regulated hospitals, and high-stakes banking. Built for governance, not for vibes.
 AudienceCISO · CRO · CCO
 IndustriesGov · Healthcare · Banking
-PostureSOC 2 · HIPAA · FedRAMP
+PostureSOC 2 · HIPAA
 Product ChromeDark default · Light toggle
 Released2026.05.18
 The Mark
@@ -199,7 +199,7 @@ For identifiers, references, and system state
 model_id: claude-4-sonnet-20260208\
 policy_ref: NS-GOV-2026.05-PII-REDACT-v3\
 run_id: run_8f3a92e1-c4d0-4b7e-9f12\
-attestation: SOC2-T2 · HIPAA · FedRAMP-IL4\
+attestation: SOC2-T2 · HIPAA\
 data_residency: us-gov-west-1
 ### Font specifications
 Primary · Human-readable type
@@ -497,7 +497,7 @@ Do
 - 04Default the product to the dark canvas; reserve the light surface for print, export, and the explicit theme toggle.
 - 05Apply the gradient (always left→right, always starting at `#FDFEFF`) on the page title and on the single most important phrase per heading. Use `.gradient-text` for governance (ends `#7BABFF`) or `.gradient-text-pink` for creation (ends `#E170FC`). One per heading — never two, never mixed on a single surface.
 - 06Limit primary actions to one indigo→magenta button per surface. The CTA is the loudest thing on the page; it should be alone.
-- 07Show compliance posture in a persistent footer. SOC 2 · HIPAA · FedRAMP · ISO 27001 · GDPR · PCI DSS.
+- 07Show compliance posture in a persistent footer. SOC 2 · HIPAA.
 Don't
 - 01No purple-pink gradients on white marketing surfaces. No "AI sparkle" iconography. No glow effects on flat compliance UI.
 - 02No casual voice. No emojis. No "Let's build something amazing!" CTAs.
@@ -513,10 +513,6 @@ Brand Position · 2026
 NeuralSeek is the AI development environment regulated enterprises **deploy under policy** — guardrails, governance, and audit lineage built in.
 SOC 2 Type II
 HIPAA
-FedRAMP
-ISO 27001
-GDPR
-PCI DSS
 NS · Brand System · 2026.05
 Quietly engineered.
 v 2.1 — Regulated · Dark-First

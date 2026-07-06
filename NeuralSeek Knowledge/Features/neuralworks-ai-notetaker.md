@@ -2,7 +2,7 @@
 title: NeuralWorks — Take notes under policy. (Governed AI Notetaker)
 summary: >-
   NeuralWorks is NeuralSeek's modular AI notetaker that joins Microsoft Teams, Zoom, and Google Meet calls, transcribes them inside the customer's boundary, and turns every conversation into governed action across CRM, ticketing, and inbox via NeuralSeek mAIstro agent flows. LLM-agnostic (Claude, GPT, Gemini, Llama, Mistral, watsonx, Bedrock, Grok, DeepSeek), deployable on-prem / VPC / air-gapped, semantically scored summaries, 4-layer PII/PHI redaction, attribution protection against fabricated quotes, full replay audit, 118 AI Guardrails. Built for regulated buyers (banking, healthcare, government, capital markets) who can't ship raw call audio to commodity notetakers like Gong, Fireflies, Fathom, Zoom AI, or Microsoft Copilot. Tagline — "A notetaker your CISO approves."
-tags: [features, product, neuralworks, notetaker, meetings, transcription, governance, regulated-industries, mAIstro, agent-swarms, agent-flows, crm-update, action-items, slack, jira, hubspot, salesforce, security, compliance, hipaa, soc2, fedramp, pii-redaction, phi-redaction, attribution-protection, audit, replay, on-prem, vpc, air-gapped, llm-agnostic]
+tags: [features, product, neuralworks, notetaker, meetings, transcription, governance, regulated-industries, mAIstro, agent-swarms, agent-flows, crm-update, action-items, slack, jira, hubspot, salesforce, security, compliance, hipaa, soc2, pii-redaction, phi-redaction, attribution-protection, audit, replay, on-prem, vpc, air-gapped, llm-agnostic]
 source: https://neuralseek.ai/use-cases/neuralworks
 version: 2.0 (Regulated)
 ---
@@ -126,10 +126,6 @@ NeuralWorks inherits the NeuralSeek platform's compliance posture:
 
 - **HIPAA** (with BAA available on Azure OpenAI)
 - **SOC 2 Type II**
-- **FedRAMP** (deployable under)
-- **ISO 27001**
-- **GDPR**
-- **PCI-DSS**
 - **CCPA**
 - **EU AI Act**
 - **OWASP**
