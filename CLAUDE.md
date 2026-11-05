@@ -114,7 +114,7 @@ This section applies when the agent is **Claude Code** (the Anthropic CLI). Othe
 
 ### Things to never do without checking first
 
-- **Don't add dot grids, glows, gradient text or stock imagery to any generated visual.** Grain and the + grid are allowed only where the v3 guidelines allow them (social, deck and brochure covers). See `BRAND_RULES.md` for the full anti-pattern list and the format-specific guidance.
+- **Don't add dot grids, glows, gradient text or stock imagery to any generated visual.** Grain is allowed on social posts only; the + grid only on social, deck slides and brochure covers (see the v3 guidelines). See `BRAND_RULES.md` for the full anti-pattern list and the format-specific guidance.
 - **Don't modify Lawrence's wording in his original files** (Talk Tracks, ROI Analysis, Marketing Alignment Pack, Knowledge from Calls). Copy them as-authored. Add indexes and routing around them, not edits inside them.
 - **Don't add YAML frontmatter to files Lawrence wrote** without asking — the index files and `llms.txt` carry the retrieval metadata.
 - **Don't change repo settings** (visibility, branch protection, collaborators) without explicit permission.
