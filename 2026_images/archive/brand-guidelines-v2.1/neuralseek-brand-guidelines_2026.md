@@ -1,11 +1,10 @@
 ---
-title: NeuralSeek Brand Guidelines 2026
+title: NeuralSeek Brand Guidelines 2026 v2.1 (ARCHIVED, do not apply)
 summary: >-
-  NeuralSeek's 2026 brand system (v2.1). MANDATORY: the canvas background is a dark-base color (#131316) with five overlapping radial-gradient purple ellipses producing a "rolling glow." NEVER use dots, grids, mesh, noise, grain, particles, or any pattern. The background is GRADIENT ONLY. Covers logo, color, typography (Open Sans + JetBrains Mono), nodes, UI, cards, voice, taglines.
+  ARCHIVED v2.1. Superseded by 2026_images/neuralseek-brand-guidelines_2026_v3.md. Do not apply these rules to new work.
 tags: [brand, brand-guidelines, design-system, visual-identity, typography, color, voice, tone, dark-canvas, no-dots, no-grids, gradient-only, 2026]
 source: neuralseek-brand-guidelines_2026.html
 version: v2.1 (2026)
-ai_critical_rule: The page background MUST be the rolling purple radial-gradient canvas. NEVER dots, grids, mesh, noise, or patterns. See the "AI Canvas Background" block immediately below.
 status: archived
 superseded_by: 2026_images/neuralseek-brand-guidelines_2026_v3.md
 ---
@@ -23,16 +22,16 @@ superseded_by: 2026_images/neuralseek-brand-guidelines_2026_v3.md
 >
 > For format-specific application guidance (how to apply this to `.pptx` via
 > python-pptx, to `.docx` via python-docx, to PDF via weasyprint, etc.), see
-> **RULE 7** in [`BRAND_RULES.md`](../BRAND_RULES.md) at the repo root.
+> **RULE 7** in [`BRAND_RULES.md`](../../../BRAND_RULES.md) at the repo root.
 >
 > **Logo variant pick (most-asked question):** the brand canvas is dark by
 > default, so the colored-N + white-text variant
-> [`color_logo_white_text.svg`](NeuralSeek%20Logos/color_logo_white_text.svg)
+> [`color_logo_white_text.svg`](../../NeuralSeek%20Logos/color_logo_white_text.svg)
 > is the right choice for almost every NeuralSeek deliverable. Only switch to
 > the colored-text variant
-> [`neuralseek__colored_logo_and_name.png`](NeuralSeek%20Logos/neuralseek__colored_logo_and_name.png)
+> [`neuralseek__colored_logo_and_name.png`](../../NeuralSeek%20Logos/neuralseek__colored_logo_and_name.png)
 > when the background is genuinely white or near-white. Full variant table in
-> **RULE 2** of [`BRAND_RULES.md`](../BRAND_RULES.md).
+> **RULE 2** of [`BRAND_RULES.md`](../../../BRAND_RULES.md).
 
 ## What the background IS
 
@@ -119,13 +118,13 @@ Minimum padding equal to **1×** the cap height of the wordmark on every side. N
 Logo Variations
 
 3 LOCKUPS
-![NeuralSeek primary lockup](NeuralSeek%20Logos/neuralseek__colored_logo_and_name.png)
+![NeuralSeek primary lockup](../../NeuralSeek%20Logos/neuralseek__colored_logo_and_name.png)
 Primary lockup
 Default · light surfaces
-![NeuralSeek monochrome lockup](NeuralSeek%20Logos/color_logo_white_text.svg)
+![NeuralSeek monochrome lockup](../../NeuralSeek%20Logos/color_logo_white_text.svg)
 Monochrome reverse
 Dark surfaces · video · print
-![NeuralSeek mark only](NeuralSeek%20Logos/neuralseek_colored_just_logo.png)
+![NeuralSeek mark only](../../NeuralSeek%20Logos/neuralseek_colored_just_logo.png)
 Mark only
 App icon · favicon · avatar
 Color
@@ -255,62 +254,62 @@ Every capability inside the NeuralSeek workspace — every model, every connecto
 Models
 
 04 OF 12+
-![](nodes/send_to_claude_4_sonnet.png)
-![](nodes/send_to_managed_gpt_5_4.png)
-![](nodes/send_to_llama_3_2_90b_vision.png)
-![](nodes/send_to_deepseek_v3.png)
-![](nodes/embeddings.png)
-![](nodes/translate.png)
+![](../../nodes/send_to_claude_4_sonnet.png)
+![](../../nodes/send_to_managed_gpt_5_4.png)
+![](../../nodes/send_to_llama_3_2_90b_vision.png)
+![](../../nodes/send_to_deepseek_v3.png)
+![](../../nodes/embeddings.png)
+![](../../nodes/translate.png)
 Knowledge & Retrieval
 
 06 NODES
-![](nodes/seek.png)
-![](nodes/ns_kb_search.png)
-![](nodes/ns_kb_add_document.png)
-![](nodes/ns_kb_delete_document.png)
-![](nodes/semantic_score.png)
-![](nodes/curate.png)
+![](../../nodes/seek.png)
+![](../../nodes/ns_kb_search.png)
+![](../../nodes/ns_kb_add_document.png)
+![](../../nodes/ns_kb_delete_document.png)
+![](../../nodes/semantic_score.png)
+![](../../nodes/curate.png)
 Guardrails & Governance
 
 06 NODES
-![](nodes/protect_prompt_injection.png)
-![](nodes/remove_pii.png)
-![](nodes/profanity_filter.png)
-![](nodes/http_guardrails.png)
-![](nodes/condition.png)
-![](nodes/stop.png)
+![](../../nodes/protect_prompt_injection.png)
+![](../../nodes/remove_pii.png)
+![](../../nodes/profanity_filter.png)
+![](../../nodes/http_guardrails.png)
+![](../../nodes/condition.png)
+![](../../nodes/stop.png)
 Data & Connectors
 
 06 NODES
-![](nodes/postgres.png)
-![](nodes/snowflake.png)
-![](nodes/databricks.png)
-![](nodes/db2_database.png)
-![](nodes/neo4j.png)
-![](nodes/redshift.png)
+![](../../nodes/postgres.png)
+![](../../nodes/snowflake.png)
+![](../../nodes/databricks.png)
+![](../../nodes/db2_database.png)
+![](../../nodes/neo4j.png)
+![](../../nodes/redshift.png)
 Generation & Output
 
 06 NODES
-![](nodes/create_doc.png)
-![](nodes/create_pdf.png)
-![](nodes/create_powerpoint.png)
-![](nodes/generate_image.png)
-![](nodes/generate_speech.png)
-![](nodes/generate_video.png)
+![](../../nodes/create_doc.png)
+![](../../nodes/create_pdf.png)
+![](../../nodes/create_powerpoint.png)
+![](../../nodes/generate_image.png)
+![](../../nodes/generate_speech.png)
+![](../../nodes/generate_video.png)
 Logic, Protocol & I/O
 
 06 NODES
-![](nodes/mcp.png)
-![](nodes/a2a.png)
-![](nodes/rest.png)
-![](nodes/extract.png)
-![](nodes/mathematical_calculation.png)
-![](nodes/read_cache.png)
+![](../../nodes/mcp.png)
+![](../../nodes/a2a.png)
+![](../../nodes/rest.png)
+![](../../nodes/extract.png)
+![](../../nodes/mathematical_calculation.png)
+![](../../nodes/read_cache.png)
 Product Chrome
 ## Dark canvas by default. Light on request.
 
 The 2026 product UI runs on a near-black canvas with a subtle indigo-to-magenta atmosphere — never the page; always the room behind it. A persistent theme toggle in the masthead lets the operator drop to a light surface for print-aligned review. Page titles take a cyan-to-soft-blue gradient — readable at 14pt of distance from a CISO's monitor, and instantly identifiable as a NeuralSeek surface.
-![NeuralSeek](NeuralSeek%20Logos/color_logo_white_text.svg)
+![NeuralSeek](../../NeuralSeek%20Logos/color_logo_white_text.svg)
 - Home
 - Neural Config
 - Seek
@@ -436,48 +435,48 @@ NeuralSeek does not ask the enterprise to move its data. The platform speaks to 
 ### Systems of record · Enterprise applications
 
 Native connectors for the platforms compliance officers already inventory. Identity, role, and audit lineage flow through unchanged.
-![Salesforce](Enterprise%20Apps/salesforce.webp)
-![HubSpot](Enterprise%20Apps/hubspot.png)
-![Slack](Enterprise%20Apps/slack.png)
-![Microsoft Teams](Enterprise%20Apps/teams.png)
-![Gmail](Enterprise%20Apps/gmail.png)
-![Zoom](Enterprise%20Apps/zoom.png)
-![SharePoint](Enterprise%20Apps/sharepoint.png)
-![Google Drive](Enterprise%20Apps/googledrive.png)
-![Box](Enterprise%20Apps/box.png)
-![Google Calendar](Enterprise%20Apps/googleCalendar.webp)
-![Jira](Enterprise%20Apps/jira.png)
-![Trello](Enterprise%20Apps/trello.svg)
-![ClickUp](Enterprise%20Apps/clickup.png)
-![Workday](Enterprise%20Apps/workday.png)
-![Snowflake](Enterprise%20Apps/snowflake.png)
-![Databricks](Enterprise%20Apps/databricks.png)
-![BigQuery](Enterprise%20Apps/bigquery.svg)
-![Postgres](Enterprise%20Apps/Postgresql.png)
-![Oracle](Enterprise%20Apps/oracle.png)
-![IBM Db2](Enterprise%20Apps/db2.webp)
-![Neo4j](Enterprise%20Apps/neo4j.png)
-![Elastic](Enterprise%20Apps/elastic.webp)
-![Microsoft Azure](Enterprise%20Apps/azure.png)
-![IBM watsonx](Enterprise%20Apps/watsonx.png)
-![Epic](Enterprise%20Apps/epic.webp)
-![ERP](Enterprise%20Apps/erp.webp)
+![Salesforce](../../Enterprise%20Apps/salesforce.webp)
+![HubSpot](../../Enterprise%20Apps/hubspot.png)
+![Slack](../../Enterprise%20Apps/slack.png)
+![Microsoft Teams](../../Enterprise%20Apps/teams.png)
+![Gmail](../../Enterprise%20Apps/gmail.png)
+![Zoom](../../Enterprise%20Apps/zoom.png)
+![SharePoint](../../Enterprise%20Apps/sharepoint.png)
+![Google Drive](../../Enterprise%20Apps/googledrive.png)
+![Box](../../Enterprise%20Apps/box.png)
+![Google Calendar](../../Enterprise%20Apps/googleCalendar.webp)
+![Jira](../../Enterprise%20Apps/jira.png)
+![Trello](../../Enterprise%20Apps/trello.svg)
+![ClickUp](../../Enterprise%20Apps/clickup.png)
+![Workday](../../Enterprise%20Apps/workday.png)
+![Snowflake](../../Enterprise%20Apps/snowflake.png)
+![Databricks](../../Enterprise%20Apps/databricks.png)
+![BigQuery](../../Enterprise%20Apps/bigquery.svg)
+![Postgres](../../Enterprise%20Apps/Postgresql.png)
+![Oracle](../../Enterprise%20Apps/oracle.png)
+![IBM Db2](../../Enterprise%20Apps/db2.webp)
+![Neo4j](../../Enterprise%20Apps/neo4j.png)
+![Elastic](../../Enterprise%20Apps/elastic.webp)
+![Microsoft Azure](../../Enterprise%20Apps/azure.png)
+![IBM watsonx](../../Enterprise%20Apps/watsonx.png)
+![Epic](../../Enterprise%20Apps/epic.webp)
+![ERP](../../Enterprise%20Apps/erp.webp)
 ### Third-party data sources
 
 External signals brought into governed context — search, market data, real-estate, regulatory filings, and prospecting — never left raw, never left alone.
-![Bing](3rd%20Party%20Data%20Sources/bing.png)
-![Brave](3rd%20Party%20Data%20Sources/brave.png)
-![Google Search](3rd%20Party%20Data%20Sources/google%20search.svg)
-![Tavily](3rd%20Party%20Data%20Sources/tavilylogo.png)
-![Hugging Face](LLM%20Logos/huggingface.svg)
-![SEC EDGAR](3rd%20Party%20Data%20Sources/sec_edgar.png)
-![Nasdaq](3rd%20Party%20Data%20Sources/nasdaq.png)
-![Zillow](3rd%20Party%20Data%20Sources/zillow.png)
-![ATTOM](3rd%20Party%20Data%20Sources/attom.png)
-![Clay](3rd%20Party%20Data%20Sources/clay.webp)
-![Instantly](3rd%20Party%20Data%20Sources/instantly.png)
-![HeyReach](3rd%20Party%20Data%20Sources/heyreach.png)
-![PowerPoint](Enterprise%20Apps/powerpoint.png)
+![Bing](../../3rd%20Party%20Data%20Sources/bing.png)
+![Brave](../../3rd%20Party%20Data%20Sources/brave.png)
+![Google Search](../../3rd%20Party%20Data%20Sources/google%20search.svg)
+![Tavily](../../3rd%20Party%20Data%20Sources/tavilylogo.png)
+![Hugging Face](../../LLM%20Logos/huggingface.svg)
+![SEC EDGAR](../../3rd%20Party%20Data%20Sources/sec_edgar.png)
+![Nasdaq](../../3rd%20Party%20Data%20Sources/nasdaq.png)
+![Zillow](../../3rd%20Party%20Data%20Sources/zillow.png)
+![ATTOM](../../3rd%20Party%20Data%20Sources/attom.png)
+![Clay](../../3rd%20Party%20Data%20Sources/clay.webp)
+![Instantly](../../3rd%20Party%20Data%20Sources/instantly.png)
+![HeyReach](../../3rd%20Party%20Data%20Sources/heyreach.png)
+![PowerPoint](../../Enterprise%20Apps/powerpoint.png)
 Logo Lockups
 3
 Primary, monochrome reverse, mark-only — covering every surface from app icon to print.
