@@ -133,7 +133,8 @@ PDFs, brochures, partner pieces), colored N + white text on dark backgrounds
 
 ## RULE 5 — Key phrase in solid violet, never gradient text
 
-- One key phrase per heading in solid `brand` violet. Never two.
+- One key phrase per heading in solid violet. Never two. Flat backgrounds: `brand` (#7A57E0 light, #A78BFA dark). On textures: #5A3FA3 on Dawn/Ice, #C9B8F0 on Night/Aurora/Bloom.
+- Layout for social and decks (type scale, panels, default palette per piece, partner lockup): v3 guidelines §6 and `2026_images/brand-examples/`.
 - No gradient text anywhere, with one exception: big customer-result numbers in the "results row" piece may use the logo gradient (`#30CCFE → #5281F4 → #4C3DF5 → #A32EF6 → #F98AFE`), on dark only, one number per tile.
 - Only approved customer figures. Demo values (e.g. 72%, $1.73) may appear inside UI screenshots, never as results.
 
