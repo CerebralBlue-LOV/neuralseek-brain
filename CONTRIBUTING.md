@@ -23,8 +23,8 @@ via pull request.
 - Adding new feature names, customer names, or financial figures
   without source verification
 - Edits to `BRAND_RULES.md`,
-  `2026_images/neuralseek-brand-guidelines_2026_v3.md`, or the canvas
-  CSS spec without coordination with the brand owner
+  `2026_images/neuralseek-brand-guidelines_2026_v3.md`, or the brand
+  tokens without coordination with the brand owner
 
 ## How to contribute
 
