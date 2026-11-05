@@ -55,7 +55,9 @@ Type scale (desktop). On mobile, H1 drops to 40–44 px and H2 to 28–32 px. Bo
 
 Rules:
 - Never use weight 300.
-- Set one key phrase per heading in solid violet (`brand`). Never use gradient text.
+- Set one key phrase per heading in solid violet. Never use gradient text. Which violet:
+  - Flat backgrounds: `brand` (#7A57E0 on light, #A78BFA on dark).
+  - On textures, the higher-contrast tone: #5A3FA3 on Dawn and Ice; #C9B8F0 on Night, Aurora and Bloom.
 - Only exception: large customer-result numbers in the "results row" piece may use the logo gradient (#30CCFE → #5281F4 → #4C3DF5 → #A32EF6 → #F98AFE). One number per tile, Sora 600, dark background only.
 - Never use mono in paragraphs or marketing headings.
 - Keep paragraph lines to about 65 characters at most.
@@ -113,7 +115,7 @@ Rules:
 | LinkedIn company page | Dark | 4:5 (1080×1350); 1200×627 for text-heavy posts | Large Sora heading, a figure or real screenshot, white logo |
 | LinkedIn personal accounts | Light | 4:5 or 1200×627 | Real look, soft violets, nothing that looks like an ad |
 | YouTube | Dark | Thumbnail 1280×720; banner 2560×1440 | Short heading, product screenshot |
-| Partnerships | Light | Letter/A4; posts 4:5 | Logos at the same height with "×" between them. The partner's colors appear only in its logo |
+| Partnerships | Light | Letter/A4; posts 4:5 | PDFs and print: logos at the same height with "×" between them. Decks and social: two glass tiles joined by a line with a dot at each end (§6). The partner's colors appear only in its logo |
 | PDFs | Light, white background | Letter, 2 pages max | Albert Sans 500 for text; brand-deep card for recommendations. See §7 |
 | Brochures | Light (white + canvas) | Letter bifold, 4 pages | Dawn on the cover only; one Night block on the back cover. See §7 |
 | Newsletter | Light | 600 px wide | Sora headings with an Arial fallback |
@@ -143,6 +145,23 @@ Social posts, decks and partnership pieces share one system: an owned color text
 | Social | Varied per piece | One per piece, from the 5 | 3–4% film grain |
 | Decks | Max 2 per deck: Night (cover, sections, data, close) and Dawn (product, cases) | Night and Dawn only | None |
 | Partnerships | Night, or split Night/Dawn | Night and Dawn | None in decks and PDFs; grain on posts |
+
+**Layout for social and decks:**
+
+| Element | Social post (1080×1350) | Slide (1920×1080) |
+|---|---|---|
+| Headline | Sora 600, 88–110 px, max 3 lines | Cover 96–120 px; slide title 64–80 px |
+| Subline / body | Albert Sans, 30–36 px, max 2 lines | Albert Sans, 28–32 px |
+| Eyebrow | JetBrains Mono 500, 22–26 px, uppercase | JetBrains Mono 500, 18–20 px, uppercase |
+| CTA | One button, Albert Sans 500, 30 px | One per deck, on the close slide |
+| Margins | 80 px minimum | 120 px minimum |
+
+- Put text directly on the calm area of the texture, with generous empty space. Add a flat panel (#131316 on dark, #FAF9FC on light) only behind more than 3 lines of running text. Never put every slide or post in a box.
+- One idea per slide or post. Fewer, bigger words beat more, smaller ones.
+- Default palette by piece: webinars, events and the company page use Night; Bloom only for launches and brand events; Dawn for personal accounts, quotes and product slides.
+- Company-page posts about the product include a real screenshot (product window). Event and quote posts may omit it.
+- Screenshots may be cropped to fit, never stretched or tilted; keep the part that shows data.
+- Reference examples: [`brand-examples/`](brand-examples/README.md). Match their scale and spacing.
 
 ## 7. PDFs and brochures (light backgrounds)
 | | PDF (solution brief, one-pager) | Brochure (bifold) |
