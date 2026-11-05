@@ -13,7 +13,7 @@ applies_to: [word-docs, powerpoint, pdf, html, slides, social-cards, banners, em
 >
 > **If you are an AI agent generating ANY NeuralSeek deliverable, read this file
 > first. The full brand book is at
-> [`2026_images/neuralseek-brand-guidelines_2026.md`](2026_images/neuralseek-brand-guidelines_2026.md).
+> [`2026_images/neuralseek-brand-guidelines_2026_v3.md`](2026_images/neuralseek-brand-guidelines_2026_v3.md).
 > This file is the non-negotiable subset.**
 
 ## APPLIES TO EVERY OUTPUT FORMAT — not just HTML
@@ -218,10 +218,11 @@ Images, vendor websites, or any other source — those won't match the brand
 treatment, and many vendor logos have specific monochrome/color restrictions
 the brand-approved versions already handle.
 
-This catalog mirrors the assets shown in
-[`2026_images/neuralseek-brand-guidelines_2026.md`](2026_images/neuralseek-brand-guidelines_2026.md).
-The two files stay aligned — that brand book is the priority source if anything
-diverges.
+This catalog carries over the asset files from v2.1 (archived in
+`2026_images/archive/brand-guidelines-v2.1/`) and is the source of truth for
+which file to use. The v3 guidelines
+([`2026_images/neuralseek-brand-guidelines_2026_v3.md`](2026_images/neuralseek-brand-guidelines_2026_v3.md))
+point here for assets.
 
 ### 8.1 Logo lockups (4 variants)
 
@@ -364,7 +365,7 @@ screenshot exists — check the index first.
 
 ## If this file conflicts with the full brand book
 
-The full brand book at `2026_images/neuralseek-brand-guidelines_2026.md` is the
+The full brand book at `2026_images/neuralseek-brand-guidelines_2026_v3.md` is the
 source of truth for everything not listed here. This file is the AI-critical
 subset. If you see a conflict, follow the full brand book — and please flag the
 conflict so it can be reconciled.
