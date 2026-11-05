@@ -6,7 +6,7 @@
 > `https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/<Folder>/<file>`
 > (URL-encode spaces as `%20`). On GitHub the links below are browsable in-tree.
 
-> **Building a branded deliverable (deck / page / PDF / diagram)?** Read `BRAND_RULES.md` first, then pull logos from the tables below. Default NeuralSeek logo on the dark canvas is `NeuralSeek Logos/color_logo_white_text.svg`.
+> **Building a branded deliverable (deck / page / PDF / diagram)?** Read `BRAND_RULES.md` first, then pull logos from the tables below. NeuralSeek logo: `NeuralSeek Logos/color_logo_white_text.svg` on dark backgrounds, `NeuralSeek Logos/neuralseek__colored_logo_and_name.png` on light ones.
 
 ---
 
@@ -20,7 +20,7 @@
 | `LLM Logos/` | Model-provider logos (OpenAI, Anthropic, Gemini, watsonx…) | "LLM-agnostic" / model-choice slides |
 | `CISO_icons/` | Compliance framework badges (HIPAA, SOC 2, EU AI Act…) | Governance / security / regulated-industry surfaces |
 | `Client Logos (colored)/` | Colored customer logos | Case studies, client-specific decks, logo walls (light bg) |
-| `whited_logos/` | Single-color WHITE customer logos | Customer logo walls on the dark canvas |
+| `whited_logos/` | Single-color WHITE customer logos | Customer logo walls on dark backgrounds |
 | `Companies Logos/` | Third-party tech/company logos (ecosystem, competitors, partners) | Comparison & landscape slides |
 | `Demo Logos/` | Logos used in live demos | Demo screenshots / walkthroughs |
 | `Custom Client Apps/` | Per-client custom app marks (e.g. Itochu) | That client's deliverables only |
@@ -154,6 +154,6 @@ S&P Global logo, agentforce, apple, atlassian, awscloud, bloomberg, chamath, cla
 
 - **Naming is not 100% uniform** — most files are lowercase (`salesforce.webp`) but a few are capitalized (`Claude.svg`, `Postgresql.png`). Match the exact filename from the tables above.
 - **Mixed formats** — `.png`, `.webp`, `.svg`, `.avif`, `.jpg` all appear. Prefer `.svg` where available for crisp scaling; webp/png are fine for raster.
-- **Transparent vs. baked background** — most marks are transparent. A few carry their own fill (e.g. `Zillow`, `attom`). On the dark canvas, white-wordmark logos (e.g. `salesforce.webp`) need a dark/neutral chip, not a white one, to stay legible.
+- **Transparent vs. baked background** — most marks are transparent. A few carry their own fill (e.g. `Zillow`, `attom`). On dark backgrounds, white-wordmark logos (e.g. `salesforce.webp`) need a dark/neutral chip, not a white one, to stay legible.
 - **Customer logo usage** is subject to each customer's brand permissions — confirm before external publication.
 - **Adding an image?** Drop it in the right folder, then add a row here so the map stays the source of truth.
