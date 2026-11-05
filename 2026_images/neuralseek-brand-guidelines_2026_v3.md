@@ -82,6 +82,7 @@ Contrast:
 - White on a brand button: 4.9:1.
 - Dark brand on #131316: 6.8:1.
 - For small violet text in light mode, use brand-hi (9.4:1).
+- Buttons: light mode white text on `brand` #7A57E0; dark mode `#131316` text on `brand` #A78BFA.
 
 Rules:
 - Neutrals come first. Use solid violet only for the CTA, the key phrase and at most one block per screen or piece.
@@ -93,6 +94,7 @@ Rules:
 - **Logo:**
   - Light backgrounds: color symbol with ink text.
   - Dark backgrounds: color symbol with white text.
+  - Files: `2026_images/NeuralSeek Logos/neuralseek__colored_logo_and_name.png` (light) and `2026_images/NeuralSeek Logos/color_logo_white_text.svg` (dark).
   - Avatars and favicons: symbol only.
   - Clear space: at least the height of the logo's capital letters.
   - Never recolor or invert the logo.
@@ -121,7 +123,7 @@ Co-branding: follow the partner's own rules for its logo. Each brand keeps its o
 ## 6. Visual system for social and decks
 Social posts, decks and partnership pieces share one system: an owned color texture, a hairline grid with + markers, frosted-glass tiles for logos, and real screenshots. The `neuralseek-social-design` skill produces it. If the skill is not available, use the flat canvas and brand tokens (§3); never improvise textures, glows or gradients.
 
-**Textures** (generated, never stock):
+**Textures** (generated, never stock). The official files live in [`textures/`](textures/README.md): `social/` (1080×1350, 15 files) and `deck/` (1920×1080, Night and Dawn, no grain). Use those files; never generate or improvise a texture.
 
 | Palette | Colors | Use |
 |---|---|---|
