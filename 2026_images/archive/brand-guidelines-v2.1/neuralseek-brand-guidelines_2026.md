@@ -6,7 +6,11 @@ tags: [brand, brand-guidelines, design-system, visual-identity, typography, colo
 source: neuralseek-brand-guidelines_2026.html
 version: v2.1 (2026)
 ai_critical_rule: The page background MUST be the rolling purple radial-gradient canvas. NEVER dots, grids, mesh, noise, or patterns. See the "AI Canvas Background" block immediately below.
+status: archived
+superseded_by: 2026_images/neuralseek-brand-guidelines_2026_v3.md
 ---
+
+> **ARCHIVED (2026-11-04).** This is brand guidelines v2.1. It is superseded by [`neuralseek-brand-guidelines_2026_v3.md`](../../neuralseek-brand-guidelines_2026_v3.md). Do not use it for new work.
 
 # ⚠️ AI CANVAS BACKGROUND — READ THIS FIRST (APPLIES TO ALL FORMATS)
 
