@@ -91,7 +91,7 @@ same rule; both must agree.
 
 ---
 
-<img src="NeuralSeek%20Logos/color_logo_white_text.svg" class="wordmark-img" alt="NeuralSeek" />
+<img src="../../NeuralSeek%20Logos/color_logo_white_text.svg" class="wordmark-img" alt="NeuralSeek" />
 Brand System
 v 2.1 — Regulated · Dark-First
 Brand Guidelines · 2026
@@ -108,7 +108,7 @@ The Mark
 ## An infinity of trust and creation.
 
 The mark sweeps cool to warm in a single gesture — institutional blue grounds the system; magenta tips into intelligence. Used at full color always; never recolored, never flattened, never placed on busy imagery.
-<img src="NeuralSeek%20Logos/neuralseek_colored_just_logo.png" class="logo-mark-image" alt="NeuralSeek mark" />
+<img src="../../NeuralSeek%20Logos/neuralseek_colored_just_logo.png" class="logo-mark-image" alt="NeuralSeek mark" />
 Construction
 Two interlocked **N** forms tracing a single conductive path — input on one side, governed output on the other.
 Gradient direction
