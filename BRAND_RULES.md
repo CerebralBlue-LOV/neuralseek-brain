@@ -54,7 +54,8 @@ Both modes are official. Pick by channel (see RULE 7).
 - Web: flat canvas, alternating with surface-2. Neutrals first.
 - PDFs and print: white `#FFFFFF`.
 - Social and decks: generated Night (dark) or Dawn (light) textures from the `neuralseek-social-design` skill. Decks: max 2 backgrounds per deck, no grain. Social: one palette per piece, 3–4% grain allowed.
-- If the `neuralseek-social-design` skill is not available, use the flat canvas and brand tokens from this file. Never improvise textures, glows or gradients.
+- Official texture files: `2026_images/textures/` (`social/` 1080×1350 and `deck/` 1920×1080, see its README). Use them as they are.
+- If neither the files nor the `neuralseek-social-design` skill is available, use the flat canvas and brand tokens from this file. Never improvise textures, glows or gradients.
 
 **Never use:**
 
