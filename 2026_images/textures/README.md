@@ -43,7 +43,8 @@ Only Night and Dawn, max 2 backgrounds per deck, and the **same style** across t
 
 ## Rules
 
-- Place text on the calm area of the texture; add a flat `#131316` (dark) or `#FAF9FC` (light) panel behind long text if needed.
+- Put text directly on the calm area of the texture, with generous empty space. Add a flat `#131316` (dark) or `#FAF9FC` (light) panel only behind more than 3 lines of running text; never box every slide or post.
+- Type scale, default palette per piece and reference examples: §6 of the guidelines and [`../brand-examples/`](../brand-examples/README.md).
 - Optional on social and deck covers: hairline grid in thirds (1 px, 10–14% opacity) with + markers at the crossings.
 - Never add glows, orbs, extra gradients or gradient text on top.
 - PDFs and brochures stay white; only the brochure cover may use `dawn` (see §7 of the guidelines).
