@@ -1,32 +1,34 @@
 ---
 title: NeuralSeek — Brand Rules for AI Tools
 summary: >-
-  The minimum rules any AI must follow when generating ANY NeuralSeek deliverable in ANY format — Word docs (.docx), PowerPoint decks (.pptx), PDFs, HTML pages, slides, social cards, banners, emails, images, marketing collateral. Canvas background is a rolling purple radial gradient — never dots, grids, mesh, noise, or patterns. This file is the TL;DR; the full brand system lives in 2026_images/neuralseek-brand-guidelines_2026.md.
-tags: [brand, brand-rules, ai-instructions, canvas, background, gradient, no-dots, no-grids, critical, docx, pptx, pdf, html, slides, all-formats]
+  The minimum rules any AI must follow when generating ANY NeuralSeek deliverable in ANY format. Brand v3: the website's violet palette in light and dark, Sora + Albert Sans + JetBrains Mono, light PDFs and brochures, a generated-texture system for social and decks. This file is the TL;DR; the full brand system lives in 2026_images/neuralseek-brand-guidelines_2026_v3.md.
+tags: [brand, brand-rules, ai-instructions, v3, light-mode, dark-mode, sora, albert-sans, critical, docx, pptx, pdf, html, slides, all-formats]
 priority: critical
 applies_to: [word-docs, powerpoint, pdf, html, slides, social-cards, banners, email, images, markdown, any-deliverable]
 ---
 
 # NeuralSeek — Brand Rules for AI Tools
 
+> **Brand v3 (2026-11-04).** v2.1 (dark-only canvas, Open Sans) is archived in `2026_images/archive/brand-guidelines-v2.1/`.
+>
 > **If you are an AI agent generating ANY NeuralSeek deliverable, read this file
 > first. The full brand book is at
 > [`2026_images/neuralseek-brand-guidelines_2026.md`](2026_images/neuralseek-brand-guidelines_2026.md).
 > This file is the non-negotiable subset.**
 
-## ⚠ APPLIES TO EVERY OUTPUT FORMAT — not just HTML
+## APPLIES TO EVERY OUTPUT FORMAT — not just HTML
 
 These rules govern **every artifact you produce** when the work is for NeuralSeek:
 
-- 📄 **Word documents** (`.docx`) — reports, whitepapers, RFP responses, letters, memos
-- 📊 **PowerPoint decks** (`.pptx`) — pitches, keynotes, customer reviews, board materials
-- 📑 **PDFs** — anything exported as PDF, from any source
-- 🌐 **HTML pages** — landing pages, dashboards, internal tools, microsites
-- 🎞️ **Slides** (Google Slides, Keynote, Reveal.js, any deck format)
-- 🖼️ **Images** — social cards, banners, charts, infographics, hero images, headshots
-- 📧 **Emails** — HTML email templates, marketing emails, customer-facing comms
-- 📝 **Markdown / docs** — knowledge base, READMEs, customer-facing markdown
-- 🧾 **Anything else** with the NeuralSeek name or logo on it
+- **Word documents** (`.docx`) — reports, whitepapers, RFP responses, letters, memos
+- **PowerPoint decks** (`.pptx`) — pitches, keynotes, customer reviews, board materials
+- **PDFs** — anything exported as PDF, from any source
+- **HTML pages** — landing pages, dashboards, internal tools, microsites
+- **Slides** (Google Slides, Keynote, Reveal.js, any deck format)
+- **Images** — social cards, banners, charts, infographics, hero images, headshots
+- **Emails** — HTML email templates, marketing emails, customer-facing comms
+- **Markdown / docs** — knowledge base, READMEs, customer-facing markdown
+- **Anything else** with the NeuralSeek name or logo on it
 
 If you cannot apply a specific rule because the output format does not support it
 (e.g., a CSV file has no styling), preserve the rules you *can* apply (file name,
@@ -37,47 +39,32 @@ Format-specific guidance is in section **RULE 7** below.
 
 ---
 
-## RULE 1 — Canvas background is GRADIENT ONLY
+## RULE 1 — Backgrounds: light and dark, from the website tokens
 
-The page background MUST be the rolling purple radial-gradient canvas. Five
-overlapping radial ellipses on a near-black base. Nothing else on top.
+Both modes are official. Pick by channel (see RULE 7).
+
+| Token | Light | Dark |
+|---|---|---|
+| canvas | `#FAF9FC` | `#131316` |
+| surface-2 | `#F2EFF9` | `#1F1C28` |
+| surface (cards) | `#E9E4F4` | `#2A2638` |
+| surface-elev | `#FFFFFF` | `#332F42` |
+| wash | `#DDD3F3` | `#301E4C` |
+
+- Web: flat canvas, alternating with surface-2. Neutrals first.
+- PDFs and print: white `#FFFFFF`.
+- Social and decks: generated Night (dark) or Dawn (light) textures from the `neuralseek-social-design` skill. Decks: max 2 backgrounds per deck, no grain. Social: one palette per piece, 3–4% grain allowed.
 
 **Never use:**
 
-- ❌ Dot grids / pin-grids / polka dots
-- ❌ Square grids / pixel grids / blueprint grids
-- ❌ Mesh / wireframe / circuit-board patterns
-- ❌ Noise / grain / film texture
-- ❌ Particles / star fields / glowing-dot fields
-- ❌ Diagonal stripes / hatching
-- ❌ Flat solid dark (must have the rolling gradient — flat is wrong)
-- ❌ "AI hex" / neural-net decoration patterns
-- ❌ Any tiled, repeated, or geometric pattern
+- Dot grids / polka dots
+- Glows or radial orbs pasted on flat black; colored shadows
+- Noise or grain in decks, PDFs or the website
+- Website point-cloud figures (book, network, bridge, globe, scale, cube) outside the website
+- Stock imagery, "AI hex" or circuit-board decoration
+- The hairline + grid and frosted glass in the website UI (they belong to the social/deck system only)
 
-**Required CSS — paste verbatim:**
-
-```css
-body {
-  background-color: #131316;
-  background-image:
-    radial-gradient(ellipse 1100px 900px at 18% 8%,  #301E4C 0%, transparent 55%),
-    radial-gradient(ellipse 900px 750px at 82% 26%, rgba(48, 30, 76, 0.72), transparent 55%),
-    radial-gradient(ellipse 1300px 850px at 8% 72%, rgba(48, 30, 76, 0.55), transparent 60%),
-    radial-gradient(ellipse 1050px 900px at 92% 96%, #301E4C 0%, transparent 55%),
-    radial-gradient(ellipse 800px 600px at 50% 50%, rgba(48, 30, 76, 0.18), transparent 70%);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: rgba(255, 255, 255, 0.95);
-}
-```
-
-**If gradients are unavailable** (raster image generators that struggle with them):
-fall back to flat `#1a1424` and state "gradient unavailable in this format."
-**Never** fall back to dots or grids.
-
-**Why:** Dots and grids communicate "AI sparkle" — the exact aesthetic NeuralSeek
-positions *against*. The gradient communicates "institutional, calm, governed"
-to CISO / compliance buyers.
+**Why:** NeuralSeek sells to risk and compliance buyers. Calm neutrals, real product screenshots and one violet accent read as institutional; effects read as "AI sparkle".
 
 ---
 
@@ -90,65 +77,64 @@ to CISO / compliance buyers.
 
 ### Logo variant selection — pick by background
 
-The brand canvas is dark by default, so the **colored N + white text** variant
-is the right choice for nearly every NeuralSeek deliverable. Only switch to the
-colored-text variant when the background is genuinely white or near-white (print
-docs, light-mode exports, formal letterhead).
+Pick by background: colored N + ink text on light backgrounds (web light mode,
+PDFs, brochures, partner pieces), colored N + white text on dark backgrounds
+(dark mode, LinkedIn company page, YouTube, Night textures).
 
 | Background | Use this file | Path |
 |---|---|---|
-| **Dark / brand canvas / any non-white surface (DEFAULT)** | `color_logo_white_text.svg` — colored N mark with white wordmark | [`2026_images/NeuralSeek Logos/color_logo_white_text.svg`](2026_images/NeuralSeek%20Logos/color_logo_white_text.svg) |
-| **White / near-white / light-mode print** | `neuralseek__colored_logo_and_name.png` — colored N mark with colored wordmark | [`2026_images/NeuralSeek Logos/neuralseek__colored_logo_and_name.png`](2026_images/NeuralSeek%20Logos/neuralseek__colored_logo_and_name.png) |
+| **Dark backgrounds** | `color_logo_white_text.svg` — colored N mark with white wordmark | [`2026_images/NeuralSeek Logos/color_logo_white_text.svg`](2026_images/NeuralSeek%20Logos/color_logo_white_text.svg) |
+| **Light backgrounds** | `neuralseek__colored_logo_and_name.png` — colored N mark with colored wordmark | [`2026_images/NeuralSeek Logos/neuralseek__colored_logo_and_name.png`](2026_images/NeuralSeek%20Logos/neuralseek__colored_logo_and_name.png) |
 | **Mark only — no wordmark needed (small UI, favicon, footer chip)** | `neuralseek_colored_just_logo.png` — colored N mark alone | [`2026_images/NeuralSeek Logos/neuralseek_colored_just_logo.png`](2026_images/NeuralSeek%20Logos/neuralseek_colored_just_logo.png) |
 | **All-white fallback** when even the colored N would clash (overlaid on photography, single-color print, etched/embossed) | `neuralseek_all_white_logo_and_name.png` — monochrome white wordmark + mark | [`2026_images/NeuralSeek Logos/neuralseek_all_white_logo_and_name.png`](2026_images/NeuralSeek%20Logos/neuralseek_all_white_logo_and_name.png) |
 
-**Default presumption:** If you cannot inspect the background or you are unsure,
-use `color_logo_white_text.svg`. The brand canvas is dark; the colored-N + white-text
-combination is the workhorse logo for almost every NeuralSeek visual.
+**If you cannot inspect the background,** use the variant that matches the channel's default mode in RULE 7.
 
 ---
 
-## RULE 3 — Two fonts only
+## RULE 3 — Three fonts
 
-- **Open Sans** — every word a human reads (headings, body, navigation, forms).
-- **JetBrains Mono** — every identifier the system writes (model names, run IDs,
-  policy references, code).
-- No other fonts.
-
----
-
-## RULE 4 — Color discipline
-
-- **Blue governs.** Governance, audit, security, admin surfaces stay blue.
-- **Purple creates.** AI-creation surfaces use indigo (`#5B2DFF`) → magenta (`#A24BFF`).
-- **Cyan signals.** `#1FB6FF` for highlights and pointers.
-- **Magenta accents.** Sparingly. Only on creation surfaces.
-- **Never** mix governance-blue and creation-magenta on the same surface.
-
-Brand hex palette:
-
-| Token | Hex | Use |
+| Role | Family | Weights |
 |---|---|---|
-| Canvas | `#131316` | Page background base |
-| Regal Purple | `#301E4C` | Background glow accent (5 radial gradients) |
-| Cyan | `#1FB6FF` | Highlights, pointers, signal |
-| Trust Blue | `#2D5BFF` | Governance, system, admin |
-| Indigo | `#5B2DFF` | Creation surfaces, action gradient start |
-| Magenta | `#A24BFF` | Creation surfaces, action gradient end |
-| Ink (cards) | `#2A2638` | Default card surface (lifted ~2 shades above canvas) |
-| Surface-2 | `#1F1C28` | Recessed surfaces (table headers, code) |
-| Approve / Warn / Block | `#22C55E` / `#F59E0B` / `#EF4444` | Status colors |
+| Headings | **Sora** | 600 (700 only for very short social pieces) |
+| Text, menus, buttons, forms | **Albert Sans** | 400 body, 500 emphasis and buttons |
+| System labels, IDs, model names, code | **JetBrains Mono** | 400, 500 |
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Albert+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+```
+
+- Never weight 300. Never mono in paragraphs or marketing headings.
+- Open Sans and Quicksand are retired. Never Inter, Geist or Space Grotesk.
+- Fallbacks for Office files and email: Sora → Arial; Albert Sans → Calibri/Arial; JetBrains Mono → Consolas.
 
 ---
 
-## RULE 5 — Gradient text on important phrases
+## RULE 4 — Color discipline (violet palette)
 
-- Title gradient: `linear-gradient(90deg, #FDFEFF 0%, #7BABFF 100%)` for
-  governance phrases.
-- Pink variant: `linear-gradient(90deg, #FDFEFF 0%, #E170FC 100%)` for creation
-  phrases.
-- **One gradient phrase per heading.** Never two. Never on body text. Never on
-  labels or mono identifiers.
+| Token | Light | Dark | Use |
+|---|---|---|---|
+| foreground | `#171322` | `#F8FAFC` | Main text |
+| muted-foreground | `#59546C` | `#90A1B9` | Secondary text |
+| brand | `#7A57E0` | `#A78BFA` | Key phrase, CTA, links |
+| brand-hi | `#4C2E96` | `#C9B8F0` | Violet text (small text in light mode) |
+| brand-mid | `#6A4BD0` | `#8B6FD1` | Hover, icons |
+| brand-deep | `#5A3FA3` | `#6B4FA8` | Solid blocks |
+| brand-shade | `#2A1A5E` | `#301E4C` | Deep backgrounds |
+| Approve / Warn / Block | `#22C55E` / `#F59E0B` / `#EF4444` | same | Status only |
+
+- Neutrals first. Solid violet only for the CTA, the key phrase and at most one block per screen or piece.
+- Max 3 violet tones per piece. One primary CTA per screen.
+- Category colors (pink, orange, blue, teal, yellow, purple, indigo, green) only for marketplace cards and charts.
+
+---
+
+## RULE 5 — Key phrase in solid violet, never gradient text
+
+- One key phrase per heading in solid `brand` violet. Never two.
+- No gradient text anywhere, with one exception: big customer-result numbers in the "results row" piece may use the logo gradient (`#30CCFE → #5281F4 → #4C3DF5 → #A32EF6 → #F98AFE`), on dark only, one number per tile.
+- Only approved customer figures. Demo values (e.g. 72%, $1.73) may appear inside UI screenshots, never as results.
+
 
 ---
 
@@ -171,128 +157,55 @@ copy, anything that sounds like a generic AI startup.
 
 ## RULE 7 — Format-specific application
 
-The rules above (background, logo, fonts, color, voice) apply to **every** output
-format. Below is the concrete guidance for each common deliverable type. If your
-output format is not listed, apply the closest match and preserve the spirit:
-dark canvas, rolling purple gradient (where renderable), Open Sans + JetBrains
-Mono, brand-palette colors, full-color logo, no anti-patterns.
+| Channel | Default mode | Notes |
+|---|---|---|
+| Web | Light, dark toggle | One brand CTA per section |
+| LinkedIn company page | Dark | 1080×1350 or 1200×627; Night or a social palette |
+| LinkedIn personal | Light | Soft violets, nothing that looks like an ad |
+| YouTube | Dark | Thumbnail 1280×720 |
+| Partnerships | Light | Logos at equal height with "×"; partner colors only in its logo |
+| PDFs | Light, white | Letter, 2 pages max |
+| Brochures | Light | Letter bifold, 4 pages |
+| Newsletter | Light | 600 px wide |
 
-### 📊 PowerPoint (`.pptx`) — pitches, decks, customer reviews, board materials
+### PowerPoint (`.pptx`) and slides
+- Max 2 backgrounds per deck: Night (cover, sections, data, close) and Dawn (product, cases). No grain.
+- Titles Sora 600 (fallback Arial), body Albert Sans (fallback Calibri), identifiers JetBrains Mono.
+- Key phrase in solid `brand` violet. Real product screenshots, straight, 8 px radius, 1 px border.
+- Logo variant per background (RULE 2).
 
-- **Slide master background:** solid fill `#131316`. If gradient fills are
-  supported by your generation library (python-pptx `gradient_stops`,
-  python-pptx-templater, etc.), use a linear or radial gradient from
-  `#301E4C` (top-left) to `#131316` (bottom-right) instead.
-- **Title font:** Open Sans Semibold 32pt (fallback chain: Open Sans → Calibri →
-  Arial). Use white `#FFFFFF` by default. Use cyan-to-blue gradient `#FDFEFF →
-  #7BABFF` for the single most important phrase per title (if your library
-  supports text gradients; otherwise solid `#7BABFF`).
-- **Body font:** Open Sans Regular 18pt, white at 95% opacity (`#F2F2F2`).
-- **Code / identifiers:** JetBrains Mono 14pt (fallback: Consolas, Courier New).
-- **Accent color for key callouts:** `#A24BFF` (creation/AI surfaces) or
-  `#1FB6FF` (signals/highlights). Never both on the same slide.
-- **Logo placement:** the slide canvas is dark, so use
-  `2026_images/NeuralSeek Logos/color_logo_white_text.svg` (colored N + white
-  text) in the masthead or footer of the slide master so it appears on every
-  slide. See the logo variant table in RULE 2 — use the white-text variant on
-  any non-white background.
-- **Charts:** use the brand palette — cyan, trust-blue, indigo, magenta — in
-  that order for series. Use Approve/Warn/Block colors only for status data.
-- **Forbidden:** dot-grid backgrounds, mesh patterns, noise textures, particle
-  effects, generic "tech" or "AI" slide templates, default Office themes.
+### Word documents (`.docx`)
+- White page, foreground `#171322` text. Headings Sora 600 (fallback Arial), body Albert Sans 11 pt (fallback Calibri).
+- Accent rules and callouts in `brand` / `brand-deep`. Footer: logo + "Governed AI, in production · neuralseek.com".
 
-### 📄 Word documents (`.docx`) — reports, whitepapers, RFP responses
+### PDFs and brochures
+- White background, Albert Sans 500 text, Sora 600 headings, mono for eyebrows.
+- PDF: one brand-deep card for the recommendation, no dark areas, no textures.
+- Brochure: Dawn texture and + grid on the cover only; white and canvas inside; one Night block on the back cover.
+- Results rows on surface-2 with brand-hi numbers. Footer: logo · "Governed AI, in production · neuralseek.com" · page number.
 
-There are two acceptable Word modes — choose based on intended use:
+### HTML pages
+- Use the RULE 1 and RULE 4 tokens with `light-dark()` or a `prefers-color-scheme` switch.
+- Load the fonts from RULE 3. `body { font-family: 'Albert Sans', system-ui, sans-serif; }`, headings `'Sora'`, `pre, code { font-family: 'JetBrains Mono', ui-monospace, monospace; }`.
 
-- **Digital-only mode (preferred default):** dark page background `#131316`
-  with white body text. Cover page uses the full rolling-purple gradient (insert
-  as a full-bleed image generated from the HTML brand spec, or use Word's
-  gradient fill: linear `#301E4C → #131316`).
-- **Print mode (use only when the doc will be physically printed):** light
-  background (`#FFFFFF`), dark body text (`#0B1220`). All brand colors still
-  apply for headings, accent rules, and callouts. Cover page can still use the
-  dark canvas as a full-bleed image.
+### Images, banners, social cards
+- Generated textures from the `neuralseek-social-design` skill (Night, Dawn, Aurora, Bloom, Ice), one palette per piece and per campaign.
+- Hairline grid in thirds with + markers, frosted-glass logo tiles, real screenshots that may bleed off the edge.
+- Never website point-cloud figures, stock photos or invented UI.
 
-In both modes:
+### Emails
+- Light, 600 px wide. Sora headings with Arial fallback; Albert Sans body with Arial fallback.
 
-- **Headings:** Open Sans Bold — H1 24pt, H2 18pt, H3 14pt. H1 in `#7BABFF`
-  (governance) or `#E170FC` (creation). H2/H3 inherit from H1 family.
-- **Body:** Open Sans Regular 11pt.
-- **Code / identifiers / API refs:** JetBrains Mono 10pt.
-- **Footer:** include "NeuralSeek · Built to be trusted in regulated rooms" and
-  a small color logo aligned right.
-- **Forbidden:** Calibri-default Word documents with no styling, generic
-  Microsoft templates, dot/grid page borders, any "AI"-themed clipart.
+### Markdown / docs
+- Styling is controlled by the host. Keep descriptive filenames, full-color logo embeds and YAML frontmatter.
 
-### 📑 PDFs — exported from any source
+### Anything else
+1. Light or dark tokens from RULE 1 and RULE 4.
+2. Sora + Albert Sans + JetBrains Mono.
+3. Full-color logo, never recolored.
+4. Voice from RULE 6.
+5. Never substitute an anti-pattern as a fallback. Ask first.
 
-PDFs inherit the rules of their source format:
-
-- **PDF from Word:** apply Word rules above.
-- **PDF from HTML:** apply HTML rules (RULE 1's CSS spec). Use
-  `--print-background` in headless Chrome / wkhtmltopdf / weasyprint so the
-  rolling-gradient canvas actually renders in the PDF.
-- **PDF from PowerPoint:** apply PowerPoint rules above.
-- **Standalone PDF generators (reportlab, fpdf, etc.):** dark canvas
-  `#131316`, Open Sans (embed the font), brand colors, no anti-patterns.
-
-### 🌐 HTML pages — landing pages, microsites, dashboards, internal tools
-
-- Use the exact CSS in **RULE 1** verbatim.
-- Load Open Sans and JetBrains Mono via Google Fonts:
-  ```html
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  ```
-- Set `body { font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif; }`.
-- Set `pre, code { font-family: 'JetBrains Mono', ui-monospace, monospace; }`.
-- All other rules from RULES 1–6 apply.
-
-### 🖼️ Images, banners, social cards, hero graphics
-
-- **Canvas:** dark `#131316` with the 5-blob rolling purple radial gradient
-  (`#301E4C`). If your image generator (DALL·E, Imagen, Midjourney, Stable
-  Diffusion) cannot reliably produce gradients, fall back to flat `#1a1424`
-  and explicitly state "gradient unavailable in this format." **Never** fall
-  back to dots, grids, mesh, or "AI"-aesthetic patterns.
-- **Logo:** always full-color, from `2026_images/NeuralSeek Logos/`. Never
-  recolor, flatten, or place on busy imagery. **For the dark brand canvas
-  (the default case for almost every image), use the colored-N + white-text
-  variant: `color_logo_white_text.svg`.** Only switch to the colored-text
-  variant (`neuralseek__colored_logo_and_name.png`) if the background is
-  genuinely white or near-white. See the variant table in RULE 2 for the
-  full picker.
-- **Templates to copy from:** the existing LinkedIn banners
-  ([`neuralseek-linkedin-banner-company.svg`](2026_images/NeuralSeek%20Logos/neuralseek-linkedin-banner-company.svg),
-  [`neuralseek-linkedin-banner-personal.svg`](2026_images/NeuralSeek%20Logos/neuralseek-linkedin-banner-personal.svg))
-  are good reference templates for proportions and treatment.
-
-### 📧 Emails — HTML and plain-text
-
-- **HTML emails:** use the dark canvas gradient, but include a flat-color
-  fallback `background-color: #1a1424;` because some email clients (Outlook
-  desktop, certain mobile clients) do not render CSS gradients reliably.
-- **Plain-text emails:** include the color logo as an inline attachment. Keep
-  voice consistent with RULE 6 — calm, declarative, no AI sparkle.
-
-### 📝 Markdown / docs (READMEs, knowledge base entries)
-
-- The rendering host (GitHub, GitLab, etc.) controls the styling, so you can't
-  apply the canvas directly.
-- What you *can* control: descriptive image filenames, full-color logo embeds,
-  consistent code-block language tags, brand-voice copy throughout.
-- Add YAML frontmatter (`title`, `summary`, `tags`, `source`) so AI retrieval
-  works well.
-
-### 🧾 Anything else
-
-If you cannot find your format in the list above, default to:
-1. Dark canvas (`#131316`) with the rolling purple gradient where renderable.
-2. Open Sans + JetBrains Mono.
-3. Brand-palette colors only.
-4. Full-color NeuralSeek logo, never recolored.
-5. Voice from RULE 6.
-6. **Never** substitute an anti-pattern as a fallback. Ask first.
 
 ---
 
@@ -422,7 +335,7 @@ Use these when showing the search/data/regulatory/prospecting sources NeuralSeek
 - `3rd Party Data Sources/heyreach.png`
 - `Enterprise Apps/powerpoint.png` — PowerPoint (used as a data source for ingestion)
 
-### 8.5 LinkedIn banner templates
+### 8.5 LinkedIn banner templates (v2.1, pending redesign to v3)
 
 For social posts / banners, copy the proportions and treatment from these existing SVGs rather than designing from scratch:
 
