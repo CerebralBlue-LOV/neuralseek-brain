@@ -132,7 +132,7 @@
 | `color_logo_white_text.svg` | Colored N + WHITE text — **default for dark backgrounds** |
 | `neuralseek-linkedin-banner-company.svg` | LinkedIn company banner |
 | `neuralseek-linkedin-banner-personal.svg` | LinkedIn personal banner |
-| `neuralseek__colored_logo_and_name.png` | Colored N + colored text — white backgrounds only |
+| `neuralseek__colored_logo_and_name.png` | Colored N + colored text — light backgrounds (white, canvas, Dawn) |
 | `neuralseek_all_white_logo_and_name.png` | All-white lockup — photos / colored fills |
 | `neuralseek_colored_just_logo.png` | Colored N mark only — favicons, badges, avatars |
 
