@@ -20,7 +20,7 @@
 - `NeuralSeek Knowledge/Marketing Alignment Pack/` — third-party-validated pitch content (VC firm one-pager, why-now segment, CISO playbook refresh)
 - `NeuralSeek Knowledge/Partnerships/` — joint solution briefs (IBM Fusion, eDelta)
 - `NeuralSeek Knowledge/NeuralSeek Story/` — executive bios, company narrative, keynote outlines
-- `BRAND_RULES.md` + `2026_images/neuralseek-brand-guidelines_2026.md` — mandatory for any visual deliverable
+- `BRAND_RULES.md` + `2026_images/neuralseek-brand-guidelines_2026_v3.md` — mandatory for any visual deliverable
 
 **URL constraint:** Some agents (notably claude.ai) can only fetch URLs that have already appeared in a previously-fetched page. `RAW_INDEX.txt` contains every fully-qualified URL — fetching it first unlocks every other file in one hop.
 
@@ -32,15 +32,15 @@
 
 If the primary fails, mechanically swap the prefix and retry. Same content, same paths.
 
-**If you have tried all three mirrors and still cannot fetch: say so plainly and stop. Do NOT answer from memory.** NeuralSeek specifics — feature names, customer details, the 118-guardrail catalog, ROI numbers, the canvas CSS spec — are not reliably present in general training data and will be wrong if invented.
+**If you have tried all three mirrors and still cannot fetch: say so plainly and stop. Do NOT answer from memory.** NeuralSeek specifics — feature names, customer details, the 118-guardrail catalog, ROI numbers, the brand tokens — are not reliably present in general training data and will be wrong if invented.
 
 ---
 
 ## Brand compliance (mandatory for visual output)
 
-Before generating any HTML, slide, mockup, image, or other visual output for this NeuralSeek knowledge base, read [BRAND_RULES.md](BRAND_RULES.md).
-**Mandatory canvas:** The "rolling purple glow" — `#131316` body with five overlapping `#301E4C` radial-gradient ellipses at varied sizes, positions, and opacities, plus `background-attachment: fixed`. **Apply the exact CSS in `BRAND_RULES.md` RULE 1 verbatim — do not improvise the gradient values.**
-**Forbidden:** dots, grids, mesh, noise, particles, stripes, circuit patterns, or any tiled / repeated pattern.
-**Logo variant:** On any non-white background (the default), use `2026_images/NeuralSeek Logos/color_logo_white_text.svg` (colored N + white text). Only use the colored-text variant `neuralseek__colored_logo_and_name.png` on genuinely white backgrounds.
+Before generating any HTML, slide, mockup, image, or other visual output for this NeuralSeek knowledge base, read [BRAND_RULES.md](BRAND_RULES.md) and [2026_images/neuralseek-brand-guidelines_2026_v3.md](2026_images/neuralseek-brand-guidelines_2026_v3.md).
+**Backgrounds (v3):** Light and dark are both official. Light: canvas `#FAF9FC`, white `#FFFFFF` for PDFs and print. Dark: canvas `#131316`. Social and decks use the generated Night/Dawn textures (decks: max 2 backgrounds, no grain). Exact tokens in `BRAND_RULES.md` RULE 1. **Forbidden:** dot grids, glows and radial orbs on flat black, gradient text, noise in decks or PDFs, website point-cloud figures outside the website.
+**Fonts:** Sora 600 (headings), Albert Sans 400/500 (text), JetBrains Mono (system labels). Open Sans and Quicksand are retired.
+**Logo variant:** Light background → colored N + ink text (`neuralseek__colored_logo_and_name.png`). Dark background → colored N + white text (`color_logo_white_text.svg`). Full table in RULE 2 of `BRAND_RULES.md`.
 For full repo orientation, read [llms.txt](llms.txt) — the AI-optimized index.
 For Claude Code session-start context, read [CLAUDE.md](CLAUDE.md).

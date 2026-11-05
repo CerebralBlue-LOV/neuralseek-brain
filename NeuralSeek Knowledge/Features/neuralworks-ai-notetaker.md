@@ -85,7 +85,7 @@ Cross-reference: the full 118-guardrail catalog NeuralWorks inherits from the Ne
 - **Ticketing:** Jira
 - **Email:** Gmail
 - **Storage:** Google Drive, SharePoint
-- Plus 100+ generic NeuralSeek connectors (see the Enterprise Apps catalog in [`../../2026_images/neuralseek-brand-guidelines_2026.md`](../../2026_images/neuralseek-brand-guidelines_2026.md))
+- Plus 100+ generic NeuralSeek connectors (see the Enterprise Apps catalog in [`../../BRAND_RULES.md`](../../BRAND_RULES.md), RULE 8.3)
 
 ### Supported LLM models (swap in two clicks)
 
