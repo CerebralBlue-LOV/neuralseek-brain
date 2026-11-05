@@ -41,6 +41,25 @@ Only Night and Dawn, max 2 backgrounds per deck, and the **same style** across t
 | `night-silk.jpg`, `night-streak.jpg`, `night-ribbon.jpg` | Cover, section dividers, data slides, close |
 | `dawn-silk.jpg`, `dawn-streak.jpg`, `dawn-ribbon.jpg` | Product and customer slides |
 
+## More textures from the brand kit
+
+Same palettes, in the exact compositions used in the Brand Kit 2026. Use them for the formats named.
+
+| Folder / file | Size | Use |
+|---|---|---|
+| `signature/night-silk-a.jpg` | 1080×1350 | Signature Night silk (dark default for social) |
+| `signature/night-streak-b.jpg` | 1080×1350 | Signature Night streak (webinars, events) |
+| `signature/night-silk-c.jpg`, `signature/dawn-silk-c.jpg` | 1080×1350 | Announcements, hiring, quotes |
+| `signature/glass-edge-aurora-1.jpg`, `-2.jpg` | 1080×1350 | Partner and product launch posts (dark slab with lit edge) |
+| `signature/slab-bloom.jpg` | 1080×1350 | Launch and event posts |
+| `signature/ice-gradient-wide.jpg`, `signature/bloom-silk-wide.jpg` | 1200×627 | Text-heavy link posts |
+| `wide/night-silk-wide.jpg`, `wide/night-streak-wide.jpg`, `wide/dawn-silk-wide.jpg` | 1920×1080 | YouTube thumbnails, Zoom/Teams backgrounds, web headers (not deck slides: use `deck/`) |
+| `carousel/night-streak-panorama-3-slides.jpg` | 3240×1350 | One continuous texture cut into three 1080×1350 carousel slides |
+| `banners/linkedin-banner-<palette>.jpg` | 1584×396 | LinkedIn banners: night (company page), dawn (personal), aurora, bloom, ice (campaigns) |
+| `email/newsletter-header-*.jpg` | 1200×400 | Newsletter headers (shown at 600×200) |
+| `print/brochure-cover-dawn-*.jpg` | 1275×1050 | Top band of a brochure cover (the rest stays white) |
+| `print/rollup-night-*.jpg` | 990×2376 | Event roll-up banners (33×80 in) |
+
 ## Rules
 
 - Put text directly on the calm area of the texture, with generous empty space. Add a flat `#131316` (dark) or `#FAF9FC` (light) panel only behind more than 3 lines of running text; never box every slide or post.
