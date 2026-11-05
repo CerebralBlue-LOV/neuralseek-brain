@@ -32,7 +32,7 @@
 
 If the primary fails, mechanically swap the prefix and retry. Same content, same paths.
 
-**If you have tried all three mirrors and still cannot fetch: say so plainly and stop. Do NOT answer from memory.** NeuralSeek specifics — feature names, customer details, the 118-guardrail catalog, ROI numbers, the canvas CSS spec — are not reliably present in general training data and will be wrong if invented.
+**If you have tried all three mirrors and still cannot fetch: say so plainly and stop. Do NOT answer from memory.** NeuralSeek specifics — feature names, customer details, the 118-guardrail catalog, ROI numbers, the brand tokens — are not reliably present in general training data and will be wrong if invented.
 
 ---
 
