@@ -23,7 +23,7 @@ via pull request.
 - Adding new feature names, customer names, or financial figures
   without source verification
 - Edits to `BRAND_RULES.md`,
-  `2026_images/neuralseek-brand-guidelines_2026.md`, or the canvas
+  `2026_images/neuralseek-brand-guidelines_2026_v3.md`, or the canvas
   CSS spec without coordination with the brand owner
 
 ## How to contribute
@@ -47,13 +47,13 @@ If your contribution generates HTML, slides, PDFs, social cards, or
 any branded visual output, you **must** follow
 [`BRAND_RULES.md`](./BRAND_RULES.md). Specifically:
 
-- Use the rolling purple radial-gradient canvas spec verbatim
-  (`#131316` base with five `#301E4C` ellipses)
-- **Never** use dots, grids, mesh, noise, particles, stripes, or any
-  tiled pattern
-- Use the colored-N + white-text logo
-  (`2026_images/NeuralSeek Logos/color_logo_white_text.svg`) on
-  any non-white background
+- Use the v3 tokens for light or dark backgrounds (RULE 1 and RULE 4)
+  and the fonts Sora, Albert Sans and JetBrains Mono (RULE 3)
+- **Never** use dot grids, glows, gradient text, stock imagery or the
+  website's point-cloud figures outside the website
+- Use the logo variant that matches the background: colored N + ink
+  text on light, colored N + white text
+  (`2026_images/NeuralSeek Logos/color_logo_white_text.svg`) on dark
 
 Pull requests that violate brand rules will be asked to revise
 before merge.
