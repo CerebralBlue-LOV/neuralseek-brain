@@ -1,6 +1,9 @@
 ---
 title: NeuralSeek Brand Guidelines 2026 v3
-version: v3.2 (2026-11-04)
+version: v3 (revised 2026-11-05)
+status: current
+source: neuralseek-brand-guidelines_2026_v3.md
+tags: [brand, brand-guidelines, v3, design-system, typography, color, light-mode, dark-mode, sora, albert-sans, social, decks, pdf]
 replaces: v2.1 (archived at 2026_images/archive/brand-guidelines-v2.1/)
 summary: >-
   The current violet website palette, in light and dark mode. Typography: Sora (headings), Albert Sans (text),
@@ -74,7 +77,7 @@ Rules:
 | brand-shade | #2A1A5E | #301E4C | Deep backgrounds |
 
 Contrast:
-- foreground on light canvas: 16.3:1.
+- foreground on light canvas: 17.4:1.
 - brand on light canvas: 4.7:1.
 - White on a brand button: 4.9:1.
 - Dark brand on #131316: 6.8:1.
@@ -116,7 +119,7 @@ Rules:
 Co-branding: follow the partner's own rules for its logo. Each brand keeps its own typeface, so IBM Plex never replaces Sora.
 
 ## 6. Visual system for social and decks
-Social posts, decks and partnership pieces share one system: an owned color texture, a hairline grid with + markers, frosted-glass tiles for logos, and real screenshots. The `neuralseek-social-design` skill produces it.
+Social posts, decks and partnership pieces share one system: an owned color texture, a hairline grid with + markers, frosted-glass tiles for logos, and real screenshots. The `neuralseek-social-design` skill produces it. If the skill is not available, use the flat canvas and brand tokens (§3); never improvise textures, glows or gradients.
 
 **Textures** (generated, never stock):
 
@@ -154,7 +157,7 @@ Social posts, decks and partnership pieces share one system: an owned color text
 - Results rows use surface-2 with brand-hi numbers. Only approved customer figures; never demo values.
 - Quotes only from real customers approved for public use.
 - Links: verified URLs only.
-- Visual reference: NeuralSeek Brand Kit 2026 (PDF).
+- Visual reference: NeuralSeek Brand Kit 2026 (PDF, available from marketing).
 
 ## 8. How to request pieces (Claude and the team)
 Every request uses the `neuralseek-social-design` skill and includes these fields:
@@ -213,5 +216,5 @@ Asset catalog (logos, workspace nodes, connectors, data sources, screenshots): `
   - Lucide-style icons, emojis, sparkle icons.
   - Rows of identical cards, bento grids.
   - Fake terminals and demos that aren't real.
-- **Typography:** Inter, Geist or Space Grotesk; Open Sans in headings; light weights.
+- **Typography:** Inter, Geist or Space Grotesk; Open Sans or Quicksand anywhere; light weights.
 - **Copy:** em dashes; the "It's not X, it's Y" formula.
