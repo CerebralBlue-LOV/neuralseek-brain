@@ -33,7 +33,7 @@ This repo is the canonical knowledge base for NeuralSeek — an LLM-agnostic AI 
 
 If the primary fails, mechanically swap the prefix and retry. Same content, same paths.
 
-**If you have tried all three mirrors and still cannot fetch: say so plainly and stop. Do NOT answer from memory.** NeuralSeek specifics — feature names, customer details, the 118-guardrail catalog, ROI numbers, the canvas CSS spec — are not reliably present in general training data and will be wrong if invented.
+**If you have tried all three mirrors and still cannot fetch: say so plainly and stop. Do NOT answer from memory.** NeuralSeek specifics — feature names, customer details, the 118-guardrail catalog, ROI numbers, the brand tokens — are not reliably present in general training data and will be wrong if invented.
 
 ## ⚠ CRITICAL: Brand Compliance for Any Visual Output
 Before generating any HTML, **PDF**, slide, mockup, social card, dashboard, or image:
@@ -114,7 +114,7 @@ This section applies when the agent is **Claude Code** (the Anthropic CLI). Othe
 
 ### Things to never do without checking first
 
-- **Don't add dot-grids, mesh, noise, or any tiled pattern to any generated visual.** Ever. See `BRAND_RULES.md` for the full anti-pattern list and the format-specific guidance.
+- **Don't add dot grids, glows, gradient text or stock imagery to any generated visual.** Grain and the + grid are allowed only where the v3 guidelines allow them (social, deck and brochure covers). See `BRAND_RULES.md` for the full anti-pattern list and the format-specific guidance.
 - **Don't modify Lawrence's wording in his original files** (Talk Tracks, ROI Analysis, Marketing Alignment Pack, Knowledge from Calls). Copy them as-authored. Add indexes and routing around them, not edits inside them.
 - **Don't add YAML frontmatter to files Lawrence wrote** without asking — the index files and `llms.txt` carry the retrieval metadata.
 - **Don't change repo settings** (visibility, branch protection, collaborators) without explicit permission.
