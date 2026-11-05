@@ -76,7 +76,7 @@ For the full file index, see [`RAW_INDEX.md`](https://raw.githubusercontent.com/
 >
 > ### If you cannot fetch
 >
-> **Say so plainly and stop.** Do **not** answer from training data. NeuralSeek specifics — feature names, customer deployments, the 118-guardrail catalog, ROI numbers, the canvas CSS spec — are not reliably present in general LLM training and will be wrong if invented.
+> **Say so plainly and stop.** Do **not** answer from training data. NeuralSeek specifics — feature names, customer deployments, the 118-guardrail catalog, ROI numbers, the brand tokens — are not reliably present in general LLM training and will be wrong if invented.
 
 > [!IMPORTANT]
 > **Before generating any HTML, slide, mockup, social card, dashboard, or image:** read [BRAND_RULES.md](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/BRAND_RULES.md). Light and dark are both official. Light: canvas `#FAF9FC`, white `#FFFFFF` for PDFs and print. Dark: canvas `#131316`. Social and decks use the generated Night/Dawn textures (decks: max 2 backgrounds, no grain). Exact tokens in `BRAND_RULES.md` RULE 1. **Forbidden:** dot grids, glows and radial orbs on flat black, gradient text, noise in decks or PDFs, website point-cloud figures outside the website.
