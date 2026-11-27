@@ -1,0 +1,9 @@
+{
+  "_palette": "night",
+  "_texture": "silk",
+  "_layout": "text",
+  "eyebrow": "Live webinar · Dec 3 · 11:00 ET",
+  "headline": "Governed AI, <span class=\"kp\">in production</span>",
+  "sub": "How regulated teams ship agents with guardrails, lineage and audit built in.",
+  "cta": "Save your seat"
+}

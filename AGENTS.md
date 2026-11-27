@@ -21,6 +21,7 @@
 - `NeuralSeek Knowledge/Partnerships/` — joint solution briefs (IBM Fusion, eDelta)
 - `NeuralSeek Knowledge/NeuralSeek Story/` — executive bios, company narrative, keynote outlines
 - `BRAND_RULES.md` + `2026_images/neuralseek-brand-guidelines_2026_v3.md` — mandatory for any visual deliverable
+- `2026_images/brand-system/START_HERE.md` — **to make any marketing asset** (post, deck, PDF, video, email): locked templates + tokens + fonts + textures. Fill the template, never design from scratch
 
 **URL constraint:** Some agents (notably claude.ai) can only fetch URLs that have already appeared in a previously-fetched page. `RAW_INDEX.txt` contains every fully-qualified URL — fetching it first unlocks every other file in one hop.
 

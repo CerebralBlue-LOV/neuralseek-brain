@@ -1,0 +1,142 @@
+/* NeuralSeek brand v3 — locked stylesheet for templates. Do not edit per piece. */
+@font-face{font-family:'Sora';font-weight:600;font-style:normal;font-display:block;src:url('../fonts/sora-latin-600-normal.woff2') format('woff2'),url('https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/brand-system/fonts/sora-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'Sora';font-weight:700;font-style:normal;font-display:block;src:url('../fonts/sora-latin-700-normal.woff2') format('woff2'),url('https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/brand-system/fonts/sora-latin-700-normal.woff2') format('woff2');}
+@font-face{font-family:'Albert Sans';font-weight:400;font-style:normal;font-display:block;src:url('../fonts/albert-sans-latin-400-normal.woff2') format('woff2'),url('https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/brand-system/fonts/albert-sans-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Albert Sans';font-weight:500;font-style:normal;font-display:block;src:url('../fonts/albert-sans-latin-500-normal.woff2') format('woff2'),url('https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/brand-system/fonts/albert-sans-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-weight:400;font-style:normal;font-display:block;src:url('../fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2'),url('https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/brand-system/fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-weight:500;font-style:normal;font-display:block;src:url('../fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2'),url('https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/brand-system/fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2');}
+
+:root{--font-display:'Sora',Arial,sans-serif;--font-body:'Albert Sans',Arial,sans-serif;--font-mono:'JetBrains Mono',Consolas,monospace;
+--l-fg:#171322;--l-muted:#59546C;--l-canvas:#FAF9FC;--l-surface-2:#F2EFF9;--l-surface:#E9E4F4;--l-elev:#FFFFFF;--l-wash:#DDD3F3;--l-brand:#7A57E0;--l-brand-hi:#4C2E96;--l-brand-deep:#5A3FA3;
+--d-fg:#F8FAFC;--d-muted:#90A1B9;--d-canvas:#131316;--d-surface-2:#1F1C28;--d-surface:#2A2638;--d-elev:#332F42;--d-wash:#301E4C;--d-brand:#A78BFA;--d-brand-hi:#C9B8F0;--d-brand-deep:#6B4FA8;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#0b0b0e}
+body.ns-doc{display:flex;flex-direction:column;align-items:flex-start;gap:40px;padding:40px}
+@media print{body.ns-doc{padding:0;gap:0;background:none}}
+.frame{position:relative;overflow:hidden;flex:none;background-size:cover;background-position:center;background-repeat:no-repeat;font-family:var(--font-body);color:var(--fg);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+/* modes */
+.frame[data-palette=night],.frame[data-palette=aurora],.frame[data-palette=bloom],.frame[data-palette=flat-dark]{--fg:var(--d-fg);--fg2:rgba(248,250,252,.82);--muted:var(--d-muted);--eyebrow:rgba(248,250,252,.78);--line:rgba(255,255,255,.13);--btn-bg:#A78BFA;--btn-fg:#131316;--kp:#C9B8F0;--panel:#131316;--logo:url('../../NeuralSeek%20Logos/color_logo_white_text.svg');--glass-bg:rgba(255,255,255,.07);--glass-bd:rgba(255,255,255,.24);--win-bd:rgba(255,255,255,.18)}
+.frame[data-palette=dawn],.frame[data-palette=ice],.frame[data-palette=flat-light],.frame[data-palette=white]{--fg:var(--l-fg);--fg2:#3B3650;--muted:var(--l-muted);--eyebrow:#4C2E96;--line:rgba(23,19,34,.12);--btn-bg:#7A57E0;--btn-fg:#FFFFFF;--kp:#5A3FA3;--panel:#FAF9FC;--logo:url('../../NeuralSeek%20Logos/neuralseek__colored_logo_and_name.png');--glass-bg:rgba(255,255,255,.45);--glass-bd:rgba(23,19,34,.14);--win-bd:rgba(23,19,34,.14)}
+.frame[data-palette=flat-dark]{background:#131316;--kp:#A78BFA}
+.frame[data-palette=flat-light]{background:#FAF9FC;--kp:#7A57E0}
+.frame[data-palette=white]{background:#FFFFFF;--kp:#7A57E0}
+/* type */
+.eyebrow{font-family:var(--font-mono);font-weight:500;text-transform:uppercase;letter-spacing:.08em;line-height:1.4;color:var(--eyebrow)}
+.headline{font-family:var(--font-display);font-weight:600;letter-spacing:-.03em;line-height:1.05;color:var(--fg);text-wrap:balance}
+.title{font-family:var(--font-display);font-weight:600;letter-spacing:-.02em;line-height:1.1;color:var(--fg);text-wrap:balance}
+.kp{color:var(--kp)}
+.sub,.body{font-family:var(--font-body);font-weight:400;line-height:1.4;color:var(--fg2);text-wrap:pretty}
+.body strong,.sub strong{font-weight:500;color:var(--fg)}
+.mono{font-family:var(--font-mono)}
+.cta{display:inline-flex;align-items:center;font-family:var(--font-body);font-weight:500;background:var(--btn-bg);color:var(--btn-fg);border-radius:999px;white-space:nowrap}
+.logo{background:var(--logo) left center/contain no-repeat;aspect-ratio:5.72/1}
+.foot{font-family:var(--font-mono);font-weight:400;text-transform:uppercase;letter-spacing:.08em;color:var(--eyebrow)}
+/* + grid in thirds */
+.grid{position:absolute;inset:0;pointer-events:none;
+background:linear-gradient(var(--line),var(--line)) 33.333% 0/1px 100% no-repeat,linear-gradient(var(--line),var(--line)) 66.666% 0/1px 100% no-repeat,linear-gradient(var(--line),var(--line)) 0 33.333%/100% 1px no-repeat,linear-gradient(var(--line),var(--line)) 0 66.666%/100% 1px no-repeat}
+.grid i{position:absolute;width:22px;height:22px;transform:translate(-50%,-50%);background:linear-gradient(var(--fg),var(--fg)) center/22px 1.5px no-repeat,linear-gradient(var(--fg),var(--fg)) center/1.5px 22px no-repeat;opacity:.55}
+.grid i:nth-child(1){left:33.333%;top:33.333%}.grid i:nth-child(2){left:66.666%;top:33.333%}.grid i:nth-child(3){left:33.333%;top:66.666%}.grid i:nth-child(4){left:66.666%;top:66.666%}
+/* product window: real screenshot, straight, 8px radius, 1px border */
+.window{border-radius:8px;border:1px solid var(--win-bd);overflow:hidden;background:#fff}
+.window img{display:block;width:100%;height:100%;object-fit:cover;object-position:left top}
+/* flat panel: only behind more than 3 lines of running text */
+.panel{background:var(--panel);border-radius:12px}
+/* glass tiles + partner lockup */
+.glass{background:var(--glass-bg);border:1px solid var(--glass-bd);border-radius:16px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:center}
+.glass img{max-width:72%;max-height:46%;object-fit:contain}
+.glass .logo{width:72%}
+.glass .partner-name{font-family:var(--font-body);font-weight:500;color:var(--fg)}
+.joiner{position:relative;width:1px;background:var(--fg);opacity:.5;margin:0 auto}
+.joiner::before,.joiner::after{content:'';position:absolute;left:50%;width:7px;height:7px;border-radius:50%;background:var(--fg);transform:translateX(-50%)}
+.joiner::before{top:-3px}.joiner::after{bottom:-3px}
+/* formats */
+.fmt-post{width:1080px;height:1350px}
+.fmt-landscape{width:1200px;height:627px}
+.fmt-slide{width:1920px;height:1080px}
+.fmt-video{width:1920px;height:1080px}
+.fmt-vertical{width:1080px;height:1920px}
+.fmt-email{width:1200px;height:400px}
+.fmt-letter{width:816px;height:1056px}
+.joiner.h{width:auto;height:1px;margin:auto 0;flex:1}
+.joiner.h::before,.joiner.h::after{top:50%;left:auto;transform:translateY(-50%)}
+.joiner.h::before{left:-3px}.joiner.h::after{right:-3px;bottom:auto}
+.frame.transparent{background:none!important}
+/* legibility scrim: locked, keeps text readable on any texture. Never remove. */
+.frame::before{content:'';position:absolute;inset:0;pointer-events:none;background:var(--scrim,none)}
+.frame[data-palette=night],.frame[data-palette=aurora],.frame[data-palette=bloom]{--s:8,6,14;--sa:.62}
+.frame[data-palette=dawn],.frame[data-palette=ice]{--s:250,249,252;--sa:.66}
+.frame[data-palette=flat-dark],.frame[data-palette=flat-light],.frame[data-palette=white],.frame.transparent{--scrim:none!important}
+.scrim-left{--scrim:linear-gradient(90deg,rgba(var(--s),var(--sa)) 0%,rgba(var(--s),calc(var(--sa)*.8)) 45%,rgba(var(--s),0) 88%)}
+.scrim-top{--scrim:linear-gradient(180deg,rgba(var(--s),var(--sa)) 0%,rgba(var(--s),calc(var(--sa)*.75)) 42%,rgba(var(--s),0) 62%)}
+.scrim-bottom{--scrim:linear-gradient(0deg,rgba(var(--s),var(--sa)) 0%,rgba(var(--s),calc(var(--sa)*.75)) 40%,rgba(var(--s),0) 70%)}
+.scrim-full{--scrim:linear-gradient(rgba(var(--s),calc(var(--sa)*.7)),rgba(var(--s),calc(var(--sa)*.7)))}
+
+.fmt-post[data-palette=night][data-texture=silk]{background-image:url('../../textures/social/night-silk.jpg')}
+.fmt-post[data-palette=night][data-texture=streak]{background-image:url('../../textures/social/night-streak.jpg')}
+.fmt-post[data-palette=night][data-texture=ribbon]{background-image:url('../../textures/social/night-ribbon.jpg')}
+.fmt-post[data-palette=dawn][data-texture=silk]{background-image:url('../../textures/social/dawn-silk.jpg')}
+.fmt-post[data-palette=dawn][data-texture=streak]{background-image:url('../../textures/social/dawn-streak.jpg')}
+.fmt-post[data-palette=dawn][data-texture=ribbon]{background-image:url('../../textures/social/dawn-ribbon.jpg')}
+.fmt-post[data-palette=aurora][data-texture=silk]{background-image:url('../../textures/social/aurora-silk.jpg')}
+.fmt-post[data-palette=aurora][data-texture=streak]{background-image:url('../../textures/social/aurora-streak.jpg')}
+.fmt-post[data-palette=aurora][data-texture=ribbon]{background-image:url('../../textures/social/aurora-ribbon.jpg')}
+.fmt-post[data-palette=bloom][data-texture=silk]{background-image:url('../../textures/social/bloom-silk.jpg')}
+.fmt-post[data-palette=bloom][data-texture=streak]{background-image:url('../../textures/social/bloom-streak.jpg')}
+.fmt-post[data-palette=bloom][data-texture=ribbon]{background-image:url('../../textures/social/bloom-ribbon.jpg')}
+.fmt-post[data-palette=ice][data-texture=silk]{background-image:url('../../textures/social/ice-silk.jpg')}
+.fmt-post[data-palette=ice][data-texture=streak]{background-image:url('../../textures/social/ice-streak.jpg')}
+.fmt-post[data-palette=ice][data-texture=ribbon]{background-image:url('../../textures/social/ice-ribbon.jpg')}
+.fmt-landscape[data-palette=night][data-texture=silk]{background-image:url('../../textures/landscape/night-silk.jpg')}
+.fmt-landscape[data-palette=night][data-texture=streak]{background-image:url('../../textures/landscape/night-streak.jpg')}
+.fmt-landscape[data-palette=night][data-texture=ribbon]{background-image:url('../../textures/landscape/night-ribbon.jpg')}
+.fmt-landscape[data-palette=dawn][data-texture=silk]{background-image:url('../../textures/landscape/dawn-silk.jpg')}
+.fmt-landscape[data-palette=dawn][data-texture=streak]{background-image:url('../../textures/landscape/dawn-streak.jpg')}
+.fmt-landscape[data-palette=dawn][data-texture=ribbon]{background-image:url('../../textures/landscape/dawn-ribbon.jpg')}
+.fmt-landscape[data-palette=aurora][data-texture=silk]{background-image:url('../../textures/landscape/aurora-silk.jpg')}
+.fmt-landscape[data-palette=aurora][data-texture=streak]{background-image:url('../../textures/landscape/aurora-streak.jpg')}
+.fmt-landscape[data-palette=aurora][data-texture=ribbon]{background-image:url('../../textures/landscape/aurora-ribbon.jpg')}
+.fmt-landscape[data-palette=bloom][data-texture=silk]{background-image:url('../../textures/landscape/bloom-silk.jpg')}
+.fmt-landscape[data-palette=bloom][data-texture=streak]{background-image:url('../../textures/landscape/bloom-streak.jpg')}
+.fmt-landscape[data-palette=bloom][data-texture=ribbon]{background-image:url('../../textures/landscape/bloom-ribbon.jpg')}
+.fmt-landscape[data-palette=ice][data-texture=silk]{background-image:url('../../textures/landscape/ice-silk.jpg')}
+.fmt-landscape[data-palette=ice][data-texture=streak]{background-image:url('../../textures/landscape/ice-streak.jpg')}
+.fmt-landscape[data-palette=ice][data-texture=ribbon]{background-image:url('../../textures/landscape/ice-ribbon.jpg')}
+.fmt-vertical[data-palette=night][data-texture=silk]{background-image:url('../../textures/vertical/night-silk.jpg')}
+.fmt-vertical[data-palette=night][data-texture=streak]{background-image:url('../../textures/vertical/night-streak.jpg')}
+.fmt-vertical[data-palette=night][data-texture=ribbon]{background-image:url('../../textures/vertical/night-ribbon.jpg')}
+.fmt-vertical[data-palette=dawn][data-texture=silk]{background-image:url('../../textures/vertical/dawn-silk.jpg')}
+.fmt-vertical[data-palette=dawn][data-texture=streak]{background-image:url('../../textures/vertical/dawn-streak.jpg')}
+.fmt-vertical[data-palette=dawn][data-texture=ribbon]{background-image:url('../../textures/vertical/dawn-ribbon.jpg')}
+.fmt-vertical[data-palette=aurora][data-texture=silk]{background-image:url('../../textures/vertical/aurora-silk.jpg')}
+.fmt-vertical[data-palette=aurora][data-texture=streak]{background-image:url('../../textures/vertical/aurora-streak.jpg')}
+.fmt-vertical[data-palette=aurora][data-texture=ribbon]{background-image:url('../../textures/vertical/aurora-ribbon.jpg')}
+.fmt-vertical[data-palette=bloom][data-texture=silk]{background-image:url('../../textures/vertical/bloom-silk.jpg')}
+.fmt-vertical[data-palette=bloom][data-texture=streak]{background-image:url('../../textures/vertical/bloom-streak.jpg')}
+.fmt-vertical[data-palette=bloom][data-texture=ribbon]{background-image:url('../../textures/vertical/bloom-ribbon.jpg')}
+.fmt-vertical[data-palette=ice][data-texture=silk]{background-image:url('../../textures/vertical/ice-silk.jpg')}
+.fmt-vertical[data-palette=ice][data-texture=streak]{background-image:url('../../textures/vertical/ice-streak.jpg')}
+.fmt-vertical[data-palette=ice][data-texture=ribbon]{background-image:url('../../textures/vertical/ice-ribbon.jpg')}
+.fmt-video[data-palette=night][data-texture=silk]{background-image:url('../../textures/video-16x9/night-silk.jpg')}
+.fmt-video[data-palette=night][data-texture=streak]{background-image:url('../../textures/video-16x9/night-streak.jpg')}
+.fmt-video[data-palette=night][data-texture=ribbon]{background-image:url('../../textures/video-16x9/night-ribbon.jpg')}
+.fmt-video[data-palette=dawn][data-texture=silk]{background-image:url('../../textures/video-16x9/dawn-silk.jpg')}
+.fmt-video[data-palette=dawn][data-texture=streak]{background-image:url('../../textures/video-16x9/dawn-streak.jpg')}
+.fmt-video[data-palette=dawn][data-texture=ribbon]{background-image:url('../../textures/video-16x9/dawn-ribbon.jpg')}
+.fmt-video[data-palette=aurora][data-texture=silk]{background-image:url('../../textures/video-16x9/aurora-silk.jpg')}
+.fmt-video[data-palette=aurora][data-texture=streak]{background-image:url('../../textures/video-16x9/aurora-streak.jpg')}
+.fmt-video[data-palette=aurora][data-texture=ribbon]{background-image:url('../../textures/video-16x9/aurora-ribbon.jpg')}
+.fmt-video[data-palette=bloom][data-texture=silk]{background-image:url('../../textures/video-16x9/bloom-silk.jpg')}
+.fmt-video[data-palette=bloom][data-texture=streak]{background-image:url('../../textures/video-16x9/bloom-streak.jpg')}
+.fmt-video[data-palette=bloom][data-texture=ribbon]{background-image:url('../../textures/video-16x9/bloom-ribbon.jpg')}
+.fmt-video[data-palette=ice][data-texture=silk]{background-image:url('../../textures/video-16x9/ice-silk.jpg')}
+.fmt-video[data-palette=ice][data-texture=streak]{background-image:url('../../textures/video-16x9/ice-streak.jpg')}
+.fmt-video[data-palette=ice][data-texture=ribbon]{background-image:url('../../textures/video-16x9/ice-ribbon.jpg')}
+.fmt-slide[data-palette=night][data-texture=silk]{background-image:url('../../textures/deck/night-silk.jpg')}
+.fmt-slide[data-palette=night][data-texture=streak]{background-image:url('../../textures/deck/night-streak.jpg')}
+.fmt-slide[data-palette=night][data-texture=ribbon]{background-image:url('../../textures/deck/night-ribbon.jpg')}
+.fmt-slide[data-palette=dawn][data-texture=silk]{background-image:url('../../textures/deck/dawn-silk.jpg')}
+.fmt-slide[data-palette=dawn][data-texture=streak]{background-image:url('../../textures/deck/dawn-streak.jpg')}
+.fmt-slide[data-palette=dawn][data-texture=ribbon]{background-image:url('../../textures/deck/dawn-ribbon.jpg')}
+.fmt-email[data-palette=dawn][data-texture=silk]{background-image:url('../../textures/email/newsletter-header-dawn-silk.jpg')}
+.fmt-email[data-palette=dawn][data-texture=ribbon]{background-image:url('../../textures/email/newsletter-header-dawn-ribbon.jpg')}
+.fmt-email[data-palette=ice][data-texture=silk]{background-image:url('../../textures/email/newsletter-header-ice-silk.jpg')}

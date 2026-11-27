@@ -27,6 +27,8 @@
 ## 2026_images
 
 - [neuralseek-brand-guidelines_2026_v3.md (current brand guidelines)](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/neuralseek-brand-guidelines_2026_v3.md)
+- [brand-system/START_HERE.md (locked templates to make any asset)](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/brand-system/START_HERE.md)
+- [brand-system/tokens/brand-tokens.json (brand tokens, machine-readable)](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/brand-system/tokens/brand-tokens.json)
 - [archive/brand-guidelines-v2.1/neuralseek-brand-guidelines_2026.html (archived v2.1)](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/archive/brand-guidelines-v2.1/neuralseek-brand-guidelines_2026.html)
 - [Product Screenshots/00-INDEX.md (product-UI screenshot map — full-screen heroes + component close-ups)](https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/Product%20Screenshots/00-INDEX.md)
 

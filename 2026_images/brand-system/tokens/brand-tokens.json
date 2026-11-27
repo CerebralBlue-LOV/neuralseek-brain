@@ -1,0 +1,68 @@
+{
+  "$schema_note": "NeuralSeek brand v3 tokens. Source of truth for every agent. Do not add values that are not here.",
+  "version": "v3",
+  "updated": "2026-11-27",
+  "fonts": {
+    "display": { "family": "Sora", "weights": [600, 700], "use": "Headings, headlines, covers. 700 only for very short social headlines.", "file_fallback": "Arial" },
+    "body": { "family": "Albert Sans", "weights": [400, 500], "use": "Body, sublines, buttons, captions.", "file_fallback": "Calibri, Arial" },
+    "mono": { "family": "JetBrains Mono", "weights": [400, 500], "use": "Uppercase eyebrows, IDs, model names, page numbers. Never paragraphs or headlines.", "file_fallback": "Consolas" },
+    "files": "2026_images/brand-system/fonts/ (woff2, SIL OFL 1.1, commercial use allowed)",
+    "never": ["Inter", "Geist", "Space Grotesk", "Open Sans", "Quicksand", "weight 300"]
+  },
+  "color": {
+    "light": {
+      "foreground": "#171322", "muted": "#59546C", "canvas": "#FAF9FC", "surface-2": "#F2EFF9", "surface": "#E9E4F4",
+      "surface-elev": "#FFFFFF", "wash": "#DDD3F3", "brand": "#7A57E0", "brand-hi": "#4C2E96", "brand-mid": "#6A4BD0",
+      "brand-deep": "#5A3FA3", "brand-shade": "#2A1A5E", "button-bg": "#7A57E0", "button-text": "#FFFFFF"
+    },
+    "dark": {
+      "foreground": "#F8FAFC", "muted": "#90A1B9", "canvas": "#131316", "surface-2": "#1F1C28", "surface": "#2A2638",
+      "surface-elev": "#332F42", "wash": "#301E4C", "brand": "#A78BFA", "brand-hi": "#C9B8F0", "brand-mid": "#8B6FD1",
+      "brand-deep": "#6B4FA8", "brand-shade": "#301E4C", "button-bg": "#A78BFA", "button-text": "#131316"
+    },
+    "logo_gradient": ["#30CCFE", "#5281F4", "#4C3DF5", "#A32EF6", "#F98AFE"],
+    "logo_gradient_use": "Only big customer-result numbers on dark. Never on text otherwise."
+  },
+  "key_phrase": {
+    "rule": "One key phrase per headline, solid color, never gradient.",
+    "flat_light": "#7A57E0", "flat_dark": "#A78BFA",
+    "on_texture": { "night": "#C9B8F0", "aurora": "#C9B8F0", "bloom": "#C9B8F0", "dawn": "#5A3FA3", "ice": "#5A3FA3" }
+  },
+  "palettes": {
+    "night": { "mode": "dark", "use": "Default for company page, webinars, events, deck cover/sections/close." },
+    "dawn": { "mode": "light", "use": "Default for personal posts, quotes, product slides." },
+    "aurora": { "mode": "dark", "use": "Social and video only: product and tech." },
+    "bloom": { "mode": "dark", "use": "Social and video only: launches and brand events." },
+    "ice": { "mode": "light", "use": "Social and video only: partners and governance on light." }
+  },
+  "textures": {
+    "variants": ["silk", "streak", "ribbon"],
+    "folders": {
+      "post-1080x1350": "2026_images/textures/social/{palette}-{variant}.jpg",
+      "landscape-1200x627": "2026_images/textures/landscape/{palette}-{variant}.jpg",
+      "vertical-1080x1920": "2026_images/textures/vertical/{palette}-{variant}.jpg",
+      "video-1920x1080": "2026_images/textures/video-16x9/{palette}-{variant}.jpg",
+      "slide-1920x1080": "2026_images/textures/deck/{night|dawn}-{variant}.jpg",
+      "email-1200x400": "2026_images/textures/email/newsletter-header-{dawn-silk|dawn-ribbon|ice-silk}.jpg"
+    },
+    "never": "Generate, recolor, blur, flip or stretch a texture. Use the files as they are."
+  },
+  "layout": {
+    "post-1080x1350": { "margin": 80, "headline_px": [88, 110], "headline_max_lines": 3, "body_px": [30, 36], "eyebrow_px": [22, 26], "cta_px": 30 },
+    "landscape-1200x627": { "margin": 64, "headline_px": [60, 76], "headline_max_lines": 3, "body_px": [24, 28], "eyebrow_px": [18, 20] },
+    "slide-1920x1080": { "margin": 120, "cover_headline_px": [96, 120], "title_px": [64, 80], "body_px": [28, 32], "eyebrow_px": [18, 20] },
+    "vertical-1080x1920": { "margin": 96, "safe_top": 220, "safe_bottom": 380, "headline_px": [96, 120], "body_px": [34, 40], "eyebrow_px": [24, 28] },
+    "video-1920x1080": { "margin": 120, "headline_px": [96, 120], "body_px": [32, 36], "eyebrow_px": [20, 22] },
+    "pdf-letter": { "margin_in": 0.7, "h1_px": [40, 44], "h2_px": [22, 24], "body_px": [13, 14], "max_pages": 2 }
+  },
+  "logo": {
+    "on_dark": "2026_images/NeuralSeek Logos/color_logo_white_text.svg",
+    "on_light": "2026_images/NeuralSeek Logos/neuralseek__colored_logo_and_name.png",
+    "mark_only": "2026_images/NeuralSeek Logos/neuralseek_colored_just_logo.png",
+    "never": "Recolor, invert, stretch, add effects, or place on busy imagery."
+  },
+  "voice": {
+    "tagline": "Governed AI, in production.",
+    "never": ["em dashes", "emojis", "It's not X, it's Y", "the only", "world-class", "best-in-class", "Let's build something amazing"]
+  }
+}

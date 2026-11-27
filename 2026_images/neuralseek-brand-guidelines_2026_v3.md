@@ -12,6 +12,8 @@ summary: >-
 
 # NeuralSeek Brand Guidelines v3
 
+> **Making an asset (post, deck, PDF, video, email)? Do not design from scratch.** Use the locked templates in [`brand-system/`](brand-system/START_HERE.md): fill the text, pick the palette, render. They apply every rule in this book automatically, so every agent gets the same result.
+
 ## 1. What changes from v2.1
 | Topic | v2.1 / today | v3 |
 |---|---|---|
@@ -123,9 +125,9 @@ Rules:
 Co-branding: follow the partner's own rules for its logo. Each brand keeps its own typeface, so IBM Plex never replaces Sora.
 
 ## 6. Visual system for social and decks
-Social posts, decks and partnership pieces share one system: an owned color texture, a hairline grid with + markers, frosted-glass tiles for logos, and real screenshots. The `neuralseek-social-design` skill produces it. If the skill is not available, use the flat canvas and brand tokens (§3); never improvise textures, glows or gradients.
+Social posts, decks and partnership pieces share one system: an owned color texture, a hairline grid with + markers, frosted-glass tiles for logos, and real screenshots. The templates in [`brand-system/templates/`](brand-system/START_HERE.md) produce it. Never improvise textures, glows or gradients.
 
-**Textures** (generated, never stock). The official files live in [`textures/`](textures/README.md): `social/` (1080×1350, 15 files) and `deck/` (1920×1080, Night and Dawn, no grain). Use those files; never generate or improvise a texture.
+**Textures** (generated, never stock). The official files live in [`textures/`](textures/README.md): `social/` (1080×1350), `landscape/` (1200×627), `vertical/` (1080×1920), `video-16x9/` (1920×1080) and `deck/` (1920×1080, Night and Dawn, no grain). Use those files; never generate or improvise a texture.
 
 | Palette | Colors | Use |
 |---|---|---|
@@ -181,7 +183,7 @@ Social posts, decks and partnership pieces share one system: an owned color text
 - Visual reference: NeuralSeek Brand Kit 2026 (PDF, available from marketing).
 
 ## 8. How to request pieces (Claude and the team)
-Every request uses the `neuralseek-social-design` skill and includes these fields:
+Every piece is made from a template in [`brand-system/`](brand-system/START_HERE.md) (social post, landscape post, deck, one-pager, video 9:16 and 16:9, email header). A request includes these fields:
 
 | Field | Example |
 |---|---|
@@ -194,13 +196,13 @@ Every request uses the `neuralseek-social-design` skill and includes these field
 | Image | File name from `2026_images/Product Screenshots` |
 | CTA | One |
 
-Template: "Using the neuralseek-social-design skill, create a [piece type] for [channel/format], [mode], palette [name]. Headline: [text], key phrase: [text]. Proof: [approved figure + source]. Screenshot: [file]. CTA: [text]."
+Template: "Using the NeuralSeek brand system (2026_images/brand-system/START_HERE.md), create a [piece type] for [channel/format], [mode], palette [name]. Headline: [text], key phrase: [text]. Proof: [approved figure + source]. Screenshot: [file]. CTA: [text]."
 
 Consistency rules:
 - One palette per campaign; every piece in the campaign uses it.
-- Run the skill's QA before delivery (fonts, tokens, contrast, no anti-AI patterns, approved figures).
+- Run `render.py` QA before delivery (fonts, tokens, contrast, no anti-AI patterns, approved figures).
 - Official assets (logo, textures, screenshots) come only from the repo.
-- The brand owner approves new templates before they go into the skill.
+- The brand owner approves new templates before they go into `brand-system/templates/`.
 
 ## 9. Voice and position (carried over from v2.1)
 **Position:** NeuralSeek is the AI development environment regulated enterprises deploy under policy, with guardrails, governance and audit lineage built in.

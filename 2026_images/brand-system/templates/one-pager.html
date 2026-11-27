@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>NeuralSeek · Solution brief (Letter, 2 pages)</title>
+<meta name="ns-template" content="one-pager">
+<meta name="ns-output" content="pdf">
+<link rel="stylesheet" href="../tokens/brand.css">
+<style>
+/* LOCKED LAYOUT. Do not edit. White background, no texture, no grid, no grain. Letter, max 2 pages. */
+.fmt-letter{padding:56px 64px 0;color:#171322}
+.fmt-letter .top{display:flex;justify-content:space-between;align-items:center;height:28px}
+.fmt-letter .top .logo{width:150px;height:26px}
+.fmt-letter .top .eyebrow{font-size:10.5px}
+.fmt-letter h1.headline{font-size:42px;margin-top:44px;max-width:640px}
+.fmt-letter .lead{font-family:var(--font-body);font-weight:500;font-size:15.5px;line-height:1.5;color:#3B3650;margin-top:18px;max-width:600px}
+.fmt-letter .window{margin-top:30px;height:270px;border-color:rgba(23,19,34,.14)}
+.fmt-letter .sec{display:grid;grid-template-columns:56px 1fr;margin-top:26px}
+.fmt-letter .sec .n{font-family:var(--font-mono);font-weight:500;font-size:12px;color:#4C2E96;padding-top:5px;letter-spacing:.06em}
+.fmt-letter h2{font-family:var(--font-display);font-weight:600;font-size:19px;letter-spacing:-.01em;line-height:1.25}
+.fmt-letter .sec p{font-family:var(--font-body);font-weight:500;font-size:13px;line-height:1.55;color:#3B3650;margin-top:6px;max-width:560px}
+.fmt-letter .results{display:flex;background:#F2EFF9;border-radius:10px;margin-top:34px;padding:26px 0}
+.fmt-letter .results div{flex:1;padding:0 26px;border-left:1px solid rgba(23,19,34,.1)}
+.fmt-letter .results div:first-child{border-left:0}
+.fmt-letter .results b{display:block;font-family:var(--font-display);font-weight:600;font-size:34px;letter-spacing:-.02em;color:#4C2E96}
+.fmt-letter .results span{display:block;font-family:var(--font-body);font-weight:500;font-size:12px;line-height:1.45;color:#59546C;margin-top:6px}
+.fmt-letter .results-src{font-family:var(--font-mono);font-size:9.5px;color:#59546C;margin-top:8px;letter-spacing:.04em}
+.fmt-letter .reco{background:#5A3FA3;border-radius:12px;padding:30px 34px;margin-top:30px;color:#fff}
+.fmt-letter .reco .eyebrow{color:#DDD3F3;font-size:10.5px}
+.fmt-letter .reco h2{color:#fff;font-size:22px;margin-top:10px}
+.fmt-letter .reco p{font-family:var(--font-body);font-weight:500;font-size:13px;line-height:1.55;color:#EDE7FA;margin-top:8px;max-width:560px}
+.fmt-letter .reco .cta{background:#fff;color:#4C2E96;font-size:13px;padding:10px 20px;margin-top:18px}
+.fmt-letter .footer{position:absolute;left:64px;right:64px;bottom:36px;display:flex;align-items:center;gap:14px;border-top:1px solid rgba(23,19,34,.1);padding-top:14px}
+.fmt-letter .footer .logo{width:96px;height:17px}
+.fmt-letter .footer .t{font-family:var(--font-body);font-weight:500;font-size:10.5px;color:#59546C;flex:1}
+.fmt-letter .footer .pg{font-family:var(--font-mono);font-size:10px;color:#59546C}
+</style></head>
+<body class="ns-doc">
+<!--
+  Use for solution briefs, one-pagers, partner briefs. Keep both pages; delete sections inside a page rather than adding new ones.
+  Headline max 3 lines with ONE key phrase in <span class="kp">. Section bodies max 4 lines each.
+  Results row: approved customer figures only, with the source line. Never demo numbers. If you have none, delete .results and .results-src.
+  Screenshot: real file from 2026_images/Product Screenshots, set the img src.
+-->
+
+<section class="frame fmt-letter" data-palette="white">
+  <div class="top"><div class="logo"></div><div class="eyebrow" data-slot="eyebrow">Solution brief · Financial services</div></div>
+  <h1 class="headline" data-slot="headline" data-max-lines="3">Agents your risk team <span class="kp">can sign off on</span></h1>
+  <p class="lead" data-slot="lead" data-max-lines="3">NeuralSeek is the AI development environment regulated enterprises deploy under policy, with guardrails, governance and audit lineage built in.</p>
+  <div class="window" data-slot="screenshot"><img src="../../Product%20Screenshots/maistro-editor/flow_seek.png" alt=""></div>
+  <div class="sec"><div class="n">01</div><div><h2 data-slot="h2-1">The challenge</h2><p data-slot="p-1" data-max-lines="4">Pilots stall at review. Security and compliance teams cannot see what an agent retrieved, which model answered, or which policy applied, so nothing reaches production.</p></div></div>
+  <div class="sec"><div class="n">02</div><div><h2 data-slot="h2-2">What NeuralSeek does</h2><p data-slot="p-2" data-max-lines="4">Build agents in mAIstro with guardrails, PII removal and policy checks as steps in the flow. Every run is logged with its sources, model and cost.</p></div></div>
+  <div class="sec"><div class="n">03</div><div><h2 data-slot="h2-3">What your team gets</h2><p data-slot="p-3" data-max-lines="4">Evidence for every answer, exportable to the tools you already run, and one place to compare models before you switch.</p></div></div>
+  <div class="footer"><div class="logo"></div><div class="t">Governed AI, in production · neuralseek.com</div><div class="pg">01</div></div>
+</section>
+
+<section class="frame fmt-letter" data-palette="white">
+  <div class="top"><div class="logo"></div><div class="eyebrow">How it works</div></div>
+  <div class="sec" style="margin-top:40px"><div class="n">01</div><div><h2 data-slot="h2-4">Connect</h2><p data-slot="p-4" data-max-lines="4">Point NeuralSeek at your knowledge bases and systems. Data stays where it lives.</p></div></div>
+  <div class="sec"><div class="n">02</div><div><h2 data-slot="h2-5">Govern</h2><p data-slot="p-5" data-max-lines="4">Set guardrails, PII rules and approved models once. They apply to every agent.</p></div></div>
+  <div class="sec"><div class="n">03</div><div><h2 data-slot="h2-6">Prove</h2><p data-slot="p-6" data-max-lines="4">Hand reviewers the log: question, sources, model, policy result and cost for each run.</p></div></div>
+  <div class="results" data-slot="results">
+    <div><b>00%</b><span>Approved customer figure goes here</span></div>
+    <div><b>00×</b><span>Approved customer figure goes here</span></div>
+    <div><b>00</b><span>Approved customer figure goes here</span></div>
+  </div>
+  <div class="results-src" data-slot="results-src">SOURCE: CUSTOMER NAME, APPROVED FOR PUBLIC USE</div>
+  <div class="reco">
+    <div class="eyebrow" data-slot="reco-eyebrow">Recommended next step</div>
+    <h2 data-slot="reco-title">Run one governed agent on your data in two weeks</h2>
+    <p data-slot="reco-body" data-max-lines="3">We scope one use case with your risk team, build it in mAIstro, and hand over the evidence log for review.</p>
+    <div class="cta" data-slot="cta">neuralseek.com/contact</div>
+  </div>
+  <div class="footer"><div class="logo"></div><div class="t">Governed AI, in production · neuralseek.com</div><div class="pg">02</div></div>
+</section>
+</body></html>

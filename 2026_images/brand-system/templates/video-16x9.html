@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>NeuralSeek · Video frames 16:9 (1920×1080)</title>
+<meta name="ns-template" content="video-16x9">
+<link rel="stylesheet" href="../tokens/brand.css">
+<style>
+/* LOCKED LAYOUT. YouTube, LinkedIn landscape video, webinar intros. */
+.fmt-video .eyebrow{position:absolute;left:120px;top:110px;font-size:22px}
+.fmt-video .copy{position:absolute;left:120px;width:1300px}
+.fmt-video .headline{font-size:112px}
+.fmt-video .sub{font-size:34px;margin-top:40px;max-width:1100px}
+.fmt-video .logo{position:absolute;left:120px;bottom:96px;width:240px}
+.v-title{--scrim:linear-gradient(90deg,rgba(var(--s),var(--sa)) 0%,rgba(var(--s),calc(var(--sa)*.7)) 55%,rgba(var(--s),0) 85%)}
+.v-title .copy{top:330px}
+.v-end{--scrim:linear-gradient(rgba(var(--s),.5),rgba(var(--s),.5))}
+.v-end .copy{top:330px}
+.v-end .cta{font-size:34px;padding:26px 46px;margin-top:56px}
+.v-end .url{position:absolute;right:120px;bottom:104px;font-size:22px}
+/* lower third: transparent PNG to overlay on footage */
+.v-lower .bar{position:absolute;left:120px;bottom:110px;display:flex;align-items:center;gap:28px;padding:26px 36px;background:rgba(19,19,22,.78);border:1px solid rgba(255,255,255,.18);border-radius:14px;backdrop-filter:blur(18px)}
+.v-lower .bar .logo{position:static;width:44px;height:44px;aspect-ratio:auto;background-image:url('../../NeuralSeek%20Logos/neuralseek_colored_just_logo.png')}
+.v-lower .name{font-family:var(--font-display);font-weight:600;font-size:38px;color:#F8FAFC;letter-spacing:-.01em}
+.v-lower .role{font-family:var(--font-mono);font-weight:500;font-size:20px;text-transform:uppercase;letter-spacing:.08em;color:#C9B8F0;margin-top:6px}
+</style></head>
+<body class="ns-doc">
+<!--
+  Title and end cards: night, dawn, aurora, bloom or ice (one per video). Headline max 2 lines.
+  Lower third renders as a transparent PNG: name + role only, real people only.
+-->
+<section class="frame fmt-video v-title" data-palette="night" data-texture="silk">
+  <div class="grid"><i></i><i></i><i></i><i></i></div>
+  <div class="eyebrow" data-slot="eyebrow">NeuralSeek × IBM Fusion</div>
+  <div class="copy">
+    <h1 class="headline" data-slot="headline" data-max-lines="2">AI in a box, <span class="kp">governed from day one</span></h1>
+    <p class="sub" data-slot="sub" data-max-lines="2">Agents that run next to the data they answer from.</p>
+  </div>
+  <div class="logo"></div>
+</section>
+
+<section class="frame fmt-video v-end" data-palette="night" data-texture="ribbon">
+  <div class="copy">
+    <h2 class="headline" data-slot="headline" data-max-lines="2">Governed AI, <span class="kp">in production</span></h2>
+    <div class="cta" data-slot="cta">Book a demo</div>
+  </div>
+  <div class="logo"></div>
+  <div class="url foot" data-slot="url">neuralseek.com</div>
+</section>
+
+<section class="frame fmt-video v-lower transparent" data-palette="night">
+  <div class="bar"><div class="logo"></div><div><div class="name" data-slot="name">Garrett Rowe</div><div class="role" data-slot="role">CEO, NeuralSeek</div></div></div>
+</section>
+</body></html>

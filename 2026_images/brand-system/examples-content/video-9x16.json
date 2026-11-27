@@ -1,0 +1,8 @@
+{
+  "_palette": "night",
+  "frames": [
+    { "_texture": "silk", "eyebrow": "mAIstro · Agent chat", "headline": "Ask your data. <span class=\"kp\">Keep the audit trail.</span>", "sub": "Every answer logged with sources, model and policy result." },
+    { "_texture": "ribbon", "headline": "PII removed <span class=\"kp\">before</span> the model sees it" },
+    { "_texture": "silk", "headline": "Governed AI, <span class=\"kp\">in production</span>", "cta": "Book a demo", "url": "neuralseek.com" }
+  ]
+}
