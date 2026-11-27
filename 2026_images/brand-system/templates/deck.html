@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>NeuralSeek · Deck 1920×1080</title>
+<meta name="ns-template" content="deck">
+<meta name="ns-output" content="pdf">
+<link rel="stylesheet" href="../tokens/brand.css">
+<style>
+/* LOCKED LAYOUT. Do not edit. Duplicate, reorder or delete whole <section> slides; change only text in [data-slot]. */
+.fmt-slide .eyebrow{position:absolute;left:120px;top:100px;font-size:20px}
+.fmt-slide .logo{position:absolute;left:120px;bottom:84px;width:220px}
+.fmt-slide .pg{position:absolute;right:120px;bottom:92px;font-size:18px}
+.fmt-slide .url{position:absolute;left:120px;bottom:92px;font-size:18px}
+.fmt-slide .body{font-size:30px}
+.fmt-slide .body li{list-style:none;padding-left:34px;position:relative;margin-top:18px}
+.fmt-slide .body li::before{content:'';position:absolute;left:0;top:.62em;width:14px;height:2px;background:var(--kp)}
+/* cover */
+.s-cover{--scrim:linear-gradient(90deg,rgba(var(--s),var(--sa)) 0%,rgba(var(--s),calc(var(--sa)*.7)) 55%,rgba(var(--s),0) 85%)}
+.s-cover .copy{position:absolute;left:120px;top:300px;width:1180px}
+.s-cover .headline{font-size:112px}
+.s-cover .sub{font-size:32px;margin-top:44px;max-width:980px}
+.s-cover .lockup{position:absolute;right:160px;top:250px;width:420px;height:580px;display:flex;flex-direction:column}
+.s-cover .joiner{flex:1}
+.s-cover .glass{height:200px;flex:none}
+.s-cover .glass .logo{position:static;width:240px}
+.s-cover .partner-name{font-size:40px}
+/* section */
+.s-section{--scrim:linear-gradient(90deg,rgba(var(--s),var(--sa)) 0%,rgba(var(--s),0) 80%)}
+.s-section .num{position:absolute;left:120px;top:330px;font-family:var(--font-mono);font-weight:500;font-size:28px;color:var(--eyebrow);letter-spacing:.08em}
+.s-section .headline{position:absolute;left:120px;top:400px;width:1300px;font-size:104px}
+/* content: text left, real screenshot right (bleeds off the edge) */
+.s-content{--scrim:linear-gradient(90deg,rgba(var(--s),.9) 0%,rgba(var(--s),.75) 42%,rgba(var(--s),0) 70%)}
+.s-content .title{position:absolute;left:120px;top:170px;width:780px;font-size:72px}
+.s-content .body{position:absolute;left:120px;top:470px;width:740px}
+.s-content .window{position:absolute;left:1000px;top:170px;width:1040px;height:760px}
+/* statement: one big idea or customer result */
+.s-statement{--scrim:linear-gradient(rgba(var(--s),.45),rgba(var(--s),.45))}
+.s-statement .headline{position:absolute;left:120px;top:300px;width:1500px;font-size:96px}
+.s-statement .sub{position:absolute;left:120px;top:690px;width:1200px;font-size:30px}
+/* close */
+.s-close{--scrim:linear-gradient(90deg,rgba(var(--s),var(--sa)) 0%,rgba(var(--s),0) 80%)}
+.s-close .copy{position:absolute;left:120px;top:340px;width:1300px}
+.s-close .headline{font-size:104px}
+.s-close .cta{font-size:32px;padding:26px 46px;margin-top:60px}
+</style></head>
+<body class="ns-doc">
+<!--
+  RULES: palettes Night and Dawn only, max 2 backgrounds per deck, no grain (deck textures have none).
+  Night: cover, section, statement, close. Dawn: product/content slides.
+  One idea per slide. Title max 2 lines. Body max 4 bullets of one line each. One CTA, on the close slide.
+  Cover with a partner: keep .lockup and set the partner name or <img>. Without partner: delete the .lockup div.
+  Page numbers: update data-slot="pg" by hand (01, 02 ...).
+-->
+
+<section class="frame fmt-slide s-cover" data-palette="night" data-texture="silk">
+  <div class="grid"><i></i><i></i><i></i><i></i></div>
+  <div class="eyebrow" data-slot="eyebrow">Partner brief · 2026</div>
+  <div class="copy">
+    <h1 class="headline" data-slot="headline" data-max-lines="2">NeuralSeek <span class="kp">on IBM Fusion</span></h1>
+    <p class="sub" data-slot="sub" data-max-lines="2">Governed AI agents that run on the Fusion appliance, next to the data they answer from.</p>
+  </div>
+  <div class="lockup"><div class="glass"><div class="logo"></div></div><div class="joiner"></div><div class="glass"><span class="partner-name" data-slot="partner">IBM Fusion</span></div></div>
+  <div class="url foot">neuralseek.com</div>
+  <div class="pg foot" data-slot="pg">01</div>
+</section>
+
+<section class="frame fmt-slide s-section" data-palette="night" data-texture="streak">
+  <div class="num" data-slot="num">01</div>
+  <h2 class="headline" data-slot="headline" data-max-lines="2">Why governance <span class="kp">comes first</span></h2>
+  <div class="logo"></div>
+  <div class="pg foot" data-slot="pg">02</div>
+</section>
+
+<section class="frame fmt-slide s-content" data-palette="dawn" data-texture="silk">
+  <div class="eyebrow" data-slot="eyebrow">Governance</div>
+  <h2 class="title" data-slot="title" data-max-lines="2">Governance you can <span class="kp">show an examiner</span></h2>
+  <ul class="body" data-slot="body">
+    <li>Confidence, coverage and cost for every answer</li>
+    <li>A log of what was asked, retrieved and answered</li>
+    <li>Exportable to the collector you already run</li>
+  </ul>
+  <div class="window" data-slot="screenshot"><img src="../../Product%20Screenshots/maistro-editor/flow_seek.png" alt=""></div>
+  <div class="logo"></div>
+  <div class="pg foot" data-slot="pg">03</div>
+</section>
+
+<section class="frame fmt-slide s-statement" data-palette="night" data-texture="ribbon">
+  <div class="eyebrow" data-slot="eyebrow">Customer result</div>
+  <h2 class="headline" data-slot="headline" data-max-lines="3">Policy checks on <span class="kp">every agent run</span>, before anything reaches a customer</h2>
+  <p class="sub" data-slot="sub" data-max-lines="2">Use only approved customer figures and quotes, with source.</p>
+  <div class="logo"></div>
+  <div class="pg foot" data-slot="pg">04</div>
+</section>
+
+<section class="frame fmt-slide s-close" data-palette="night" data-texture="silk">
+  <div class="grid"><i></i><i></i><i></i><i></i></div>
+  <div class="copy">
+    <h2 class="headline" data-slot="headline" data-max-lines="2">Governed AI, <span class="kp">in production</span></h2>
+    <div class="cta" data-slot="cta">Book a working session</div>
+  </div>
+  <div class="logo"></div>
+  <div class="pg foot" data-slot="pg">05</div>
+</section>
+
+</body></html>

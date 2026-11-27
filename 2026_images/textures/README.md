@@ -32,6 +32,18 @@ One texture per piece and one palette per campaign. File names are `<palette>-<s
 
 Files: `night-silk`, `night-streak`, `night-ribbon`, `dawn-silk`, `dawn-streak`, `dawn-ribbon`, `aurora-silk`, `aurora-streak`, `aurora-ribbon`, `bloom-silk`, `bloom-streak`, `bloom-ribbon`, `ice-silk`, `ice-streak`, `ice-ribbon` (all `.jpg`).
 
+## Other formats, same 15 textures (`landscape/`, `vertical/`, `video-16x9/`)
+
+Same palettes and styles as `social/`, cut from the same originals at full resolution. Same file names (`<palette>-<style>.jpg`).
+
+| Folder | Size | Use |
+|---|---|---|
+| `landscape/` | 1200×627 | LinkedIn link posts, text-heavy posts, blog share images |
+| `vertical/` | 1080×1920 (9:16) | Reels, Shorts, Stories, vertical video title and end cards |
+| `video-16x9/` | 1920×1080 | YouTube and landscape video title and end cards (all 5 palettes). Deck slides still use `deck/` |
+
+Templates that apply these automatically: [`../brand-system/START_HERE.md`](../brand-system/START_HERE.md).
+
 ## Decks (`deck/`, 1920×1080, 16:9, no grain)
 
 Only Night and Dawn, max 2 backgrounds per deck, and the **same style** across the deck (for example `night-silk` + `dawn-silk`).

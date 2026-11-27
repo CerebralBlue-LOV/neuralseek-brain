@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>NeuralSeek · Social post 1080×1350</title>
+<meta name="ns-template" content="social-post">
+<link rel="stylesheet" href="../tokens/brand.css">
+<style>
+/* LOCKED LAYOUT. Do not edit. Change only text inside [data-slot] and the frame attributes. */
+.fmt-post .eyebrow{position:absolute;left:80px;top:80px;font-size:24px;max-width:920px}
+.fmt-post .copy{position:absolute;left:80px;right:80px}
+.fmt-post .headline{font-size:104px}
+.fmt-post .headline[data-size=m]{font-size:96px}
+.fmt-post .headline[data-size=s]{font-size:88px}
+.fmt-post .sub{font-size:34px;margin-top:36px;max-width:840px}
+.fmt-post .cta{font-size:30px;padding:22px 40px;margin-top:52px}
+.fmt-post .logo{position:absolute;left:80px;bottom:80px;width:250px}
+.fmt-post .meta{position:absolute;right:80px;bottom:86px;font-size:22px}
+.fmt-post .window,.fmt-post .lockup{display:none}
+.fmt-post[data-layout=product] .window,.fmt-post[data-layout=partner] .lockup{display:flex}
+.fmt-post[data-layout=product] .cta,.fmt-post[data-layout=partner] .cta{display:none}
+/* scrim per layout (locked) */
+.fmt-post[data-layout=text]{--scrim:linear-gradient(90deg,rgba(var(--s),var(--sa)) 0%,rgba(var(--s),calc(var(--sa)*.8)) 50%,rgba(var(--s),.1) 100%)}
+.fmt-post[data-layout=product],.fmt-post[data-layout=partner]{--scrim:linear-gradient(180deg,rgba(var(--s),var(--sa)) 0%,rgba(var(--s),calc(var(--sa)*.8)) 40%,rgba(var(--s),0) 60%)}
+/* layout: text (event, webinar, quote, announcement) */
+.fmt-post[data-layout=text] .copy{top:430px}
+/* layout: product (company-page product posts: real screenshot bleeding off the right edge) */
+.fmt-post[data-layout=product] .copy{top:150px}
+.fmt-post[data-layout=product] .headline{font-size:88px}
+.fmt-post[data-layout=product] .sub{font-size:30px;margin-top:28px}
+.fmt-post[data-layout=product] .window{position:absolute;left:80px;top:640px;width:1160px;height:540px}
+/* layout: partner (two glass tiles joined by a line) */
+.fmt-post[data-layout=partner] .copy{top:150px}
+.fmt-post[data-layout=partner] .lockup{position:absolute;left:80px;right:80px;top:790px;height:230px;display:flex}
+.fmt-post[data-layout=partner] .glass{width:380px;height:230px;flex:none}
+.fmt-post[data-layout=partner] .glass .logo{position:static;width:250px}
+.fmt-post[data-layout=partner] .partner-name{font-size:40px}
+</style></head>
+<body class="ns-doc">
+
+<!--
+  FRAME ATTRIBUTES
+  data-palette : night | dawn | aurora | bloom | ice   (one per piece; default night for company page, dawn for personal)
+  data-texture : silk | streak | ribbon
+  data-layout  : text | product | partner
+  Headline: max 3 lines. Wrap ONE key phrase in <span class="kp">. Use data-size="m" or "s" only if it does not fit at default.
+  Remove an element you do not need (e.g. .cta) instead of leaving it empty.
+  product layout: CTA hidden, screenshot shown. partner layout: CTA hidden, lockup shown (partner logo: replace the span with <img src=...>).
+-->
+
+<div class="frame fmt-post" data-palette="night" data-texture="silk" data-layout="text">
+  <div class="grid"><i></i><i></i><i></i><i></i></div>
+  <div class="eyebrow" data-slot="eyebrow">Live webinar · Dec 3 · 11:00 ET</div>
+  <div class="copy">
+    <h1 class="headline" data-slot="headline" data-max-lines="3">Governed AI, <span class="kp">in production</span></h1>
+    <p class="sub" data-slot="sub" data-max-lines="2">How regulated teams ship agents with guardrails, lineage and audit built in.</p>
+    <div class="cta" data-slot="cta">Save your seat</div>
+  </div>
+  <!-- product layout only: real screenshot from 2026_images/Product Screenshots -->
+  <div class="window" data-slot="screenshot"><img src="../../Product%20Screenshots/maistro-editor/flow_seek.png" alt=""></div>
+  <!-- partner layout only -->
+  <div class="lockup"><div class="glass"><div class="logo"></div></div><div class="joiner h"></div><div class="glass"><span class="partner-name" data-slot="partner">IBM Fusion</span></div></div>
+  <div class="logo"></div>
+</div>
+
+</body></html>

@@ -1,4 +1,7 @@
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/neuralseek-brand-guidelines_2026_v3.md
+https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/brand-system/START_HERE.md
+https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/brand-system/tokens/brand-tokens.json
+https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/textures/README.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/2026_images/Product%20Screenshots/00-INDEX.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/AGENTS.md
 https://raw.githubusercontent.com/CerebralBlue-LOV/neuralseek-brain/main/BRAND_RULES.md

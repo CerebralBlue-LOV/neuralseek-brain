@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>NeuralSeek · Video frames 9:16 (1080×1920)</title>
+<meta name="ns-template" content="video-9x16">
+<link rel="stylesheet" href="../tokens/brand.css">
+<style>
+/* LOCKED LAYOUT. Reels, Shorts, Stories, LinkedIn vertical video. Safe zone: 220 px top, 380 px bottom (platform UI). */
+.fmt-vertical .eyebrow{position:absolute;left:96px;top:260px;font-size:26px}
+.fmt-vertical .copy{position:absolute;left:96px;right:96px}
+.fmt-vertical .headline{font-size:112px}
+.fmt-vertical .headline[data-size=m]{font-size:100px}
+.fmt-vertical .sub{font-size:38px;margin-top:40px}
+.fmt-vertical .logo{position:absolute;left:96px;bottom:400px;width:280px}
+/* title card */
+.v-title{--scrim:linear-gradient(180deg,rgba(var(--s),.2) 0%,rgba(var(--s),var(--sa)) 35%,rgba(var(--s),var(--sa)) 65%,rgba(var(--s),.2) 100%)}
+.v-title .copy{top:640px}
+/* caption card: one line of on-screen text over a dimmed texture */
+.v-caption{--scrim:linear-gradient(rgba(var(--s),.55),rgba(var(--s),.55))}
+.v-caption .copy{top:700px}
+.v-caption .headline{font-size:96px}
+/* end card */
+.v-end{--scrim:linear-gradient(rgba(var(--s),.5),rgba(var(--s),.5))}
+.v-end .copy{top:640px;text-align:left}
+.v-end .cta{font-size:36px;padding:26px 46px;margin-top:56px}
+.v-end .url{margin-top:40px;font-size:26px}
+</style></head>
+<body class="ns-doc">
+<!--
+  One palette per video. Default night (company page) or dawn (personal accounts). aurora/bloom/ice allowed.
+  Title card: eyebrow + headline (max 3 lines) + sub (max 2). Caption card: headline only (max 3 lines).
+  End card: headline + CTA + url. Keep all text inside the safe zone (render.py checks it).
+  Product footage: use real screen recordings; place them between these cards in the editor, never fake UI.
+-->
+<section class="frame fmt-vertical v-title" data-palette="night" data-texture="silk">
+  <div class="grid"><i></i><i></i><i></i><i></i></div>
+  <div class="eyebrow" data-slot="eyebrow">mAIstro · Agent chat</div>
+  <div class="copy">
+    <h1 class="headline" data-slot="headline" data-max-lines="3">Ask your data. <span class="kp">Keep the audit trail.</span></h1>
+    <p class="sub" data-slot="sub" data-max-lines="2">Every answer logged with sources, model and policy result.</p>
+  </div>
+  <div class="logo"></div>
+</section>
+
+<section class="frame fmt-vertical v-caption" data-palette="night" data-texture="ribbon">
+  <div class="copy">
+    <h2 class="headline" data-slot="headline" data-max-lines="3">PII removed <span class="kp">before</span> the model sees it</h2>
+  </div>
+  <div class="logo"></div>
+</section>
+
+<section class="frame fmt-vertical v-end" data-palette="night" data-texture="silk">
+  <div class="grid"><i></i><i></i><i></i><i></i></div>
+  <div class="copy">
+    <h2 class="headline" data-slot="headline" data-max-lines="2">Governed AI, <span class="kp">in production</span></h2>
+    <div class="cta" data-slot="cta">Book a demo</div>
+    <div class="url foot" data-slot="url">neuralseek.com</div>
+  </div>
+  <div class="logo"></div>
+</section>
+</body></html>

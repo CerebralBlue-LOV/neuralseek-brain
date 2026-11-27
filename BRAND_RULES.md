@@ -11,6 +11,8 @@ applies_to: [word-docs, powerpoint, pdf, html, slides, social-cards, banners, em
 
 > **Brand v3 (2026-11-04).** v2.1 (dark-only canvas, Open Sans) is archived in `2026_images/archive/brand-guidelines-v2.1/`.
 >
+> **Making a marketing asset?** Start at [`2026_images/brand-system/START_HERE.md`](2026_images/brand-system/START_HERE.md): locked templates (social, deck, one-pager, video, email), tokens, embedded fonts and full-resolution textures. Fill the template; never design from scratch.
+>
 > **If you are an AI agent generating ANY NeuralSeek deliverable, read this file
 > first. The full brand book is at
 > [`2026_images/neuralseek-brand-guidelines_2026_v3.md`](2026_images/neuralseek-brand-guidelines_2026_v3.md).
@@ -53,9 +55,9 @@ Both modes are official. Pick by channel (see RULE 7).
 
 - Web: flat canvas, alternating with surface-2. Neutrals first.
 - PDFs and print: white `#FFFFFF`.
-- Social and decks: generated Night (dark) or Dawn (light) textures from the `neuralseek-social-design` skill. Decks: max 2 backgrounds per deck, no grain. Social: one palette per piece, 3–4% grain allowed.
+- Social and decks: the official Night (dark) or Dawn (light) texture files, applied through the templates in `2026_images/brand-system/`. Decks: max 2 backgrounds per deck, no grain. Social: one palette per piece, 3–4% grain allowed.
 - Official texture files: `2026_images/textures/` (`social/` 1080×1350 and `deck/` 1920×1080, see its README). Use them as they are.
-- If neither the files nor the `neuralseek-social-design` skill is available, use the flat canvas and brand tokens from this file. Never improvise textures, glows or gradients.
+- If neither the texture files nor the brand-system templates are available, use the flat canvas and brand tokens from this file. Never improvise textures, glows or gradients.
 
 **Never use:**
 
@@ -192,7 +194,7 @@ copy, anything that sounds like a generic AI startup.
 - Load the fonts from RULE 3. `body { font-family: 'Albert Sans', system-ui, sans-serif; }`, headings `'Sora'`, `pre, code { font-family: 'JetBrains Mono', ui-monospace, monospace; }`.
 
 ### Images, banners, social cards
-- Generated textures from the `neuralseek-social-design` skill (Night, Dawn, Aurora, Bloom, Ice), one palette per piece and per campaign.
+- Official texture files from `2026_images/textures/` (Night, Dawn, Aurora, Bloom, Ice), one palette per piece and per campaign.
 - Hairline grid in thirds with + markers, frosted-glass logo tiles, real screenshots that may bleed off the edge.
 - Never website point-cloud figures, stock photos or invented UI.
 
